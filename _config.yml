@@ -21,7 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #repository_url: http://www.google.com
 # Build settings
 markdown: kramdown
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin: "dark"
 
@@ -69,7 +69,8 @@ defaults:
 #  uri    : "http://your-site.com"
 #  home   : # null (default), "absolute or relative url to link to author home"
 
-
+plugins:
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
