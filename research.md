@@ -48,4 +48,4 @@ I have reviewed papers for:
 
 - **2017** _NIPS Workshop Black in AI_ Travel Grant
 
-- **2009 - 2012** Merit scholarship
+- **2009 - 2012** Merit Scholarship
