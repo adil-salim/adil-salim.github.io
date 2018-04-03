@@ -7,15 +7,15 @@ header:
 
 ## Journal papers
 
-- A. Salim, P. Bianchi, and W. Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/revised.pdf %}), _Preprint_, April 2017, revised in October 2017. (Here is the [Code](https://github.com/adil-salim/Snake) and a [short version]({{site.baseurl}}{% link Research/snake-nips17.pdf %}) presented at _NIPS 2017 Workshop Black in AI_)
+- A. Salim, P. Bianchi, and W. Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/revised.pdf %}), accepted for publication in _Transaction on Automatic Control_, March 2018. (Here is the [Code](https://github.com/adil-salim/Snake) and a [short version]({{site.baseurl}}{% link Research/snake-nips17.pdf %}) presented at _NIPS 2017 Workshop Black in AI_)
 
-- P. Bianchi, W. Hachem, and A. Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/revised_fb.pdf %}), _Preprint_, February 2017. (Here is an extended [abstract]({{site.baseurl}}{% link Research/fb-short17.pdf %}))
+- P. Bianchi, W. Hachem, and A. Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/revised_fb.pdf %}), accepted for publication in _Journal of Convex Analysis_, March 2018. (Here is an extended [abstract]({{site.baseurl}}{% link Research/fb-short17.pdf %}))
 
 - P. Bianchi, W. Hachem, and A. Salim, [Constant Step Stochastic Approximations Involving Differential Inclusions: Stability, Long-Run Convergence and Applications]({{site.baseurl}}{% link Research/revised_arxiv_dicst.pdf %}), _Preprint_, December 2016, revised in December 2017. 
 
 ## Conference papers
 
-- A. Salim, P. Bianchi, and W. Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/stodr17.pdf %})", October 2017. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}) and an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report)
+- A. Salim, P. Bianchi, and W. Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/stodr17.pdf %})", _ICASSP 2018_, Calgary, Canada. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}) and an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report)
 
 
 - A. Salim, P. Bianchi, and W. Hachem, "[Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/cap2017.pdf %})", _CAp 2017_, Grenoble, France.
