@@ -27,7 +27,7 @@ header:
 - A. Salim, P. Bianchi, and W. Hachem, "[A Stochastic Proximal Point Algorithm for Total Variation Regularization over Large Scale Graphs]({{site.baseurl}}{% link Research/proxtv.pdf %})", _IEEE CDC 2016_, Las Vegas, USA.
 
 
-- R. Mourya, P. Bianchi, A. Salim and C. Richard, "An Adaptive Distributed Asynchronous Algorithm with Application to Target Localization", _IEEE CAMSAP 2017_, Curacao, Dutch Antilles. 
+- R. Mourya, P. Bianchi, A. Salim and C. Richard, "[An Adaptive Distributed Asynchronous Algorithm with Application to Target Localization]({{site.baseurl}}{% link Research/mourya2017adaptive.pdf %})", _IEEE CAMSAP 2017_, Curacao, Dutch Antilles. 
 
 - P. Bianchi, W. Hachem and A. Salim, "Building Stochastic Optimization Algorithms with Random Monotone Operators", _EUCCO 2016_, Leuven, Belgium. 
 
