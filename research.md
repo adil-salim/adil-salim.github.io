@@ -46,6 +46,6 @@ I have reviewed papers for:
 
 ## Awards
 
+- **2018** _GDR ISIS_ Travel Grant for PhD mobility at EPFL
 - **2017** _NIPS Workshop Black in AI_ Travel Grant
-
 - **2009 - 2012** Merit Scholarship
