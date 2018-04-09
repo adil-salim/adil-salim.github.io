@@ -15,6 +15,8 @@ header:
 
 ## Conference papers
 
+- A. Salim, P. Bianchi and W. Hachem "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
+
 - A. Salim, P. Bianchi, and W. Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}), an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report and the [Code](https://github.com/adil-salim/Stochastic-DR))
 
 
