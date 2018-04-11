@@ -9,7 +9,7 @@ Since 2015, I am a Tutorial Assistant for the following courses.
 
 Industrial masters:
 
-- Data science project ("Fil rouge", Télécom ParisTech)
+- Image processing project ("Fil rouge", Télécom ParisTech)
 
 Graduate level:
 
