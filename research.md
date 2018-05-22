@@ -11,7 +11,7 @@ header:
 
 - P. Bianchi, W. Hachem, and A. Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/joca1813_revised.pdf %}), accepted for publication in _Journal of Convex Analysis_, March 2018. (Here is an extended [abstract]({{site.baseurl}}{% link Research/fb-short17.pdf %}))
 
-- P. Bianchi, W. Hachem, and A. Salim, [Constant Step Stochastic Approximations Involving Differential Inclusions: Stability, Long-Run Convergence and Applications]({{site.baseurl}}{% link Research/revised_arxiv_dicst.pdf %}), _Preprint_, December 2016, revised in December 2017. 
+- P. Bianchi, W. Hachem, and A. Salim, [Constant Step Stochastic Approximations Involving Differential Inclusions: Stability, Long-Run Convergence and Applications]({{site.baseurl}}{% link Research/revised_arxiv_dicst.pdf %}), accepted for publication in _Stochastics_, May 2018. 
 
 ## Conference papers
 
