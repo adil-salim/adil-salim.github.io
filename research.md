@@ -45,6 +45,7 @@ header:
 I have reviewed papers for:
 
 - IEEE Transactions on Signal and Information Processing over Networks
+- IEEE Transactions on Information Theory
 
 ## Awards
 
