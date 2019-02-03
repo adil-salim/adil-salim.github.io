@@ -7,6 +7,8 @@ header:
 
 ## Journal papers
 
+- A. Salim, P. Bianchi, and W. Hachem, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
+
 - A. Salim, P. Bianchi, and W. Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), accepted for publication in _Transaction on Automatic Control_, March 2018. (Here is the [Code](https://github.com/adil-salim/Snake) and a [short version]({{site.baseurl}}{% link Research/snake-nips17.pdf %}) presented at _NIPS 2017 Workshop Black in AI_)
 
 - P. Bianchi, W. Hachem, and A. Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/joca1813_revised.pdf %}), accepted for publication in _Journal of Convex Analysis_, March 2018. (Here is an extended [abstract]({{site.baseurl}}{% link Research/fb-short17.pdf %}))
