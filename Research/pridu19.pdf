@@ -1,0 +1,1110 @@
+\documentclass[smallextended]{svjour3}
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2018
+
+% ready for submission
+%\usepackage[preprint]{nips_2018}
+
+% to compile a preprint version, e.g., for submission to arXiv, add
+% add the [preprint] option:
+% \usepackage[preprint]{nips_2018}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2018}
+
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2018}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amscd,amsfonts,bbm,mathrsfs,enumerate}
+%\usepackage{amsthm,amsmath}
+\usepackage[shortlabels]{enumitem}
+\usepackage{color}
+\usepackage{yhmath}
+%\usepackage{accents}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+
+
+%\newenvironment{definition}[1][Definition.]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{example}[1][Example.]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{remark}[1][Remark.]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+%% For creating math operators
+\usepackage{amsopn}
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+\DeclareMathOperator{\var}{\mathbb Var}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\zer}{zer}
+\DeclareMathOperator{\aver}{av}
+\DeclareMathOperator{\inter}{int}
+\DeclareMathOperator{\relint}{ri}
+\DeclareMathOperator{\epi}{epi}
+\DeclareMathOperator{\graph}{gr}
+\DeclareMathOperator{\prox}{prox}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\support}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\lev}{lev}
+\DeclareMathOperator{\rec}{rec}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\co}{co}
+\DeclareMathOperator{\clo}{\overline co}
+\DeclareMathOperator{\distC}{\mathsf d}
+\DeclareMathOperator*{\diag}{diag}
+
+\newcommand{\leftnorm}{\left|\!\left|\!\left|}
+\newcommand{\rightnorm}{\right|\!\right|\!\right|}
+
+%\newcommand{\eqdef}{{\stackrel{\text{def}}{=}}} 
+\newcommand{\eqdef}{:=} 
+
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\bs}{\boldsymbol}
+
+\newcommand{\itpx}{{\mathsf x}}
+\newcommand{\sx}{{\mathsf x}}
+\newcommand{\sy}{{\mathsf y}}
+\newcommand{\sz}{{\mathsf z}}
+\newcommand{\sw}{{\mathsf w}}
+\newcommand{\sF}{{\mathsf F}}
+\newcommand{\sH}{{\mathsf H}}
+
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\bP}{{{\mathbb P}}} 
+\newcommand{\bE}{{{\mathbb E}}} 
+\newcommand{\bN}{{{\mathbb N}}} 
+
+% Operators, domains, etc.  
+\newcommand{\mA}{{\mathcal A}}
+\newcommand{\mM}{{\mathcal M}}
+\newcommand{\mc}{{\mathcal c}}
+\newcommand{\mC}{{\mathcal C}}
+\newcommand{\mB}{{\mathcal B}} 
+\newcommand{\mD}{{\mathcal D}} 
+\newcommand{\mU}{{\mathcal U}}
+\newcommand{\mX}{{\mathcal X}}
+\newcommand{\mY}{{\mathcal Y}}
+\newcommand{\mZ}{{\mathcal Z}} 
+\newcommand{\bmD}{\cl({\mathcal D})} 
+
+\newcommand{\sfc}{{\mathsf c}}
+\newcommand{\sA}{{\mathsf A}}
+\newcommand{\sE}{{\mathsf E}}
+\newcommand{\sB}{{\mathsf B}}
+\newcommand{\sP}{{\mathsf P}}
+\newcommand{\sL}{{\mathsf L}}
+\newcommand{\sQ}{{\mathsf Q}}
+\newcommand{\sJ}{{\mathsf J}}
+\newcommand{\sX}{{\mathsf X}}
+\newcommand{\sV}{{\mathsf V}}
+\newcommand{\sU}{{\mathsf U}}
+\newcommand{\sZ}{{\mathsf Z}}
+\newcommand{\sM}{{\mathsf M}}
+\newcommand{\sG}{{\mathsf G}}
+\newcommand{\sY}{{\mathsf Y}}
+\newcommand{\sLam}{{\mathsf \Lambda}}
+\newcommand{\sI}{{\mathsf I}}
+
+\newcommand{\maxmon}{{\mathscr M}} 
+\newcommand{\Selec}{{\mathfrak S}} 
+
+% Sigma fields
+\newcommand{\mcA}{{\mathscr A}} 
+\newcommand{\mcB}{{\mathscr B}} 
+\newcommand{\mcN}{{\mathscr N}} 
+\newcommand{\mcT}{{\mathscr T}} 
+\newcommand{\mcI}{{\mathscr I}} 
+\newcommand{\mcF}{{\mathscr F}} 
+\newcommand{\mcG}{{\mathscr G}}
+\newcommand{\mcL}{{\mathscr L}}
+\newcommand{\mcH}{{\mathscr H}}
+\newcommand{\mcX}{{\mathscr X}} 
+
+\newcommand{\cP}{{{\mathcal P}}} 
+\newcommand{\cS}{{{\mathcal S}}} 
+\newcommand{\cZ}{{{\mathcal Z}}} 
+\newcommand{\cM}{{{\mathcal M}}} 
+\newcommand{\cD}{{{\mathcal D}}} 
+\newcommand{\cE}{{{\mathcal E}}}
+\newcommand{\cF}{{{\mathcal F}}}
+\newcommand{\cG}{{{\mathcal G}}} 
+\newcommand{\cH}{{{\mathcal H}}} 
+\newcommand{\cL}{{{\mathcal L}}}
+\newcommand{\cT}{{{\mathcal T}}} 
+\newcommand{\cN}{{{\mathcal N}}} 
+\newcommand{\cK}{{{\mathcal K}}} 
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cI}{{{\mathcal I}}} 
+
+% Spaces 
+\newcommand{\RN}{{{\mathbb R}^N}} 
+\newcommand{\bR}{{{\mathbb R}}} 
+\newcommand{\Hx}{{\mathcal X}}      % Space of the x variable 
+\newcommand{\Hz}{{\mathcal Z}}      % Space of the z variable 
+\newcommand{\Hl}{{\mathcal V}}      % Space of the Lagrange multiplier lambda 
+\newcommand{\Hy}{{\mathcal Y}}      % Space of the Lagrange multiplier lambda 
+
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\toL}{\xrightarrow[]{{\mathcal L}}}
+\newcommand{\toweak}{\xrightharpoonup[]{{\mathcal L}}}
+
+\newcommand{\ps}[1]{\langle #1 \rangle}
+\newcommand{\wn}{{{\widetilde \nabla}}}
+% 
+% Almost sure convergence
+\newcommand{\toasshort}{\stackrel{\text{as}}{\to}}
+\newcommand{\toaslong}{\xrightarrow[n\to\infty]{\text{a.s.}}}
+
+% Convergence in probability 
+\newcommand{\toprobashort}{\,\stackrel{\mathcal{P}}{\to}\,}
+\newcommand{\toprobalong}{\xrightarrow[n\to\infty]{\mathcal P}}
+%
+% Convergence in law 
+\newcommand{\todistshort}{{\stackrel{\mathcal{D}}{\to}}}
+\newcommand{\todistlong}{\xrightarrow[n\to\infty]{\mathcal D}}
+
+\usepackage[textwidth=2cm, textsize=footnotesize]{todonotes}  
+\setlength{\marginparwidth}{1.5cm}               %  this goes with todonotes
+\newcommand{\pbnote}[1]{\todo[color=cyan!20]{#1}}
+\newcommand{\asnote}[1]{\todo[color=green!20]{#1}}
+\newcommand{\whnote}[1]{\todo[color=pink]{#1}}
+
+
+
+
+%%Aucune des deux fonctions doit etre lisse. Uniquement sous-lineaire. 
+
+%%définir H^\star - Fenchel
+%%Se demarquer de [11] Contraintes ineg sto.
+%%Expliquer les contraintes lineaires
+%%Conclusion
+
+
+
+
+
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{Adil Salim \and Pascal Bianchi \and Walid Hachem 
+\thanks{A.~Salim and P.~Bianchi are with the 
+LTCI, Télécom ParisTech, Université Paris-Saclay, 75013, Paris, France 
+(\texttt{adil.salim, pascal.bianchi@telecom-paristech.fr}).}
+\thanks{W.~Hachem is with the CNRS / LIGM (UMR 8049), Universit\'e Paris-Est 
+Marne-la-Vallée, France (\texttt{walid.hachem@u-pem.fr}).}
+}
+
+\begin{document}
+
+
+\title{A Fully Stochastic Primal-Dual Algorithm 
+\thanks{This work was partially supported by the Labex Digiteo-DigiCosme
+(OPALE project), Universit\'e Paris-Saclay.}
+}
+
+
+\author{Adil Salim         \and
+        Pascal Bianchi  \and
+        Walid Hachem
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{Adil Salim, Pascal Bianchi \at
+            Télécom ParisTech \\
+              46 rue Barrault, 75013 Paris \\
+              \email{asalim.math@gmail.com, pascal.bianchi@telecom-paristech.fr}       
+            \and 
+            Walid Hachem \at
+            CNRS, Université Paris-Est Marne-la-Vallée\\
+              5 blvd. Descartes, Champs-sur-Marne, 77454 Marne-la-Vallée Cedex 2 \\
+              \email{walid.hachem@u-pem.fr}      
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+
+
+\begin{abstract} 
+A new stochastic primal-dual algorithm for solving a composite optimization
+problem is proposed. It is assumed that all the
+functions/matrix used to define the optimization problem are given as statistical expectations. These expectations
+are unknown but revealed across time through i.i.d realizations. This covers the case of convex optimization under stochastic linear constraints. The proposed algorithm is proven to converge to a saddle point of the
+Lagrangian function. In the framework of the monotone operator theory, the
+convergence proof relies on recent results on the stochastic Forward Backward
+algorithm involving random monotone operators.
+\end{abstract}
+
+
+\section{Introduction} 
+\label{sec:intro} 
+Many applications in machine learning, statistics or signal processing require
+the solution of the following optimization problem~\cite{chambolle2011first,vu2013splitting,con-jota13}. Given two Euclidean
+spaces $\Hx$ and $\Hl$, solve
+\begin{equation} 
+\label{pb} 
+\min_{x \in \Hx} \sF(x) + \sG(x) + \sH(\sL x)
+\end{equation} 
+where $\sF,\sG$ and $\sH$ are lower semicontinuous convex functions such that $\sF(x)< \infty$ for every $x$ and $\sL$ belongs to the set
+$\cL(\Hx, \Hl)$ of $\Hx\to\Hl$ linear operators. Consider $\sfc \in \Hl$ and $\sH = \iota_{\{\sfc\}}$, where $\iota_{\mC}$ is the indicator function of the set $\mC$, \textit{i.e}, the function equal to $0$ on $\mC$ and $+\infty$ elsewhere. In this particular case, Problem~\eqref{pb} boils down to the linearly constrained problem \begin{equation} 
+\label{pbcons} 
+\min_{x \in \Hx} \sF(x) + \sG(x) \quad \text{s.t.} \quad \sL x = \sfc.
+\end{equation}
+In order to solve Problem~\eqref{pb}, primal-dual
+methods generate a sequence of primal estimates $(x_n)_{n \in
+\bN}$ and a sequence of dual estimates $(\lambda_n)_{n \in \bN}$ jointly
+converging to a saddle point of the Lagrangian function. As is well known, the qualification condition 
+\begin{equation}
+\label{qualif} 
+\sfc \in \relint \left( \sL \dom \sG - \dom \sH \right) 
+\nonumber 
+\end{equation}
+where $\relint$ is the relative interior of a 
+set, ensures the existence of such a point~\cite{bau-com-livre11}. There is a rich
+literature on such algorithms which cannot be exhaustively listed~\cite{chambolle2011first,vu2013splitting,con-jota13}. 
+
+In this paper, it is assumed that the quantities that enter the minimization
+problem are likely to be unavailable or difficult to compute numerically. More
+precisely, it is assumed that the functions $\sF$ and $\sG$ are defined
+as expectations of random functions. Given a probability space $(\Xi,\mcG,\mu)$, consider two convex normal integrands (see below) $f : \Xi \times \Hx \rightarrow \bR$ and $g : \Xi \times \Hl \rightarrow (-\infty, +\infty]$. Then, we consider that $\sF(x)=\bE_\mu(f(\cdot,x))$ and $\sG(x) =
+\bE_\mu(g(\cdot,x))$. In addition, let $L$ be a measurable function from $(\Xi,\mcG,\mu)$ to $\cL(\Hx,\Hl)$ (\textit{i.e} a random matrix), then it is assumed that $\sL = \bE_\mu L(\cdot)$. Finally, the Fenchel conjugate $\sH^\star$ of $\sH$ takes the form $\sH^\star(\lambda) = \bE_\mu
+(p(\cdot,\lambda))$, where $p$ is a normal convex integrand. 
+
+In the particular case of  Problem~\eqref{pbcons}, let us assume that $\sfc = \bE_\mu(c(\cdot))$ where $c(\cdot) : \Xi \rightarrow \Hl$ is a random vector. Then, since $\sH^\star(\lambda) = \ps{\lambda,\sfc}$, we simply put $p(\cdot,\lambda) = \ps{\lambda,c(\cdot)}$.
+
+In order to solve Problem~\eqref{pb}, the observer is given the functions $f$, $g$,
+$p$, and $L$, along with a sequence of independent and identically
+distributed (i.i.d.) random variables $(\xi_n)$ with the probability distribution
+$\mu$. In this paper, a new stochastic primal dual algorithm based on this data is proposed
+to solve this problem. 
+
+The convergence proof for this algorithm relies on the monotone operator
+theory. The algorithm is built around an instantiation of the stochastic
+Forward-Backward algorithm involving random monotone operators that was
+introduced in~\cite{bia-hac-16}. It is proven that the weighted means of the iterates of the algorithm, where the weights are given by the step sizes of the algorithm, converges almost surely to a saddle point of the Lagrangian function. To the authors knowledge, the proposed
+algorithm is the first method that allows to solve Problem~\eqref{pb} in a 
+fully stochastic setting. Existing methods typically allow to handle
+subproblems of Problem~\eqref{pb} in which some quantities used to
+define~\eqref{pb} are assumed to be available or set equal to
+zero~\cite{ouyang2013stochastic,rosasco2015stochastic,yu2017online,combettes2016stochastic,toulis2015stable}. In
+particular, the new algorithm generalizes the stochastic gradient algorithm (in
+the case where only $\sF$ is non zero), the stochastic proximal point
+algorithm~\cite{patrascu2017nonasymptotic,toulis2015stable,bia-16} (only $\sG$ is non zero), and the
+stochastic proximal gradient
+algorithm~\cite{atchade2017perturbed,bia-hac-sal-(sub)jca17} (only $\sF +
+\sG$ is non zero). 
+
+To our knowledge, the proposed algorithm is also one of the first methods that allows to tackle
+stochastic linear constraints. The paper~\cite{yu2017online} studies stochastic inequality constraints for optimization over a compact set and provide regret bounds. Handling stochastic constraints online is suitable in
+various fields of machine learning like Neyman-Pearson classification or online portfolio optimization. For example, the Markowitz portfolio
+optimization problem is an instance of Problem~\eqref{pbcons} where $\xi$ is a random variable with values in $\Hx$, $\sF(x) = \bE_\xi(\ps{x,\xi}^2)$, $\sG(x) = \iota_{\Delta}(x)$ where $\Delta$ is the probability simplex, $\sL = \bE_\xi(\xi^{T})$ and $\sfc$ is some real positive number. In this case, authors usually assume that $\sL = \bE_\xi(\xi^{T})$ is fully known or estimated.
+%and one has to solve the minimization problem
+%\begin{equation}
+%\label{eq:pf}
+%\min_{x \in \bR^d} \bE_\xi(\ps{x,\xi}^2) \qquad \text{s.t.} \qquad x \in \Delta \quad \text{and} \quad \ps{x,\bE_\xi(\xi)} = r,
+%\end{equation}
+%where $\xi$ is a random vector in $\bR^d$, $r > 0$ and $\Delta$ is the simplex of $\bR^d$. Authors usually assume $\bE_\xi(\xi)$ to be known or estimated~\cite{patrascu2017nonasymptotic,yurtsever2016stochastic}. 
+%Besides, the proposed algorithm can be applied in settings where the evaluation of $\sF, \sG, \sH$ and the matrix-vector products involving $\sL$ are prohibited. 
+The paper is organized as follows. The next section is devoted to rigorously state the main problem and the main algorithm. In section~\ref{sec:proof} the convergence proof of the algorithm is given. 
+%\end{notations}
+
+% and where finally
+% $$
+% I(x) = \left\{
+%   \begin{array}[h]{ll}
+%     +\infty & \text{if } \mu(\{s:f(s,x)=+\infty\})>0 \\
+%     0 & \text{otherwise.}
+%   \end{array}\right.
+% $$
+
+\paragraph*{Some notations. } 
+
+The notation $\mcB(\Hx)$ will refer to the Borel
+$\sigma$-field of $\Hx$.  Both the operator norm and the Euclidean norm will be
+denoted as $\|\cdot\|$.  The distance of a point $x$ to a set $S$ is denoted as
+$\dist(x, S)$. As mentioned above, we denote as $\cL(\Hx, \Hl)$ the set of
+linear operators, identified with matrices, from $\Hx$ to $\Hl$.  The set of
+proper, lower semicontinuous convex functions on $\Hx$ is $\Gamma_0(\Hx)$.
+\section{Problem description}
+\label{sec:pb} 
+
+Before entering our subject, we recall some definitions regarding set-valued
+functions and integrals. Let $(\Xi, \mcG, \mu)$ be a probability space where
+the $\sigma$-field $\mcG$ is $\mu$-complete. Given a Euclidean 
+space $\Hx$, let $h : \Xi \rightrightarrows \Hx$ be a set valued
+function such that $h(s)$ is a closed set for each $s \in \Xi$.  The
+function $h$ is said measurable if $\{ s \, : \, h(s) \cap S \neq \emptyset \}
+\in {\mcG}$ for any set $S \in \mcB(\Hx)$. An equivalent definition for
+the mesurability of $h$ requires that the domain $\dom(h) \eqdef \{ s \in
+\Xi \, : \, h(s) \neq \emptyset \}$ of $h$ belongs to $\mcG$, and that there
+exists a sequence of measurable functions $\varphi_n : \dom(h) \to \Hx$ such
+that $h(s) = \cl {\{\varphi_n(s) \}_n}$ for all $s \in \dom(h)$, where
+$\cl$ is the closure of a set. Such functions are
+called measurable selections of $h$. 
+Assume now that $h$ is measurable and that $\mu(\dom(h)) = 1$. Given
+$1 \leq p < \infty$, let 
+% $\mcL^p(\Xi, {\mcG}, \mu; \Hx)$ 
+$\mcL^p(\mu)$ be the space of the ${\mcG}$-measurable functions 
+$\varphi : \Xi \to \Hx$ such that $\int \| \varphi \|^p d\mu < \infty$, and 
+let
+\[
+\Selec^p_h \eqdef 
+\{ \varphi \in \mcL^p(\mu) \, : \, 
+\varphi(s) \in h(s) \ \mu-\text{almost everywhere (a.e.)} \} \, .
+\]
+If $\Selec^1_h \neq \emptyset$, the function $h$ is said integrable.
+The selection integral of $h$ is the set
+\begin{equation}
+\label{selint} 
+\int h d\mu \eqdef \cl{\left\{ \int_\Xi \varphi d\mu \ : \ 
+  \varphi \in \Selec^1_h \right\}} .
+\end{equation}
+
+In all the remainder, given a single-valued or a set-valued function $h$, 
+the notation $\bE_\mu h$ will refer to the integral of $h$ with respect to
+$\mu$. The meaning of this integral will be clear from the context. 
+
+We now state our problem. A function 
+$h: \Xi \times \Hx \to (-\infty, \infty]$ is said a convex normal 
+integrand if $h(s,\cdot)$ is convex, and if the set-valued 
+mapping $s\mapsto \epi h(s, \cdot)$ is closed-valued and measurable, where 
+$\epi$ is the epigraph of a function. 
+Let $f: \Xi \times \Hx \to (-\infty, \infty]$ be a convex normal integrand,
+and assume that $\int | f(s,x) | \, \mu(ds) < \infty$ for all $x \in \Hx$. Consider the convex function $\sF(x)$ defined on $\Hx$ as the Lebesgue integral
+$\sF(x) = \bE_\mu f(\cdot, x)$. Denoting as $\partial f(s, x)$ the 
+subdifferential of $f(s,\cdot)$ with respect to $x$, it is known that the set-valued 
+function $\partial f(\cdot, x)$ is measurable, 
+$\Selec^1_{\partial f(\cdot,x)} \neq\emptyset$, and 
+$\partial \sF(x) = \bE_\mu \partial f(\cdot,x)$ for each $x\in \Hx$, where the 
+integral is the selection integral defined above \cite{att-79,roc-wet-82}. 
+
+Let $g: \Xi \times \Hx \to (-\infty, \infty]$ be another convex normal 
+integrand, and let $\sG(x) = \bE_\mu g(\cdot, x)$, where the integral is
+defined as the sum 
+\[
+\int_{\{s \, : \, g(s, x) \in [0,\infty) \}} 
+           g(s, x) \, \mu(ds)  + 
+\int_{\{s \, : \, g(s, x) \in ]-\infty, 0[\}} 
+           g(s, x) \, \mu(ds)  +  I(x) \, , 
+\]
+and 
+\[
+I(x) = \left\{\begin{array}{cl} + \infty, &\text{if } 
+         \mu(\{s : g(s, x) = \infty \}) > 0, \\
+0, &\text{otherwise} \, , \end{array}\right. 
+\]
+and where the convention $(+\infty) + (-\infty) = + \infty$ is used. The
+function $\sG$ is a lower semi continuous convex function if $\sG(x) > -\infty$
+for all $x$, which we assume. We shall also assume that $\sG$ 
+is proper. Note that this implies that $g(s,\cdot) \in \Gamma_0(\Hx)$ for 
+$\mu$-almost all $s$. It is also known that $\partial g(\cdot, x)$ is 
+measurable for each $x$~\cite{att-79}. We assume that 
+$\partial \sG(x) = \bE_\mu \partial g(\cdot,x)$, where the right hand member 
+is set to $\emptyset$ for the values of $x$ for which 
+$\Selec^1_{\partial g(\cdot,x)} = \emptyset$. Before proceeding in the problem
+statement, it is useful to provide sufficient conditions under which this 
+interchange of the expectation and the subdifferentiation is possible. 
+By \cite{roc-wet-82}, this will be the case if the following conditions hold: 
+\emph{i)} the set-valued mapping $s\mapsto \cl\dom g(s, \cdot)$ is constant 
+$\mu$-a.e., where $\dom g(s,\cdot)$ is the domain of $g(s,\cdot)$, 
+\emph{ii)} $\sG(x) < \infty$ whenever $x \in \dom g(s,\cdot)$ $\mu$-a.e., 
+\emph{iii)} there exists $x_0 \in \Hx$ at which $\sG$ is finite and continuous. 
+Another case where this interchange is permitted is the following. 
+Let $m$ be a positive integer, and let $\mC_1, \ldots \mC_m$ be a collection of
+closed and convex subsets of $\Hx$. Let 
+$\mC = \cap_{i=k}^m \mC_k \neq\emptyset$, and assume
+that the normal cone $N_{\mC}(x)$ of $\mC$ at $x$ satisfies the identity 
+$N_{\mC}(x) = \sum_{k=1}^m N_{\mC_k}(x)$ for each $x\in \Hx$, where the 
+summation is the usual set summation. As is well known, this identity holds 
+true under a qualification condition of the type 
+$\cap_{k=1}^m \relint \mC_k \neq \emptyset$ (see also 
+\cite{bauschke1999strong} for other conditions). Now, assume that   
+$\Xi = \{1,\ldots, m\}$ and that $\mu$ is an arbitrary probability measure
+putting a positive weight on each $\{k\} \subset \Xi$. Let $g(s,x)$ be the 
+indicator function 
+\begin{equation} 
+\label{intercpct} 
+g(s,x) = \iota_{\mC_s}(x) \ \text{for} \  (s,x) \in \Xi \times \Hx.
+\end{equation}  
+Then it is obvious that $g$ is a convex normal integrand, $\sG = \iota_{\mC}$, 
+and $\partial \sG(x) = \bE_\mu \partial g(\cdot,x)$. 
+We can also combine these two types of conditions: let $(\Sigma, \mcT, \nu)$ 
+be a probability space, where $\mcT$ is $\nu$-complete, and let 
+$h:\Sigma \times \Hx \to (-\infty, \infty]$ be a
+convex normal integrand satisfying the conditions \emph{i)}--\emph{iii)} above.
+Consider the closed and convex sets $\mC_1,\ldots,\mC_m$ introduced above, and
+let $\alpha$ be a probability measure on the set $\{0,\ldots, m \}$ such that
+$\alpha(\{k\}) > 0$ for each $k \in \{0,\ldots, m \}$. Now, set 
+$\Xi = \Sigma \times \{0,\ldots,m\}$, $\mu = \nu \otimes \alpha$, and 
+define $g : \Xi \times \Hx \to (-\infty, \infty]$ as
+\[
+g(s, x) =  \left\{\begin{array}{ll} \alpha(0)^{-1} h(u,x) &
+\text{if } k = 0, \\
+\iota_{\mC_k}(x) & \text{otherwise}, 
+\end{array}\right. 
+\]
+where $s = (u, k) \in \Sigma \times \{0,\ldots,m\}$. Then it is clear that 
+\[
+\sG(x) = \frac{1}{\alpha(0)} \int_\Sigma h(u, x) \nu(du) + \iota_{\mC}(x) \, , 
+\]
+and 
+\[
+\partial \sG(x) = \bE_\mu \partial g(\cdot,x) = 
+ \frac{1}{\alpha(0)} \bE_\nu \partial h(\cdot, x) + 
+ \sum_{k=1}^m N_{\mC_k}(x) \, . 
+\]
+
+To proceed with our problem statement, we introduce another convex normal 
+integrand $p : \Xi  \times \Hz \to (-\infty,\infty]$ and assume that the 
+function $p$ has verbatim the same properties as $g$, after replacing the space $\Hx$ with $\Hl$. 
+We also denote $\sH$ the Fenchel conjugate of $\sP(\lambda) = \bE_\mu p(\cdot,\lambda)$, so that $\sH^\star(\lambda) = \bE_\mu p(\cdot,\lambda)$.
+
+Finally, let $L : \Xi \to \cL(\Hx,\Hl)$ be an
+operator-valued measurable function. Let us assume that $\| L \|$ is $\mu$-integrable, and let us
+introduce the Lebesgue integral $\sL = \bE_\mu L$.
+
+Having introduced these functions, our purpose is to find a solution 
+$x \in \Hx$ of Problem~\eqref{pb},  
+where the set of such points is assumed non empty. 
+To solve this problem, the observer is given the functions 
+$f, g, p, L$, and a sequence of i.i.d random variables 
+$(\xi_n)_{n\in\bN}$ from a probability space $(\Omega, \mcF, \bP)$ to 
+$(\Xi, \mcG)$ with the probability distribution $\mu$. 
+
+Denote as $\prox_{h}(x) = \arg\min_{y \in \Hx} h(y) + \|y-x\|^2 / 2$ the
+Moreau's proximity operator of a function $h \in \Gamma_0(\Hx)$.  We also
+denote as $\partial_0 h(x)$ the least norm element of the set 
+$\partial h(x)$, which is known to exist and to be 
+unique \cite{bau-com-livre11}. 
+% As is well known, 
+% $\partial_0 h(x) = \lim_{\gamma\downarrow 0} \nabla h_\gamma(x)$, where
+% $h_\gamma$ is Moreau's envelope of $h$ for $\gamma > 0$, which is the
+% differentiable function defined as  
+% $h_\gamma(x) = \min_{y \in \Hx} h(y) + \|y-x\|^2 / (2\gamma)$. 
+Similarly, $\partial_0 f(s,x)$ will refer to the least
+norm element of $\partial f(s,x)$ which was introduced above. We shall also
+denote as $\wn f(s,x)$ a measurable subgradient of $f(s,\cdot)$ at $x$. More precisely, $\wn f : (\Xi \times \Hx, \mcG \otimes \mcB(\Hx)) \to (\Hx, \mcB(\Hx))$ is a measurable function such 
+that for each $x\in \Hx$, $\wn f(\cdot, x) \in \Selec^1_{\partial f(\cdot,x)}$
+(recall that this set is non empty). A possible choice for 
+$\wn f(s, x)$ is $\partial_0 f(s,x)$ (see \cite[\S2.3 and \S3.1]{bia-hac-16} 
+for the measurability issues).
+Turning back to Problem~\eqref{pb}, our purpose will be to find a saddle point
+of the Lagrangian 
+$(x,\lambda) \mapsto \sF(x) + \sG(x) - \sH^\star(\lambda) + \ps{\sL x, \lambda}$. Denoting as $\cS \subset \Hx
+\times \Hl$ the set of these saddle points, an element $(x, \lambda)$ of
+$\cS$ is characterized by the inclusions 
+\begin{equation}
+\label{selle}
+  \left\{
+    \begin{array}[h]{lccl}
+      0 & \in & \partial \sF(x) + \partial \sG(x)& + \sL^T\lambda , \\
+      0 & = & -\sL x& + \partial \sH^\star(\lambda)\,. 
+    \end{array}
+\right.
+% \nonumber 
+\end{equation}
+
+Consider a sequence of positive weights $(\gamma_n)_{n\in\bN}$. The algorithm proposed here consists in the following iterations applied to
+the random vector $(x_n,\lambda_n) \in \Hx \times \Hl$. 
+
+\begin{algorithm}
+\caption{The Main Algorithm : Solving Problem~\eqref{pb}}
+\label{theta=0}
+\begin{equation*} 
+  \begin{split}
+    x_{n+1} &= \prox_{\gamma_{n+1} g(\xi_{n+1},\cdot)}
+  \left(
+    x_n -\gamma_{n+1}(\wn f(\xi_{n+1}, x_n)+L(\xi_{n+1})^T \lambda_n)
+     \right),  \\
+    \lambda_{n+1} &= \prox_{\gamma_{n+1} p(\xi_{n+1},\cdot)} \left( \lambda_n +
+    \gamma_{n+1}
+    L(\xi_{n+1}) x_{n} \right)  \,.
+  \end{split}
+\end{equation*}
+\end{algorithm}
+
+We also give the instance of the main algorithm that allows to solve Problem~\eqref{pbcons} (which is a instance of Problem~\eqref{pb}).
+
+\begin{algorithm}
+\caption{Stochastic Linear Constraints : Solving Problem~\eqref{pbcons}}
+\label{theta=0-cons}
+\begin{equation*} 
+  \begin{split}
+    x_{n+1} &= \prox_{\gamma_{n+1} g(\xi_{n+1},\cdot)}
+  \left(
+    x_n -\gamma_{n+1}(\wn f(\xi_{n+1}, x_n)+L(\xi_{n+1})^T \lambda_n)
+     \right),  \\
+    \lambda_{n+1} &= \lambda_n +
+    \gamma_{n+1}
+    \left(L(\xi_{n+1}) x_{n} - c(\xi_{n+1}) \right)  \,.
+  \end{split}
+\end{equation*}
+\end{algorithm}
+
+The convergence of Algorithm~\ref{theta=0} is stated by the following theorem. 
+
+\begin{theorem}
+\label{th:theta0}
+Consider the Problem~\eqref{pb}, and let the following assumptions hold true. 
+
+\begin{enumerate} 
+\item\label{step} The step size sequence satisfies 
+ $(\gamma_n) \in \ell^2 \setminus \ell^1$, and 
+ $\gamma_{n+1} / \gamma_n \rightarrow 1$ as $n\to\infty$. 
+% \item\label{empty} The set $\cS$ is not empty.\asnote{Intersection avec l'hyp qui suit}
+\item\label{sm} There exists an integer $m\geq 2$ that satisfies the following 
+ conditions: 
+ \begin{itemize} 
+  \item The function $L$ is in $\mcL^{2m}(\mu)$. 
+  \item There exists a point $(x_\star, \lambda_\star) \in \cS$, and 
+  three functions 
+  $\varphi_f \in \Selec^{2m}_{\partial f(\cdot, x_\star)}$,
+  $\varphi_g \in \Selec^{2m}_{\partial g(\cdot, x_\star)}$, and    
+  $\varphi_p \in \Selec^{2m}_{\partial p(\cdot, \lambda_\star)}$ which 
+  \begin{equation}
+  \label{phif} 
+  \bE_\mu \varphi_f +
+  \bE_\mu \varphi_g + \sL^T \lambda_\star = 0, \ \text{and } \ -\sL x_\star +
+  \bE_\mu \varphi_p = 0. 
+  \end{equation} 
+ The last assumption is verified for $m=1$ and for each point 
+ $(x_\star, \lambda_\star) \in \cS$. 
+ \end{itemize} 
+
+\item\label{d0} For any compact set $K$ of $\dom\partial \sG$, there exist
+ $\varepsilon \in (0,1]$ and $x_0 \in \dom\partial \sG$ such that 
+\begin{equation*}
+\sup_{x \in K} \bE \|\partial_0 g(\cdot, x)\|^{1+\varepsilon} < +\infty, 
+\ \text{and } \ 
+\bE \|\partial_0 g(\cdot, x_0)\|^{1+1/\varepsilon} < +\infty.
+\end{equation*}
+
+\item\label{reglin} Writing $D_{\partial g}(s) = \dom \partial g(s, \cdot)$, 
+there exists $C >0$ such that for all $x \in \Hx$,
+\[
+\bE_\mu \dist( x, D_{\partial g}(\cdot))^2 \geq C \dist(x, \dom \partial \sG)^2. 
+\]
+
+\item\label{projo} There exists $C > 0$ such that for any $x \in \Hx$ and any 
+$\gamma >0$,
+\[
+\int \|\prox_{\gamma g(s, \cdot)}(x) - \Pi_{g}(s,x)\|^4 \mu(ds) 
+\leq C \gamma^4 (1+\|x\|^{2m}), 
+\]
+where $\Pi_g(s,\cdot)$ is the projection operator onto
+$\cl(\dom \partial g(s, \cdot))$, and where $m$ is the integer provided by
+Assumption~\ref{sm}. 
+\end{enumerate} 
+
+Assumptions similar to \ref{d0}--\ref{projo} are made on the function $p$ and $\sP$. 
+
+\begin{enumerate}[resume] 
+\item\label{croissance} There exists a measurable $\Xi \to \bR_+$ function 
+$\beta$ such that $\beta^{2m}$ is $\mu$-integrable, where $m$ is the integer
+provided by Assumption~\ref{sm}, and such that for all $x \in \Hx$,
+$$
+\|\wn f(s, x)\| \leq \beta(s) (1+\|x\|).
+$$
+Moreover, there exists a constant $C > 0$ such that 
+$\bE_\mu \|\wn f(\cdot, x)\|^4 \leq C (1+\|x\|^{2m})$. \\ 
+
+\end{enumerate}
+
+Consider the sequence of iterates $(x_n,\lambda_n)$ produced by 
+the algorithm~\eqref{theta=0}, and define the averaged estimates 
+\[
+\bar x_n = \frac{\sum_{k=1}^n \gamma_k x_k}{\sum_{k=1}^n \gamma_k} , \ 
+\text{and} \ 
+\bar \lambda_n = 
+  \frac{\sum_{k=1}^n \gamma_k \lambda_k}{\sum_{k=1}^n \gamma_k} . 
+\]
+Then, the sequence $(x_n,\lambda_n)$ is bounded in $\mcL^{2m}(\Omega)$ and the sequence $(\bar x_n, \bar \lambda_n)$ converges almost 
+surely (a.s.) to a random variable $(X,\Lambda)$ supported by $\cS$. 
+\end{theorem}
+
+
+
+Let us now discuss our assumptions. Assumption~\ref{step} is standard in 
+the decreasing step case. Assumption~\ref{sm} is a moment assumption that is
+generally easy to check. Note that this assumption requires the set of
+saddle points $\cS$ to be non empty. Notice the relation between Equations~\eqref{phif}
+and the two inclusions in~\eqref{selle}. Focusing on the first 
+inclusion, there exist 
+$a \in \partial F(x_\star) = \bE_\mu\partial f(\cdot, x_\star)$ and 
+$b \in \partial G(x_\star) = \bE_\mu\partial g(\cdot, x_\star)$ such that
+$0 = a + b + \sL^T \lambda_\star$. Then, Assumption~\ref{sm} states that there are two measurable
+selections $\varphi_f$ and $\varphi_g$ of 
+$\partial f(\cdot, x_\star)$ and $\partial g(\cdot, x_\star)$ respectively
+which are both in $\mcL^{2m}(\mu)$ and which satisfy $a = \bE_\mu\varphi_f$ and
+$b = \bE_\mu\varphi_g$. Not also that the larger is $m$, and the weaker is 
+Assumption~\ref{projo}. 
+
+Assumption~\ref{d0} is relatively weak and easy to check. This assumption on
+the functions $g$ and $p$ is much weaker than Assumption~\ref{croissance},
+which assumes that the growth of $\wn f(s, \cdot)$ is not
+faster than linear. This is due to the fact that $g$ and $p$ enter the
+algorithm~\eqref{theta=0} through the proximity operator while the function
+$f$ is used explicitly in this algorithm (through its (sub)gradient). This use of the functions
+$f$ is reminiscent of the well-known Robbins-Monro algorithm, where a linear growth is needed to ensure the
+algorithm stability. Note that Assumption~\ref{croissance} is satisfied under the more restrictive assumption that $\nabla f(s,\cdot)$ is $L$-Lipschitz continuous without any bounded gradient assumption.  
+
+Assumption~\ref{reglin} is quite weak, and is studied \textit{e.g} in~\cite{necoara2018randomized}. This assumption is easy to illustrate in the case
+where $g(s,x) = \iota_{\mC_s}(x)$ as in~\eqref{intercpct}.
+Following~\cite{bauschke1999strong}, we say that the subsets
+$(\mC_1,\dots,\mC_m)$ are linearly regular if there exists $C>0$ such that for
+every $x$, 
+\[
+\max_{i=1\dots m} \dist(x,\mC_i)\geq C \dist(x,\mC) . 
+\]
+Sufficient conditions for a collection of sets to satisfy the above condition
+can be found in \cite{bauschke1999strong} and the references therein. Note that
+this condition implies that $N_{\mC}(x) = \sum_{i=1}^m N_{\mC_i}(x)$. 
+Let us finally discuss Assumption~\ref{projo}. As $\gamma\to 0$, it is known
+that $\prox_{\gamma g (s,\cdot)}(x)$ converges to $\Pi_g(s,x)$ for every 
+$(s,x)$. Assumption~\ref{projo} provides a control on the convergence rate. 
+This assumption holds under the sufficient condition that for $\mu$-almost 
+every $s$ and for every $x\in \dom \partial g(s,\cdot)$,
+\[
+\|\partial g_0(s,x)\|\leq \beta(s)(1+\|x\|^{m/2})\, , 
+\]
+where $\beta$ is a positive random variable with a finite fourth 
+moment~\cite{bia-16}. 
+
+
+\section{Proof of Theorem~\ref{th:theta0}} 
+\label{sec:proof}
+
+The proof of Theorem~\ref{th:theta0} employs the monotone operator theory. We
+begin by recalling some basic facts on monotone operators. All the results
+below can be found in \cite{bre-livre73,bau-com-livre11} without further
+mention. 
+
+
+A set-valued mapping $\sA : \Hx \rightrightarrows \Hx$ on the Euclidean space
+$\Hx$ will be called herein an operator. An operator with singleton values is identified with a function. As above, the domain of $\sA$  
+is $\dom(\sA) = \{ x \in \Hx \, : \, \sA(x) \neq \emptyset \}$. The graph
+of $\sA$ is $\graph(\sA) = \{ (x,y) \in \Hx\times\Hx \, : \, y \in \sA(x) \}$.  
+The operator $\sA$ is said monotone if 
+$\forall (x,y),(x',y')\in \graph(\sA)$, 
+$\ps{y-y',x-x'}\geq 0$. A monotone operator with non empty domain is said
+maximal if $\graph(\sA)$ is a maximal element for the inclusion ordering in 
+the family of the monotone operator graphs. 
+Let $I$ be the identity operator, and let $\sA^{-1}$ be the inverse of $\sA$,
+which is defined by the fact that 
+$(x,y) \in \graph(\sA^{-1}) \Leftrightarrow (y,x) \in \graph(\sA)$.  An
+operator $\sA$ belongs to the set $\maxmon(\Hx)$ of the maximal monotone 
+operators on $\Hx$ if and only if for each $\gamma > 0$, the so-called 
+resolvent $( I + \gamma \sA )^{-1}$ is a contraction defined on the whole 
+space $\Hx$. In particular, it is single-valued. 
+A typical element of $\maxmon(\Hx)$ is the subdifferential $\partial \sG$ of a
+function $\sG \in \Gamma_0(\Hx)$. In this case, the resolvent 
+$( I + \gamma\partial \sG)^{-1}$ for $\gamma > 0$ coincides with 
+the proximity operator $\prox_{\gamma \sG}$. 
+A skew-symmetric element of $\cL(\Hx, \Hx)$ can also be checked to be an 
+element of $\maxmon(\Hx)$. 
+
+The set of zeros of an operator $\sA$ on $\Hx$ is the set 
+$Z(\sA) =  \{ x \in\Hx \, : \, 0 \in \sA(x) \}$. The sum of two operators
+$\sA$ and $\sB$ is the operator $\sA + \sB$ whose image at $x$ is the
+set sum of $\sA(x)$ and $\sB(x)$. 
+Given two operators $\sA, \sB \in \maxmon(\Hx)$, where $\sB$ is 
+single-valued with domain $\Hx$, the so-called Forward-Backward algorithm is
+an iterative algorithm for finding a point in $Z(\sA + \sB)$. It reads
+\[
+x_{n+1} = ( I + \gamma \sA )^{-1} ( x_n - \gamma \sB(x_n) ) \, 
+\]
+where $\gamma$ is a positive step. 
+
+In the sequel, we shall be interested by random elements of $\maxmon(\Hx)$ as
+used in \cite{bia-16,bia-hac-16,bia-hac-sal-(sub)jca17}. Consider a function 
+$A : \Xi \to\maxmon(\Hx)$, where $(\Xi, \mcG, \mu)$ is the probability space 
+introduced at the beginning of Section~\ref{sec:pb}. By the maximality of 
+$A(s)$, the graph $\graph(A(s))$ is known to be a closed subset of 
+$\Hx\times\Hx$. By saying that $A(\cdot)$ is a $\maxmon(\Hx)$-valued 
+random variable, we mean that the function $s\mapsto \graph(A(s))$ is 
+measurable according to the definition of Section~\ref{sec:pb}. 
+When $A(s) = \partial h(s,\cdot)$, where $h:\Xi\times\Hx \to (-\infty,\infty]$ 
+is a convex normal integrand such as $h(s,\cdot)$ is proper $\mu$-a.e., $A$ 
+is a random element of $\maxmon(\Hx)$. Finally, when $A(s)$ is a skew-symmetric element 
+of $\cL(\Hx, \Hx)$ which is measurable in the usual sense (as a 
+$\Xi \to \cL(\Hx, \Hx)$ function), then it is also a random element of 
+$\maxmon(\Hx)$. 
+% We also need to
+% define the expectation of this random variable. We define the essential 
+% intersection $D$ of the domains of the operators $A(s)$ as 
+% \[
+% D = \bigcup_{G \in {\mcG} : \mu(G) = 0} \ 
+% \bigcap_{s \in \Xi \setminus G} \dom A(s) \, , 
+% \]
+% Denote as $A(s,x)$ the image of $x$ by $A(s)$. Let us assume that 
+% $D\neq\emptyset$, and that the set-valued mapping $A(\cdot, x)$ is integrable 
+% for each $x\in D$. We then define the mean operator $\sA$ by the equation
+% $\sA(x) = \bE_\mu A(\cdot, x)$ for all $x\in D$, where $\bE_\mu$ is the 
+% selection integral defined by~\eqref{selint}.  \\ 
+\\
+
+We now enter the proof of Theorem~\ref{th:theta0}. Let us set 
+$\Hy = \Hx\times\Hl$, and endow this Euclidean space with the 
+standard scalar product. By writing $(x,\lambda) \in \Hy$, it will be 
+understood that $x \in \Hx$ and $\lambda\in \Hl$. 
+ 
+For each $s \in \Xi$, define the set-valued operator $A(s)$ on $\Hy$ as 
+\[
+A(s, (x,\lambda) ) = \begin{bmatrix} \partial g(s,x) \\ \partial p(s,\lambda) \end{bmatrix} ,
+\]
+where $A(s, (x,\lambda))$ is the image of $(x,\lambda)$ by $A(s)$. 
+Fixing $s\in\Xi$, the operator $A(s, (x,\lambda))$ coincides with the 
+subdifferential of the convex normal integrand 
+$g(s,x) + p(s,\lambda)$ with respect to $(x,\lambda)$. Thus, the 
+map $s\mapsto A(s)$ is a measurable $\Xi\to\maxmon(\Hy)$ function. Let us also 
+define the operator $B(s)$ as 
+\[
+B(s, (x,\lambda)) = 
+\begin{bmatrix}
+   \partial f(s, x)& + L(s)^T \lambda \\
+    -L(s) x&  
+\end{bmatrix} . 
+\]
+We can write $B(s) = B_1(s) + B_2(s)$, where 
+\[
+B_1(s, (x,\lambda)) = \begin{bmatrix} \partial f(s,x) \\
+ 0 \end{bmatrix}, \qquad B_2(s) = \begin{bmatrix} 0 & L(s)^T \\
+                     -L(s) & 0 \end{bmatrix}
+\]
+($B_2(s)$ is a linear skew-symmetric operator written in a 
+matrix form in $\Hy$). For each $s\in\Xi$, both these operators belong to $\maxmon(\Hy)$, and 
+$\dom B_2(s) = \Hy$. Thus, $B(s) \in \maxmon(\Hy)$ by 
+\cite[Cor.~24.4]{bau-com-livre11}. Moreover, since both $B_1$ and $B_2$ 
+are measurable, $B$ is a $\maxmon(\Hy)$-valued random variable. 
+
+Now, from the assumptions on the functions $f,g$, and $p$, we see that 
+the operators $\sA = \bE_\mu A$ and $\sB = \bE_\mu B$, where $\bE_\mu$
+is the selection integral~\eqref{selint}, are written as 
+\[
+\sA(x,\lambda) = \begin{bmatrix} \partial \sG(x) \\ \partial \sH^\star(\lambda) \end{bmatrix}, \ \text{and } \ 
+\sB(x,\lambda) = \begin{bmatrix} \partial \sF(x)&  + \sL^T \lambda \\ -\sL x& \end{bmatrix} .
+\]
+For the same reasons as for the operators $A(s)$ and $B(s)$, it holds that
+$\sA$, $\sB$, and $\sA + \sB$ belong to $\maxmon(\Hy)$. Moreover, recalling 
+the system of inclusions \eqref{selle}, we also obtain that 
+$\cS = Z(\sA + \sB)$. 
+
+Defining the function 
+\[
+b(s, (x,\lambda)) = 
+\begin{bmatrix} 
+   \wn f(s, x)& + L(s)^T \lambda \\
+    -L(s) x& 
+\end{bmatrix}  
+\]
+(obviously, $b(s, (x,\lambda)) \in B(s, (x,\lambda))$ $\mu$-a.e.), let us 
+consider the following version of the Forward-Backward algorithm
+\begin{equation*} 
+  (x_{n+1}, \lambda_{n+1})
+= 
+\left( I + \gamma_{n+1} A(\xi_{n+1}, \cdot) \right)^{-1} 
+ \left( (x_n, \lambda_n) 
+     - \gamma_{n+1} b(\xi_{n+1}, (x_n,\lambda_n))  \right) .
+\end{equation*} 
+On the one hand, one can easily check that this is exactly Algorithm~\eqref{theta=0}. 
+On the other hand, this algorithm is an instance of the random Forward-Backward
+algorithm studied in \cite{bia-hac-16}.  By checking the assumptions of
+Theorem~\ref{th:theta0} one by one, one sees that the assumptions of
+\cite[Th.~3.1 and Cor.~3.1]{bia-hac-16} are verified. Theorem~\ref{th:theta0}
+follows. 
+\begin{remark}
+The convergence stated by Theorem~\ref{th:theta0} concerns the averaged 
+sequence $(\bar x_n, \bar\lambda_n)$. One can ask whether the 
+sequence $(x_n, \lambda_n)$ itself converges to $\cS$. A counterexample is provided by the particular case $\Hx = \Hl = \bR$, $f = g = p = 0$, and $L = 1$ (proof omitted). A pointwise convergence would have been possible if $\sA+\sB$ were so-called \textit{demipositive}~\cite{bia-hac-16}. Note that in the previous counterexample, $\sA + \sB = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$ is not demipositive.
+\end{remark}
+\begin{remark}
+Constant step Forward-Backward algorithms usually require the operator $\sB$ to be so-called \textit{cocoercive}. This property is not needed if a decreasing step size is used~\cite{pey-sor-10,bia-hac-16}.
+\end{remark}
+
+
+
+
+
+%\section{Optimization under stochastic linear constraints}
+%\label{sec:lincons}
+%Finally, we mention a particular instance of Algorithm~\eqref{theta=0}. Let $c : \Xi \to \Hl$ be an
+%vector-valued measurable function. Let us assume that $\| c(\cdot) \|$ is $\mu$-integrable, and let us
+%introduce the Lebesgue integral $\sfc = \bE_\mu c(\cdot)$. Problem~\eqref{pb} with $\sH(\lambda) = \iota_{\{\sfc\}}(\lambda)$ is equivalent to
+%\begin{equation} 
+%\label{pbcons2} 
+%\min_{x \in \Hx} \sF(x) + \sG(x) \quad \text{s.t.} \quad \sL x = \sfc
+%\end{equation} 
+%Noting that $\sH^\star(\lambda) = \ps{\lambda,\sfc} = \bE_\mu(\ps{\lambda,c(\cdot)})$, Algorithm~\eqref{theta=0} can be applied with $p(s,\lambda) = \ps{\lambda,c(s)}$ leading to the following algorithm.
+%\begin{algorithm}
+%\caption{Stochastic linear constraints}
+%\label{theta=0-cons}
+%\begin{equation*} 
+%  \begin{split}
+%    x_{n+1} &= \prox_{\gamma_{n+1} g(\xi_{n+1},\cdot)}
+%  \left(
+%    x_n -\gamma_{n+1}(\wn f(\xi_{n+1}, x_n)+L(\xi_{n+1})^T \lambda_n)
+%     \right),  \\
+%    \lambda_{n+1} &= \lambda_n +
+%    \gamma_{n+1}
+%    \left(L(\xi_{n+1}) x_{n} - c(\xi_{n+1}) \right)  \,.
+%  \end{split}
+%\end{equation*}
+%\end{algorithm}
+
+
+
+%Algorithm~\eqref{theta=0-cons} allows to handle linear constraints online.
+
+
+% \section{Generalization of the Algorithm~\eqref{theta=0}}
+
+% It is interesting to ask whether there exists a stochastic version of existing primal dual algorithms like~\cite{chambolle-pock} or~\cite{con-jota13} to solve Problem~\eqref{eq:primal}. To answer this question, we introduce a generalization of Algorithm~\eqref{theta=0} depending on a parameter $\theta \in [0,2]$, and then we relate it to Vu-Condat algorithm (\cite{Vu,con-jota13}).
+
+% Consider $\theta \in [0,2]$ and the following iterations applied to the random vector $(x_n,z_n,\lambda_n) \in \Hx \times \Hz \times \Hl$ : 
+% \begin{equation} 
+% \label{theta}
+%   \begin{split}
+%     x_{n+1} &= \prox_{\gamma_{n+1} g(\xi_{n+1},\cdot)}
+%   \left(
+%     x_n -\gamma_{n+1}(\wn f(\xi_{n+1}, x_n)+A(\xi_{n+1})^T \lambda_n)
+%      \right),  \\
+%     z_{n+1} &= \prox_{\gamma_{n+1} q(\xi_{n+1},\cdot)}
+%        \left(
+%     z_n-\gamma_{n+1}(\wn p(\xi_{n+1}, z_n)+B(\xi_{n+1})^T \lambda_n)
+%      \right), \\
+%     \lambda_{n+1} &= \lambda_n +
+%     \gamma_{n+1} \left(
+%     A(\xi_{n+1}) (x_{n} + \theta(x_{n+1} - x_n)) + B(\xi_{n+1})(z_{n} + \theta(z_{n+1} - z_n)) - c(\xi_{n+1}) \right) \,.
+%   \end{split}
+% \end{equation} 
+% where $(\gamma_n)_{n\in\bN}$ is a sequence of positive weights.
+% If $\theta = 0$, then Algorithm~\eqref{theta} boils down to~\eqref{theta=0}.
+
+% \begin{theorem}
+% \label{th:theta}
+% Consider the Problem~\eqref{pb}, and let the assumptions of Theorem~\ref{th:theta0} holds true.
+% Assume moreover that $A(\cdot), B(\cdot) \in \mcL^{\infty}(\mu)$.
+
+% Consider the sequence of iterates $(x_n,z_n,\lambda_n)$ produced by 
+% the algorithm~\eqref{theta}, and define the averaged estimates 
+% \[
+% \bar x_n = \frac{\sum_{k=1}^n \gamma_k x_k}{\sum_{k=1}^n \gamma_k} , \ 
+% \bar z_n = \frac{\sum_{k=1}^n \gamma_k z_k}{\sum_{k=1}^n \gamma_k} , \ 
+% \text{and} \ 
+% \bar \lambda_n = 
+%   \frac{\sum_{k=1}^n \gamma_k \lambda_k}{\sum_{k=1}^n \gamma_k} . 
+% \]
+% Then, the sequence $(\bar x_n, \bar z_n, \bar\lambda_n)$ converges almost 
+% surely (a.s.) to a random variable $(X,Z,\Lambda)$ supported by $\cS$. 
+
+% \end{theorem}
+
+% Before entering the proof of Theorem~\ref{th:theta}, consider Algorithm~\eqref{theta}, in the case $\theta = 2$. The resulting algorithm is a stochastic version of Vu-Condat algorithm. Roughly speaking, assuming that $f$ and $p$ are smooth, each iteration of this algorithm is a Forward-Backward applied to two random monotone operators (where one is cocoercive), under a metric depending on $A(\xi_{n+1})$ and $B(\xi_{n+1})$. More precisely, consider the blockwise defined random linear operator $V_n$ by
+% $$V_{n} = \begin{bmatrix}
+% I_\Hx &  & -\gamma_{n} A(\xi_{n})^T \\
+%  & I_\Hz & -\gamma_{n} B(\xi_{n})^T \\
+% -\gamma_{n} A(\xi_{n}) & -\gamma_{n} B(\xi_{n}) & I_{\Hl} \\ 
+% \end{bmatrix}$$   
+% for every $n \geq 1$, where an empty space stands for a zero operator and $I_\Hx$ stands for the identity of the space $\Hx$ (and similarly for $\Hz$ and $\Hl$). It is clear that under the assumptions of Theorem~\ref{th:theta}, $V_n$ is a.s a positive definite matrix if $n$ is large enough. Moreover it is easy to check that the iterates of Algorithm~\eqref{theta} satisfy a.s the following inclusion for every $n \geq 1$:  
+
+% %  Hence, $\sP$ induces an inner product over $\sX \times \sZ \times \sLam$. If all the random variables involved in Algorithm~\eqref{eq:main} have Dirac distribution (deterministic setting) and if the step size is constant, then the iterations of Algorithm~\eqref{eq:main} can be implicitly defined by 
+
+% \begin{equation}
+% \label{eq:vucondatmetric}
+% V_{n+1} \begin{bmatrix}
+% x_{n+1} - x_n \\
+% z_{n+1} - z_n \\
+% \lambda_{n+1} - \lambda_n 
+% \end{bmatrix} \in -\gamma_{n+1} U'(\xi_{n+1}, (x_n,z_n,\lambda_n)) - \gamma_{n+1} U(\xi_{n+1}, (x_{n+1},z_{n+1},\lambda_{n+1}))
+% \end{equation}
+% where 
+% \begin{equation*}
+% U'(s,(x,z,\lambda)) = \begin{bmatrix} \nabla f(s,x) \\ \nabla p(s,z) 
+%          \\ 0 \end{bmatrix}
+%          \qquad \text{and} \qquad 
+% U(s,(x,z,\lambda)) = \begin{bmatrix} 
+%    \partial g(s, x) + A(s)^T \lambda \\
+%    \partial q(s, z) + B(s)^T\lambda \\
+%     -A(s) x - B(s) z + c(s)
+% \end{bmatrix}  
+% \end{equation*}
+% are random element of $\maxmon(\Hy)$. If $\Hy$ is equipped with the inner product induced by $V_n$ instead of the Euclidean inner product, then it is easy to check that $V_{n}^{-1} U'(\xi_{n})$ and $V_{n}^{-1} U'(\xi_{n})$ are random element of $\maxmon(\Hy)$ under this new metric. Hence, the inclusion~\eqref{eq:vucondatmetric} is a stochastic Forward Backward iteration in the space $\Hy$ equipped with the metric $V_{n+1}$, applied to the monotone operators $V_{n+1}^{-1} U'(\xi_{n+1})$ and $V_{n+1}^{-1} U'(\xi_{n+1})$. Using this remark~\cite{con-jota13} and~\cite{vu} show the convergence of this algorithm in the deterministic setting. However, this remark cannot be used directly in our stochastic setting because the metric $V_n$ is random. To prove Theorem~\eqref{th:theta}, we prefer to relate Algorithm~\eqref{theta} and Algorithm~\eqref{theta=0}.
+
+% \subsection{Proof of Theorem~\ref{th:theta}}
+
+
+
+\def\cprime{$'$} \def\cdprime{$''$} \def\cprime{$'$}
+\begin{thebibliography}{10}
+
+\bibitem{chambolle2011first}
+A.~Chambolle and T.~Pock.
+\newblock A first-order primal-dual algorithm for convex problems with
+  applications to imaging.
+\newblock {\em Journal of mathematical imaging and vision}, 40(1):120--145,
+  2011.
+
+\bibitem{vu2013splitting}
+B.~C. V{\~u}.
+\newblock A splitting algorithm for dual monotone inclusions involving
+  cocoercive operators.
+\newblock {\em Advances in Computational Mathematics}, 38(3):667--681, 2013.
+
+\bibitem{con-jota13}
+L.~Condat.
+\newblock A primal-dual splitting method for convex optimization involving
+  {L}ipschitzian, proximable and linear composite terms.
+\newblock {\em Journal of Optimization Theory and Applications},
+  158(2):460--479, 2013.
+
+\bibitem{bau-com-livre11}
+H.~H. Bauschke and P.~L. Combettes.
+\newblock {\em Convex analysis and monotone operator theory in {H}ilbert
+  spaces}.
+\newblock CMS Books in Mathematics/Ouvrages de Math\'ematiques de la SMC.
+  Springer, New York, 2011.
+
+\bibitem{bia-hac-16}
+P.~Bianchi and W.~Hachem.
+\newblock Dynamical behavior of a stochastic forward-backward algorithm using
+  random monotone operators.
+\newblock {\em Journal of Optimization Theory and Applications},
+  171(1):90--120, 2016.
+
+\bibitem{ouyang2013stochastic}
+H.~Ouyang, N.~He, L.~Tran, and A.~Gray.
+\newblock Stochastic alternating direction method of multipliers.
+\newblock In {\em International Conference on Machine Learning}, pages 80--88,
+  2013.
+
+\bibitem{rosasco2015stochastic}
+L.~Rosasco, S.~Villa, and B.~C. V{\~u}.
+\newblock Stochastic inertial primal-dual algorithms.
+\newblock {\em arXiv preprint arXiv:1507.00852}, 2015.
+
+\bibitem{yu2017online}
+H.~Yu, M.~Neely, and X.~Wei.
+\newblock Online convex optimization with stochastic constraints.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1427--1437, 2017.
+
+\bibitem{combettes2016stochastic}
+P.~L. Combettes and J.~C. Pesquet.
+\newblock Stochastic forward-backward and primal-dual approximation algorithms
+  with application to online image restoration.
+\newblock In {\em Signal Processing Conference (EUSIPCO), 2016 24th European},
+  pages 1813--1817. IEEE, 2016.
+
+\bibitem{toulis2015stable}
+P.~Toulis, T.~Horel, and E.~M. Airoldi.
+\newblock Stable robbins-monro approximations through stochastic proximal
+  updates.
+\newblock {\em arXiv preprint arXiv:1510.00967}, 2015.
+
+\bibitem{patrascu2017nonasymptotic}
+A.~Patrascu and I.~Necoara.
+\newblock Nonasymptotic convergence of stochastic proximal point algorithms for
+  constrained convex optimization.
+\newblock {\em Journal of Machine Learning Research}, May 2017.
+
+\bibitem{bia-16}
+P.~Bianchi.
+\newblock Ergodic convergence of a stochastic proximal point algorithm.
+\newblock {\em SIAM Journal on Optimization}, 26(4):2235--2260, 2016.
+
+\bibitem{atchade2017perturbed}
+Y.~F. Atchad{\'e}, G.~Fort, and E.~Moulines.
+\newblock On perturbed proximal gradient algorithms.
+\newblock {\em Journal of Machine Learning Research}, 18(1):310--342, 2017.
+
+\bibitem{bia-hac-sal-(sub)jca17}
+P.~Bianchi, W.~Hachem, and A.~Salim.
+\newblock A constant step {F}orward-{B}ackward algorithm involving random
+  maximal monotone operators.
+\newblock {\em To appear in Journal of Convex Analysis}, 2019.
+
+\bibitem{att-79}
+H.~Attouch.
+\newblock Familles d'op\'erateurs maximaux monotones et mesurabilit\'e.
+\newblock {\em Annali di Matematica Pura ed Applicata}, 120(1):35--111, 1979.
+
+\bibitem{roc-wet-82}
+R.~T. Rockafellar and R.~J.-B. Wets.
+\newblock On the interchange of subdifferentiation and conditional expectations
+  for convex functionals.
+\newblock {\em Stochastics}, 7(3):173--182, 1982.
+
+\bibitem{bauschke1999strong}
+H.~H. Bauschke, J.~M. Borwein, and W.~Li.
+\newblock Strong conical hull intersection property, bounded linear regularity,
+  {J}ameson’s property ({G}), and error bounds in convex optimization.
+\newblock {\em Mathematical Programming}, 86(1):135--160, 1999.
+
+\bibitem{necoara2018randomized}
+I.~Necoara, P.~Richtarik, and A.~Patrascu.
+\newblock Randomized projection methods for convex feasibility problems:
+  conditioning and convergence rates.
+\newblock {\em arXiv preprint arXiv:1801.04873}, 2018.
+
+\bibitem{bre-livre73}
+H.~Br\'ezis.
+\newblock {\em {Op\'erateurs maximaux monotones et semi-groupes de contractions
+  dans les espaces de Hilbert}}.
+\newblock North-Holland mathematics studies. Elsevier Science, Burlington, MA,
+  1973.
+
+\bibitem{pey-sor-10}
+J.~Peypouquet and S.~Sorin.
+\newblock Evolution equations for maximal monotone operators: asymptotic
+  analysis in continuous and discrete time.
+\newblock {\em Journal of Convex Analysis}, 17(3-4):1113--1163, 2010.
+
+\end{thebibliography}
+
+
+
+
+\end{document}
