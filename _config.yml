@@ -29,9 +29,9 @@ minimal_mistakes_skin: "dark"
 author:
   name             : "Adil Salim"
   avatar           : "as.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Third year PhD student at Télécom ParisTech"
-  location         : "E408, 46 rue Barrault, Paris 13"
-  email            : "adil.salim@telecom-paristech.fr"
+  bio              : "Postdoctoral fellow at KAUST"
+  location         : "Al Khwarizmi Bldg 1, King Abdullah University of Science and Technology (KAUST), Thuwal 23955-6900, Kingdom of Saudi Arabia"
+  email            : "adil.salim@kaust.edu.sa"
   uri              :
   bitbucket        :
   codepen          :
@@ -50,7 +50,7 @@ author:
   stackoverflow    : 
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          : "AdilSlm"
   vine             :
   weibo            :
   xing             :
