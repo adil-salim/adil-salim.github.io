@@ -49,6 +49,8 @@ header:
 
 
 ## Reports
+- PhD thesis, [Random monotone operators and application to stochastic optimization](
+https://pastel.archives-ouvertes.fr/tel-01960496/document), under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/)
 
 - Master's thesis, [Processus à accroissements libres]({{site.baseurl}}{% link Research/memoire-de-m2.pdf %}), under the supervision of [Philippe Biane](http://igm.univ-mlv.fr/~biane/)
 
