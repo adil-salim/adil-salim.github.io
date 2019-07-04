@@ -21,13 +21,13 @@ header:
 
 - M. Arbel, A. Korba, A. Salim and A. Gretton "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", submitted, May 2019.
 
-- A. Salim*, A. Korba*, M. Arbel and A. Gretton "[Yet another look at Stein Variational Gradient Descent]", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
+- A. Salim*, A. Korba*, M. Arbel and A. Gretton "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
-- A. Salim "[On Stochastic Primal-Dual Algorithms]", _ICCOPT 2019_, Berlin, Germany. 
+- A. Salim "On Stochastic Primal-Dual Algorithms", _ICCOPT 2019_, Berlin, Germany. 
 
 - A. Salim and W. Hachem "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", submitted, March 2019. 
 
-- S. Schechtman, A. Salim, and P. Bianchi, "[Passty Langevin]", _CAp 2019_, Toulouse, France.
+- S. Schechtman, A. Salim, and P. Bianchi, "Passty Langevin", _CAp 2019_, Toulouse, France.
 
 - A. Salim, P. Bianchi and W. Hachem "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
 
