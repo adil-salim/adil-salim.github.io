@@ -27,7 +27,7 @@ header:
 
 - A. Salim and W. Hachem "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", submitted, March 2019. 
 
-- S. Schechtman, A. Salim, and P. Bianchi, "Passty Langevin", _CAp 2019_, Toulouse, France.
+- S. Schechtman, A. Salim, and P. Bianchi, "[Passty Langevin]({{site.baseurl}}{% link Research/cap2019.pdf %})", _CAp 2019_, Toulouse, France.
 
 - A. Salim, P. Bianchi and W. Hachem "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
 
