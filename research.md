@@ -46,8 +46,13 @@ header:
 
 I have reviewed papers for:
 
-- IEEE Transactions on Signal and Information Processing over Networks
+- Journal of the Royal Statistical Society: Series B
+- NeurIPS
+- Applied Mathematics and Optimization
 - IEEE Transactions on Information Theory
+- IEEE Transactions on Signal and Information Processing over Networks
+- IEEE Signal Processing Letters
+
 
 ## Awards
 
