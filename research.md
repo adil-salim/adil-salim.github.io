@@ -17,6 +17,18 @@ header:
 
 ## Conference papers
 
+- A. Salim, D. Kovalev and P. Richtarik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", submitted, May 2019.
+
+- M. Arbel, A. Korba, A. Salim and A. Gretton "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", submitted, May 2019.
+
+- A. Salim*, A. Korba*, M. Arbel and A. Gretton "[Yet another look at Stein Variational Gradient Descent]", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
+
+- A. Salim "[On Stochastic Primal-Dual Algorithms]", _ICCOPT 2019_, Berlin, Germany. 
+
+- A. Salim and W. Hachem "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", submitted, March 2019. 
+
+- S. Schechtman, A. Salim, and P. Bianchi, "[Passty Langevin]", _CAp 2019_, Toulouse, France.
+
 - A. Salim, P. Bianchi and W. Hachem "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
 
 - A. Salim, P. Bianchi, and W. Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}), an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report and the [Code](https://github.com/adil-salim/Stochastic-DR))
