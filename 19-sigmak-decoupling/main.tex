@@ -1,0 +1,85 @@
+
+\documentclass{article}
+\usepackage{nips_2018,graphicx}
+
+ \usepackage[english]{babel} 
+  \usepackage{times}		
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\DeclareUnicodeCharacter{00A0}{~}
+\usepackage{amssymb,amsmath,amscd,amsfonts,amsthm,bbm,mathrsfs,yhmath}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\usepackage[textwidth=2cm, textsize=footnotesize]{todonotes}  
+\setlength{\marginparwidth}{1.5cm}               %  this goes with todonotes
+\newcommand{\aknote}[1]{\todo[color=cyan!20]{#1}}
+\newcommand{\asnote}[1]{\todo[color=green!]{#1}}
+
+\newcommand{\cF}{{\mathcal F}} 
+\newcommand{\cS}{{\mathcal S}} 
+\newcommand{\cM}{{\mathcal M}} 
+\newcommand{\cP}{{\mathcal P}} 
+
+\newcommand{\cC}{{\mathcal C}} 
+\newcommand{\E}{{{\mathbb E}}} 
+\newcommand{\bR}{{\mathbb R}} 
+\newcommand{\bP}{{\mathbb P}} 
+\newcommand{\bE}{{\mathbb E}} 
+\newcommand{\sX}{{\mathsf X}} 
+
+
+\newcommand{\KL}{\mathop{\mathrm{KL}}\nolimits}
+\newcommand{\tr}{\mathop{\mathrm{tr}}\nolimits}
+\newcommand{\ps}[1]{\langle #1 \rangle}
+\newcommand{\Supp}{\mathop{\mathrm{Supp}}\nolimits}
+
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{condition}{Condition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{example}{Example}
+
+\title{From $\sigma_k$ to Decoupling}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract} 
+
+\end{abstract}
+
+Generally, the goal of this work is to go from the analysis of SGD proposed in the $\sigma_k$ paper~\cite{gorbunov2019unified} to the decoupling paper~\cite{mishchenko2019stochastic}.
+
+In~\cite{gorbunov2019unified}, SGD is analyzed under the following assumptions 
+\begin{assumption}
+Unbiasedness
+\begin{equation}
+    \bE[g^k|x^k] = \nabla f(x^k)
+\end{equation}
+\end{assumption}
+
+We are especially trying to understand the following points.
+\begin{itemize}
+    \item \cite{gorbunov2019unified} provide a tight analysis of SGD, can we generalize it to the setting of~\cite{mishchenko2019stochastic}
+    \item If we particularize~\cite{mishchenko2019stochastic} to the setting of SGD, what kind of analysis do we get? Especially, it allows biased estimate of the gradient.
+    \item In~\cite{mishchenko2019stochastic}, what is the assumption made on $v_t$ ? what is $Y_t$?
+    \item Minibatch analysis of~\cite{mishchenko2019stochastic} 
+\end{itemize}
+
+
+
+\subsubsection*{References}
+\renewcommand\refname{\vskip -1cm}
+\bibliographystyle{apalike}
+\bibliography{biblio,math}
+
+\end{document}
