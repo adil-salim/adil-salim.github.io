@@ -1,0 +1,453 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+
+ \usepackage[english]{babel}   % "babel.sty" + "french.sty"
+% \usepackage[english,francais]{babel} % "babel.sty"
+% \usepackage{french}                  % "french.sty"
+  \usepackage{times}			% ajout times le 30 mai 2003
+ 
+%% --------------------------------------------------------------
+%% CODAGE DE POLICES ?
+%% Si votre moteur Latex est francise, il est conseille
+%% d'utiliser le codage de police T1 pour faciliter la césure,
+%% si vous disposez de ces polices (DC/EC)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\DeclareUnicodeCharacter{00A0}{~}
+
+%% ==============================================================
+% Packages divers (mathématiques, etc.)   
+\usepackage{amssymb,amsmath,amscd,amsfonts,amsthm,bbm,mathrsfs,yhmath}
+%\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+% \usepackage{showkeys}
+\usepackage{hyperref}
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+\DeclareMathOperator{\var}{\mathbb Var}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\zer}{zer}
+\DeclareMathOperator{\aver}{av}
+\DeclareMathOperator{\inter}{int}
+\DeclareMathOperator{\relint}{ri}
+\DeclareMathOperator{\epi}{epi}
+\DeclareMathOperator{\graph}{gr}
+\DeclareMathOperator{\prox}{prox}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\support}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\lev}{lev}
+\DeclareMathOperator{\rec}{rec}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\co}{co}
+\DeclareMathOperator{\clo}{\overline co}
+\DeclareMathOperator{\distC}{\mathsf d}
+\DeclareMathOperator*{\diag}{diag}
+
+\newcommand{\leftnorm}{\left|\!\left|\!\left|}
+\newcommand{\rightnorm}{\right|\!\right|\!\right|}
+
+%\newcommand{\eqdef}{{\stackrel{\text{def}}{=}}} 
+\newcommand{\eqdef}{:=} 
+
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\bs}{\boldsymbol}
+
+\newcommand{\itpx}{{\mathsf x}}
+\newcommand{\sx}{{\mathsf x}}
+\newcommand{\sy}{{\mathsf y}}
+\newcommand{\sz}{{\mathsf z}}
+\newcommand{\sw}{{\mathsf w}}
+\newcommand{\sF}{{\mathsf F}}
+\newcommand{\sH}{{\mathsf H}}
+
+
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\bP}{{{\mathbb P}}} 
+\newcommand{\bE}{{{\mathbb E}}} 
+\newcommand{\bV}{{{\mathbb V}}} 
+\newcommand{\bN}{{{\mathbb N}}} 
+
+% Operators, domains, etc.  
+\newcommand{\mA}{{\mathcal A}} 
+\newcommand{\mB}{{\mathcal B}} 
+\newcommand{\mC}{{\mathcal C}} 
+\newcommand{\mD}{{\mathcal D}} 
+\newcommand{\mO}{{\mathcal O}} 
+\newcommand{\mU}{{\mathcal U}}
+\newcommand{\mX}{{\mathcal X}}
+\newcommand{\mY}{{\mathcal Y}}
+\newcommand{\mZ}{{\mathcal Z}} 
+\newcommand{\bmD}{\cl({\mathcal D})} 
+
+\newcommand{\sA}{{\mathsf A}}
+\newcommand{\sB}{{\mathsf B}}
+\newcommand{\sJ}{{\mathsf J}}
+\newcommand{\sX}{{\mathsf X}}
+\newcommand{\sG}{{\mathsf G}}
+\newcommand{\sY}{{\mathsf Y}}
+
+\newcommand{\maxmon}{{\mathscr M}} 
+\newcommand{\Selec}{{\mathfrak S}} 
+
+% Sigma fields
+\newcommand{\mcA}{{\mathscr A}} 
+\newcommand{\mcB}{{\mathscr B}} 
+\newcommand{\mcN}{{\mathscr N}} 
+\newcommand{\mcT}{{\mathscr T}} 
+\newcommand{\mcI}{{\mathscr I}} 
+\newcommand{\mcF}{{\mathscr F}} 
+\newcommand{\mcG}{{\mathscr G}} 
+\newcommand{\mcX}{{\mathscr X}} 
+
+\newcommand{\cP}{{{\mathcal P}}} 
+\newcommand{\cS}{{{\mathcal S}}} 
+\newcommand{\cZ}{{{\mathcal Z}}} 
+\newcommand{\cG}{{{\mathcal G}}} 
+\newcommand{\cM}{{{\mathcal M}}} 
+\newcommand{\cD}{{{\mathcal D}}} 
+\newcommand{\cE}{{{\mathcal E}}} 
+\newcommand{\cH}{{{\mathcal H}}} 
+\newcommand{\cL}{{{\mathcal L}}}
+\newcommand{\cA}{{{\mathcal A}}}
+\newcommand{\cT}{{{\mathcal T}}} 
+\newcommand{\cN}{{{\mathcal N}}} 
+\newcommand{\cK}{{{\mathcal K}}} 
+\newcommand{\cI}{{{\mathcal I}}} 
+
+% Spaces 
+\newcommand{\Hil}{E}                % Hilbert   
+\newcommand{\Ban}{E}                % Banach   
+\newcommand{\RN}{{{\mathbb R}^N}} 
+\newcommand{\bR}{{{\mathbb R}}} 
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\toL}{\xrightarrow[]{{\mathcal L}}}
+\newcommand{\toweak}{\xrightharpoonup[]{{\mathcal L}}}
+
+\newcommand{\ps}[1]{\langle #1 \rangle}
+
+% 
+% Almost sure convergence
+\newcommand{\toasshort}{\stackrel{\text{as}}{\to}}
+\newcommand{\toaslong}{\xrightarrow[n\to\infty]{\text{a.s.}}}
+
+% Convergence in probability 
+\newcommand{\toprobashort}{\,\stackrel{\mathcal{P}}{\to}\,}
+\newcommand{\toprobalong}{\xrightarrow[n\to\infty]{\mathcal P}}
+%
+% Convergence in law 
+\newcommand{\todistshort}{{\stackrel{\mathcal{D}}{\to}}}
+\newcommand{\todistlong}{\xrightarrow[n\to\infty]{\mathcal D}}
+
+\usepackage[textwidth=2cm, textsize=footnotesize]{todonotes}  
+\setlength{\marginparwidth}{1.5cm}               %  this goes with todonotes
+\newcommand{\pbnote}[1]{\todo[color=cyan!20]{#1}}
+\newcommand{\asnote}[1]{\todo[color=green!20]{#1}}
+\newcommand{\whnote}[1]{\todo[color=magenta]{#1}}
+\newcommand{\wh}[1]{{\color{red} #1}}
+
+%Moreau
+\newcommand{\my}{{{\nabla ^\gamma g}}}
+\newcommand{\myn}{{{\nabla ^{\gamma_{n+1}} g}}}
+%% ==============================================================
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{condition}{Condition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{example}{Example}
+
+
+% Title.
+% ------
+
+\title{Linear convergence of the stochastic Forward Backward Algorithm and applications}
+
+%
+% Single address.
+% ---------------
+
+%
+% For example:
+% ------------
+%\address{School\\
+%	Department\\
+%	Address}
+%
+% Two addresses (uncomment and modify for two-address case).
+% ----------------------------------------------------------
+%\twoauthors
+%  {A. Author-one, B. Author-two\sthanks{Thanks to XYZ agency for funding.}}
+%	{School A-B\\
+%	Department A-B\\
+%	Address A-B}
+%  {C. Author-three, D. Author-four\sthanks{The fourth author performed the work
+%	while at ...}}
+%	{School C-D\\
+%	Department C-D\\
+%	Address C-D}
+%
+\begin{document}
+%\ninept
+%
+\maketitle
+%
+
+
+%%Taux ps comme atcahdé
+%%et en esperance (classic)
+%%Qté sommable dans the theoreme de su candes
+%parler approx sto et de nos articles
+
+\begin{abstract} 
+We prove linear convergence of the stochastic Forward Backward algorithm in Wasserstein distance toward its invariant measure under some strong monotonicity assumption. The rate can be arbitrarily close to zero. These results apply to various algorithms including Chambolle Pock.
+\end{abstract}
+
+%
+%
+
+\section{Introduction}
+Finding a minimizer of a convex function or a saddle point of a convex concave function can be formulated as finding a zero of a maximal monotone operator. A standard method to find a zero of a monotone operator is the Proximal Point algorithm. The Proximal Point algorithm has many instances among minimization and saddle points methods including (in order of generality) proximal descent, Douglas Rachford, ADMM, Chambolle Pock.
+
+The stochastic Proximal Point algorithm can be applied to find a zero of a monotone operator written as an expectation. It admits as instances stochastic versions of the algorithms aforementioned. The iterates of the stochastic Proximal Point algorithm ban be seen as a Markov Chain. Under a strong monotonicity assumption (that boils down to a strong convexity assumption in the particular cases), we prove that this Markov Chain admits an unique invariant measure, and prove linear convergence to this invariant measure in Wasserstein distance. We can identify this invariant measure in the case of the Basic method~\cite{richtarik2017stochastic}, it is the Dirac at at a solution. In the general case, we can bound the distance between the invariant measure and the Dirac at a minimizer. 
+Stochastic version of Primal dual algorithm has been considered e.g. in~\cite{chambolle2018stochastic}. Linear convergence of stochastic optimization algorithm in Wasserstein distance has been considered in~\cite{dieuleveut2017bridging,can2019accelerated}. 
+
+
+\section{Basic Method}
+
+The Basic Method is a random algorithm to solve the linear system $M x = b$. 
+
+The algorithm can be written
+
+It is known that the iterated of the algorithm satisfy
+
+\begin{align*}
+    \|x_{n+1} - x_\star\|^2 =& \|x_{n} - x_\star\|^2 \\
+    &- 2\gamma\ps{g_{n+1},x_n - x_\star} + \gamma^2\|g_{n+1}\|^2\\
+    =& \|x_{n} - x_\star\|^2 \\
+    &- 2\gamma\ps{g_{n+1} - 0,x_n - x_\star} + \gamma^2\|g_{n+1} - 0\|^2\\
+\end{align*}
+
+Denoting $\mu_n$ the distribution of the random variable $x_n$, it can be seen that\asnote{to complete}
+
+where $W$ is the Wasserstein distance of order 2 and $\delta_x$ is the Dirac measure at point $x$.
+
+\section{Stochastic Forward Backward}
+
+We now extend present the stochastic Forward Backward algorithm. 
+
+\subsection{Maximal monotone operators}
+An operator $\sA$ over $H$ is defined as a set valued mapping over $H$, \textit{i.e} a function from $H$ to the set of all subsets of $H$. An operator can be identified to its graph $G(\sA) = \{(x,y) \in H \times H, y \in \sA(x)\}$. The inverse operator $\sA^{-1}$ is defined by $G(\sA) = \{(x,y) \in H \times H, y \in \sA(x)\}$ and the identity map over $H$ is denoted $I$. Given $\lambda \geq 0$, the operator $\sA$ is called $\lambda$-monotone if the following condition holds: 
+\begin{equation}
+\forall (x,y),(x',y') \in G(\sA), \ps{x-x',y-y'} \geq \lambda \|x-x'\|^2,
+\end{equation}
+where $\ps{\cdot,\cdot}$ denotes the inner product of $H$. The operator $\sA$ is called monotone if there exists $\lambda \geq 0$ such that $\sA$ is $\lambda$-monotone, and strongly monotone if $\lambda > 0$.
+
+Moreover, $\sA$ is a maximal monotone operator if $\sA$ is a monotone operator such that $G(\sA)$ is a maximal element (for the inclusion ordering) in the set of all graphs of monotone operators over $H$. It is known that maximal monotone operators are monotone operators for which, for every $\gamma > 0$, $J_{\gamma \sA} = (I + \gamma \sA)^{-1}$ is single valued, \textit{i.e} can be identified with a classical function from $H$ to $H$.
+
+\subsection{Random monotone operators}
+A random monotone operator $A$ is a maximal monotone operator depending on a random variable, \textit{i.e} $A(\cdot,\xi)$ where $\xi$ a random variable. For measurability issues, see~\cite{bia-hac-16}. A classical example is a random subdifferential, $\partial g(\cdot,\xi)$. 
+\subsection{Stochastic Proximal Point algorithm}
+
+The stochastic Proximal Point algorithm can be written
+\begin{equation}
+\label{eq:spp}
+    x_{n+1} = J_{\gamma A(\cdot,\xi_{n+1})}(x_n)
+\end{equation}
+where $\gamma >0$ and $(\xi_n)$ is a sequcen of iid rv.
+We shall rather use the following representation (that is a consequence of the definition of the resolvent): For every $n$, $x_{n+1}$ satisfies
+\begin{equation}
+    x_{n+1} \in x_n - \gamma A(x_{n+1},\xi_{n+1}).
+\end{equation}
+
+\section{Main result}
+\begin{assumption}
+$A(\cdot,\xi)$ is $\lambda(\xi)$-monotone
+\end{assumption}
+
+\begin{lemma}
+$(x_n)$ is a Markov chain and admits an unique invariant measure $\pi^\gamma$.
+\end{lemma}
+\begin{proof}
+Later. See~\cite{duf-livre97}.
+\end{proof}
+
+\begin{proposition}
+Let be $\mu_n^\gamma$ the distribution of $x_n$ and assume that $A(\cdot,\xi)$ is $\lambda(\xi)$-monotone. Then,
+\begin{equation}
+    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2
+\end{equation}
+Moreover, \begin{equation}
+    \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) \longrightarrow_{\gamma \to \infty} \bP(\lambda(\xi) = 0)
+\end{equation} 
+\end{proposition}
+
+\begin{proof}
+
+Now, consider another sequence $(y_n)$ produced by the stochastic proximal point algorithm, with the same noise $\xi_n$:
+\begin{equation}
+    y_{n+1} = J_{\gamma A(\cdot,\xi_{n+1})}(y_n)
+\end{equation}
+
+We have 
+\begin{align}
+    \frac{x_{n+1} - x_n}{\gamma} &\in - A(x_{n+1},\xi_{n+1}) \label{eq:x}\\
+    \frac{y_{n+1} - y_n}{\gamma} &\in - A(y_{n+1},\xi_{n+1}) \label{eq:y}.
+\end{align}
+We first write
+\begin{align}
+    \|x_{n+1} - y_{n+1}\|^2 = &\|x_{n} - y_n\|^2 - \|(x_{n+1} - x_n) - (y_{n+1} - y_n)\|^2 \label{eq:square}\\
+    &-2\gamma\ps{\frac{x_n - x_{n+1}}{\gamma} - \frac{y_n - y_{n+1}}{\gamma}, x_{n+1} - y_{n+1}}
+\label{eq:inner}
+\end{align}
+Noting that $\frac{x_n - x_{n+1}}{\gamma} \in A(x_{n+1},\xi_{n+1})$ and $\frac{y_n - y_{n+1}}{\gamma} \in A(y_{n+1},\xi_{n+1})$, we have
+\begin{equation}
+    \lambda(\xi_{n+1})\|x_{n+1} - y_{n+1}\|^2 \leq \ps{\frac{x_n - x_{n+1}}{\gamma} - \frac{y_n - y_{n+1}}{\gamma}, x_{n+1} - y_{n+1}}
+\end{equation}
+Therefore, 
+\begin{equation}
+    \|x_{n+1} - y_{n+1}\|^2 \leq \frac{1}{1+2\gamma\lambda(\xi_{n+1})}\|x_{n} - y_{n}\|^2.
+\end{equation}
+Assuming that $y_0 \sim \pi^\gamma$ and taking expectation,
+
+\begin{equation}
+    \bE(\|x_{n+1} - y\|^2) \leq \bE\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) \bE(\|x_{n} - y\|^2),
+\end{equation}
+where $y$ is any rv with distribution $\pi^\gamma$.
+Taking optimal couplings we get the result.
+\end{proof}
+\section{Application}
+
+\subsection{Stochastic proximal descent}
+
+Problem:
+\begin{equation}
+    \min_x \bE(g(x,\xi))
+\end{equation}
+where $g(\cdot,s) \in \Gamma_0(\bR^d)$.
+
+The algorithm:
+\begin{equation}
+\label{eq:spg}
+    x_{n+1} = \prox_{\gamma g(\cdot,\xi_{n+1})}(x_n)
+\end{equation}
+is in instance of~\eqref{eq:spp} with $A(x,\xi) = \partial g(x,\xi)$
+
+\begin{corollary}
+Assume that $g(\cdot,\xi)$ is $\lambda(\xi)$-(strongly) convex. Then,
+\begin{equation}
+    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2
+\end{equation}
+\end{corollary}
+
+
+\subsection{Chambolle Pock}
+
+Problem:
+\begin{equation}
+    \min_x \bE(g(x,\xi)) + H(Lx)
+\end{equation}
+where $g(\cdot,s) \in \Gamma_0(\bR^d)$ and $L : \bR^d \to \bR^p$ matrix. Moreover, $H \in \Gamma_0(\bR^p)$ and $H^\star(y) = \bE(p(y,\xi))$ where $p(\cdot,\xi) \in \Gamma_0(\bR^p)$.
+
+Algorithm:
+\begin{align}
+    x_{n+1} &= \prox_{\gamma g(\cdot,\xi)}(x_n - \gamma L^{T} y_n)\\
+    y_{n+1} &= \prox_{\gamma p(\cdot,\xi)}(y_n + \gamma L (2 x_{n+1} - x_n)).
+\end{align}
+
+If $L = I$, then it is stochastic Douglas Rachford/ADMM.
+
+
+
+\begin{corollary}
+Denote $\mu_n$ the distribution of $(x_n,y_n)$ and $\pi^\gamma$ its invariant measure. Assume that $g(\cdot,\xi)$ is $\lambda_1(\xi)$-(strongly) convex and $p(\cdot,\xi)$ is $\lambda_2(\xi)$-smooth. Then,
+\begin{equation}
+    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2,
+\end{equation}
+where $\lambda(\xi) = \min(\lambda_1(\xi),\lambda_2(\xi)).$
+\end{corollary}
+
+
+
+\section{Invariant measures}
+
+\subsection{Basic method}
+
+\subsection{More generally}
+
+
+
+\section{Extension}
+
+We can extend the result on~\ref{eq:spp} to the Forward Backward algorithm. It allows to cover Vu-Condat, the stochastic proximal gradient descent and the algorithm presented in~\cite{salim2018splitting}.
+
+
+
+
+Rewriting the inner product~\eqref{eq:inner}
+\begin{align}
+&\ps{\frac{x_n - x_{n+1}}{\gamma} - \frac{y_n - y_{n+1}}{\gamma}, x_{n+1} - y_{n+1}} \nonumber\\
+= & \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n+1} - y_{n+1}} 
+\label{eq:inner2}\\
+&+  \ps{A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1}), x_{n+1} - y_{n+1}}\nonumber.
+\end{align}
+Rewriting the inner product~\eqref{eq:inner2}
+\begin{align*}
+    &\ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n+1} - y_{n+1}} \\
+    =& \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n} - y_{n}} \\
+    &+ \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), (x_{n+1}-x_n) - (y_{n+1}-y_n)}\\
+    =& \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n} - y_{n}} \\
+    &-\gamma \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1})}\\
+    &-\gamma \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1})}.
+\end{align*}
+Plugging everything into~\eqref{eq:square}
+\begin{align*}
+    &\|x_{n+1} - y_{n+1}\|^2 \\
+    = &\|x_{n} - y_n\|^2 - \|(x_{n+1} - x_n) - (y_{n+1} - y_n)\|^2 \\
+    &-2\gamma \ps{A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1}), x_{n+1} - y_{n+1}}\\
+    &-2\gamma\ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n} - y_{n}}\\
+    &+2\gamma^2 \|B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1})\|^2\\
+    &+2\gamma^2 \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1})}.
+\end{align*}
+Note the relationship between the second term at the right hand side, and the last two terms:
+\begin{align}
+    &\|(x_{n+1} - x_n) - (y_{n+1} - y_n)\|^2 \\
+    =&\gamma^2 \|B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1})\|^2\\
+    &+\gamma^2 \|A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1})\|^2\\
+    &+2\gamma^2 \ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1})}.
+\end{align}
+Therefore,
+\begin{align*}
+    &\|x_{n+1} - y_{n+1}\|^2 \\
+    = &\|x_{n} - y_n\|^2\\
+    &-2\gamma \ps{A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1}), x_{n+1} - y_{n+1}}\\
+    &-2\gamma\ps{B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1}), x_{n} - y_{n}}\\
+    &+\gamma^2 \|B(x_n,\xi_{n+1}) - B(y_n,\xi_{n+1})\|^2\\
+    &-\gamma^2 \|A_\gamma(x_n - \gamma B(x_n,\xi_{n+1}),\xi_{n+1}) - A_\gamma(y_n - \gamma B(y_n,\xi_{n+1}),\xi_{n+1})\|^2.
+\end{align*}
+We now start to use our assumptions. Note that we didn't use any inequality so far. 
+\textbf{Case 1: $B$ cocoercive.}
+
+
+\textbf{Case 1: $B$ Lipschitz.}
+\asnote{$A$ must be strongly monotone with a deterministic constant but for be we only assume $\bE(B)$ strongly monotone}
+
+
+
+\bibliography{math}
+
+\end{document}
