@@ -175,7 +175,7 @@
 % Title.
 % ------
 
-\title{Linear convergence of the stochastic Forward Backward Algorithm and applications}
+\title{Non asymptotic analysis of stochastic primal dual methods}
 
 %
 % Single address.
@@ -516,8 +516,112 @@ Denoting $\sigma^2 = \bE \|g(x_\star,\zeta) + \phi_I\|^2$ the variance of the (z
 \end{equation}
 \end{proof}
 
+\section{Weakly convex case}
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+
+We want to solve 
+\begin{equation}
+    \min_x \bE_\xi(g(x,\xi)) \quad\text{s.t.}\quad \bE(L)x = \bE(b),
+\end{equation}
+where $L$ is a random matrix and $b$ a random vector. We start with $b = 0$ and $L$ deterministic. 
+
+Chambolle Pock for this problem is written
+\begin{align}
+    x_{n+1} &= \prox_{\gamma g(\cdot,\xi_{n+1})}(x_n - \gamma L_{n+1}^T y_n)\\
+    y_{n+1} &= y_n + \gamma L_{n+1}(2 x_{n+1} - x_n).
+\end{align}
+Let $z_n = (x_n, y_n)$, 
+\[
+P_\gamma = \begin{bmatrix} I &  -\gamma L^T \\ -\gamma L & I \end{bmatrix},
+\]
+\[
+A(z,\xi) = \begin{bmatrix} \partial f(x,\xi)&  + L^T y \\ -L x& \end{bmatrix} .
+\]
+
+Algorithm:
+
+$$
+P_\gamma(z_{n+1} - z_n) \in -\gamma A(z_{n+1}) 
+$$
 
 
+\begin{align*}
+&\|z_{n+1} - z_\star\|_\gamma^2 \\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \ps{z_n - z_\star,(P_{n+1} - P_n)z_n - z_\star}\\
+& -2\gamma \ps{A(z_{n+1}) - \varphi,z_{n+1} - z_\star} -2\gamma \ps{\varphi,z_{n} - z_\star} -2\gamma \ps{\varphi,z_{n+1} - z_n}\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
+& -2\gamma \alpha \ps{A(z_{n+1}) - \varphi,z_{n+1} - z_\star} \\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
+& -2\gamma\alpha \left(( g(x_{n+1},\xi_{n+1}) + \ps{L x_{n+1} - b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star - b,y_{n+1}} )\right)\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
+& -2\gamma\alpha \left(( g_\gamma(x_{n} - \gamma L^T y_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} )\right)\\
+& -2\gamma\alpha \left(-\frac{1}{2\gamma}\|x_{n+1} - x_n - \gamma L^T y_n\|^2 + \ps{L (x_{n+1} - x_n),y_\star} - \ps{L x_\star - b,y_{n+1} - y_n}\right)\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left(( g_\gamma(x_{n} - \gamma L^T y_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} )\right)\\
+& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2.\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left( g_\gamma(x_{n},\xi_{n+1}) + \ps{\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1}), -\gamma L^T y_n} - \frac{\gamma}{2}\|L^T y_n\|^2 + \ps{L x_{n}-b,y_\star} \right) \\
+& +2\gamma \alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star -b,y_{n}} \right)\\
+& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\left(\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 - \|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2\right) + \ps{L x_{n}-b,y_\star} \right)\\
+&-2\gamma\alpha \left(-\frac{\gamma}{2}\|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2 - \gamma\ps{\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1}), L^T y_n} - \frac{\gamma}{2}\|L^T y_n\|^2 \right) \\
+& +2\gamma \alpha\left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
+& +\alpha \|x_{n+1} - x_n - \gamma L^T y_n\|^2\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 + \ps{L x_{n}-b,y_\star} \right)\\
+& + \alpha\|x_{n+1} - x_n\|^2 \\
+& +2\gamma \alpha\left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
+& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2 - \alpha\gamma^2 \|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 + \ps{L x_{n}-b,y_\star} \right)\\
+& + \alpha\|x_{n+1} - x_n\|^2 \\
+& +2\gamma\alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
+\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + (\varepsilon + \alpha) \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
+& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} \right)\\
+& +2\gamma\alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right).
+\end{align*}
+Taking $\varepsilon, \alpha$ enough small such that $(\varepsilon + \alpha) \|\cdot\|^2 \leq \|\cdot\|_\gamma^2$, and taking expectation we have
+
+\begin{equation}
+    \label{eq:final}
+    \bE_n(\|z_{n+1} - z_\star\|_\gamma^2) \leq \|z_n - z_\star\|_\gamma^2 -2\gamma\alpha\left( \cL(x_n,y_\star) - \cL(x_\star,y_n)\right)+ \gamma^2 C
+\end{equation}
+\asnote{Add : domain, forward step}
+
+\begin{equation}
+z_{n+1} - z_n = \begin{bmatrix} x_{n+1} - x_{n} \\ y_{n+1} - y_{n} \end{bmatrix}
+ = \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T y_n \\ L (2 x_{n+1} - x_n)& \end{bmatrix}.
+\end{equation}
+
+\begin{align}
+P_{\gamma} (z_{n+1} - z_n) &= \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T \left(y_n +\gamma L (2 x_{n+1} - x_n)\right) \\ L \left(x_{n} -\gamma \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) - \gamma L^T y_n\right) \end{bmatrix}\\
+&= \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T y_{n+1} \\ L x_{n+1} \end{bmatrix}\\
+&\in \gamma \begin{bmatrix} - \partial g(x_{n+1},\xi_{n+1}) & -L^T y_{n+1} \\ L x_{n+1} \end{bmatrix}\\
+\end{align}
+
+\begin{align}
+    \ps{(z_{n+1} - z_n), P_{\gamma} (z_{n+1} - z_n)} = 
+\end{align}
+
+
+
+
+
+
+\asnote{Ecrire la fonction duale comme inf convolution comme Combettes, pour linearizer dans le dual et avoir un operateur B sans zero entry (mettre un terme de l'inf convo dans B et un autre dans A)}
+
+
+
+
+
+\section{Invariant measure}
+
+In the weakly convex case we know that cluster points of invariant measures are invariant for the flow and hence supported by the solutions. Here, in the strongly convex case, we prove $W^2(\pi_\gamma,\pi_\star) = O(\gamma)$. 
 \bibliography{math}
 
 \end{document}
