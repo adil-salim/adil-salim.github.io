@@ -447,6 +447,76 @@ We now start to use our assumptions. Note that we didn't use any inequality so f
 \asnote{$A$ must be strongly monotone with a deterministic constant but for be we only assume $\bE(B)$ strongly monotone}
 
 
+\section{improvement grad prox}
+
+\begin{proposition}
+Assume that $F$ is $\mu$-strongly convex and stochastically cocoercive in the sense that \asnote{actually we only need this assumption with $x' = x_\star$}
+\begin{equation}
+\label{eq:cocoercivity}
+    \exists L >0, \forall x,x', \in \bR^d \quad \bE_\zeta \|g(x,\zeta) - g(x',\zeta)\|^2 \leq L  \bE_\zeta \ps{g(x,\zeta) - g(x',\zeta),x-x'}.
+\end{equation}
+Assume moreover that $\bE_\zeta(\|\nabla f(x_\star,\zeta)\|^2) < \infty$ where $x_\star$ is the solution to problem~\eqref{eq:constrained} and that 
+\begin{equation}
+\label{eq:qualif}
+\bigcap_{i = 1}^p ri(C_i) \neq \emptyset,
+\end{equation}
+(where $ri$ is the relative interior). Then,
+the map $\cT_{RPSG}$ satisfies Assumption~\ref{ass:iterative_shrinkage} with $\rho = (1-2\gamma(1-\gamma L)\mu)$ and $\eta = 2\gamma^2\sigma^2$.
+\end{proposition}
+\begin{proof}
+\asnote{We should be able to obtain this result as a consequence of Wang and Bertsekas but I have to double check.}
+Before entering the proof, we need to provide some material from nonsmooth convex analysis. Given a convex lower semicontinuous and proper function $h$ over $\bR^d$ (we shall write $h \in \Gamma_0(\bR^d)$), its subdifferential is denoted $\partial h$. It is known that $\partial h$ is a monotone operator in the sense that $\ps{x-x',y-y'}$ for every $y \in \partial h(x)$ and $y' \in partial h(x')$. It is also known that if $h$ is differentiable, then $\partial h = \{\nabla h\}$. Given $\gamma >0$, the proximity operator of $\gamma h$ is defined as $\prox_{\gamma h}(x) = \argmin_{y} \frac{1}{2\gamma}\|y - x\|^2 + h(y)$ and its Moreau envelope $^\gamma h(x) = \min_{y} \frac{1}{2\gamma}\|y - x\|^2 + h(y)$. The Moreau envelope is known to be a $1/\gamma$-smooth function. Two important relationship links the gradient of the Moreau envelope and the proximity operator. First, $\nabla ^\gamma h(x) = \frac{1}{\gamma}(x - \prox_{\gamma h}(x))$. Second, $\nabla ^\gamma h(x) \in \partial h(\prox_{\gamma h}(x))$. Given $h_1, h_2 \in \Gamma_0(\bR^d)$, it is not true in general that $\partial (h_1+h_2) = \partial h_1 + \partial h_2$ where the symbol $+$ is the classical sum between sets. However, this equality is true under some qualification conditions that we shall use in the sequel. It is easy to check that if $h = \iota_\mC$ the indicator function of $\mC$, then $\partial \iota_\mC = N_\mC$ (the normal cone to $\mC$), $\prox_{\iota_\mC} = \proj_{\mC}$ and $\iota_\mC = \sum_{i=1}^p \iota_{C_i}$. Moreover, under our qualification condition~\eqref{eq:qualif}, it is known that $\partial \iota_\mC = \sum_{i=1}^p \partial \iota_{C_i}$, \textit{i.e} $N_\mC = \sum_{i=1}^p N_{C_i}$. Finally, the problem~\eqref{eq:constrained} being equivalent to $\min F + \iota_\mC$, its solution $x_\star$ is equivalently a solution to the inclusion $0 \in \partial (F + \partial \iota_\mC)(x_\star)$. Since $F$ is smooth, $\partial (F + \iota_\mC) = \partial F + \partial \iota_\mC$ \textit{i.e} $\partial (F + \iota_\mC) = \nabla F + \sum_{i=1}^p N_{C_i}.$ By definition of the normal cone, we also have the equality $N_\mC = \sum_{i=1}^p p_i N_{C_i}$. Therefore, $x_\star$ is a solution to problem~\eqref{eq:constrained} if and only if $0 \in \nabla F(x_\star) + \sum_{i=1}^p p_i N_{C_i}(x_\star)$ \textit{i.e} if and only if for every $i$, there exists $\phi_i \in N_{C_i}(x_\star)$ such that $\phi_i \in N_{C_i}(x_\star)$ and $0 = \nabla F(x_\star) + \sum_{i=1}^p p_i \phi_i$. This can be finally rewritten 
+\begin{equation}
+\label{eq:rpz-zero}
+0 = \bE_{(\zeta,I)}(g(x_\star,\zeta) + \phi_I).
+\end{equation}
+
+Let us denote $x^+ = \cT_{RPSG}(y)$ and $h(y,i) = \iota_{C_i}(y)$. Note that $\cT_{RPSG}(y) = y - \gamma g(y,\zeta) - \gamma \nabla ^\gamma h(y - \gamma g(y,\zeta),I)$. In the sequel we use the notation $\nabla ^\gamma h \equiv \nabla ^\gamma h(y - \gamma g(y,\zeta),I)$. First,
+\begin{equation}
+\label{eq:expand-square}
+    \|x^+ - x_\star\|^2 \leq \|y - x_\star\|^2 -2\gamma\ps{g(y,\zeta) + \nabla ^\gamma h, y - x_\star} + \gamma^2\|g(y,\zeta) + \nabla ^\gamma h\|^2.
+\end{equation}
+Then we write
+\begin{equation*}
+    \ps{g(y,\zeta),y-x_\star} = \ps{g(y,\zeta) - g(x_\star,\zeta),y-x_\star} + \ps{g(x_\star,\zeta),y-x_\star},
+\end{equation*}
+and
+\begin{align*}
+    &\ps{\nabla ^\gamma h,y-x_\star} \\=& \ps{\nabla ^\gamma h - \phi_I,y-x_\star} + \ps{\phi_I,y-x_\star}\\
+    =&\ps{\nabla ^\gamma h - \phi_I,x^+-x_\star} + \ps{\phi_I,y-x_\star} + \ps{\nabla ^\gamma h - \phi_I,y - x^+- \gamma g(y,\zeta)} + \ps{\nabla ^\gamma h - \phi_I, \gamma g(y,\zeta)}\\
+    =&\ps{\nabla ^\gamma h - \phi_I,x^+-x_\star} + \ps{\phi_I,y-x_\star} + \ps{\nabla ^\gamma h - \phi_I,\gamma \nabla ^\gamma h} + \ps{\nabla ^\gamma h - \phi_I, \gamma g(y,\zeta)}.
+\end{align*}
+Plugging into~\eqref{eq:expand-square},
+\begin{align*}
+\label{eq:expand-square}
+    &\|x^+ - x_\star\|^2 \\ 
+    =& \|y - x_\star\|^2 -2\gamma \left(\ps{g(y,\zeta) - g(x_\star,\zeta),y-x_\star} + \ps{\nabla ^\gamma h - \phi_I,x^+-x_\star} - \ps{g(x_\star,\zeta)+ \phi_I,y-x_\star}\right)\\
+    &+ \gamma^2\|g(y,\zeta)\|^2 + 2\gamma^2\ps{g(y,\zeta),\nabla ^\gamma h} + \gamma^2\|\nabla ^\gamma h\|^2 - 2\gamma^2\|\nabla ^\gamma h\|^2 - 2\gamma^2\ps{g(y,\zeta),\nabla ^\gamma h}\\
+    &+ 2\gamma^2\ps{\phi_I,g(y,\zeta)+\nabla ^\gamma h}\\
+    =& \|y - x_\star\|^2 -2\gamma \left(\ps{g(y,\zeta) - g(x_\star,\zeta),y-x_\star} + \ps{\nabla ^\gamma h - \phi_I,x^+-x_\star} - \ps{g(x_\star,\zeta)+ \phi_I,y-x_\star}\right)\\
+    &+ \gamma^2\|g(y,\zeta) + \phi_I\|^2 - \gamma^2\|\nabla ^\gamma h - \phi_I\|^2.
+\end{align*}
+Since $\|\nabla ^\gamma h - \phi_I\|^2$ and $\ps{\nabla ^\gamma h - \phi_I,x^+-x_\star}$ are nonnegative (monotonicity of $\partial \iota_{C_I}$), and using Equation~\eqref{eq:rpz-zero} we have
+\begin{equation*}
+    \bE \|x^+ - x_\star\|^2 \leq \|y - x_\star\|^2 -2\gamma \ps{\nabla F(y) - \nabla F(x_\star),y-x_\star} + \gamma^2 \bE \|g(y,\zeta) + \phi_I\|^2.
+\end{equation*}
+Now we write $g(y,\zeta) + \phi_I = (g(y,\zeta) - g(x_\star,\zeta)) + (g(x_\star,\zeta) + \phi_I)$ and successively use Young's inequality and~\eqref{eq:cocoercivity}.
+\begin{align*}
+    \bE \|x^+ - x_\star\|^2 \leq& \|y - x_\star\|^2 -2\gamma \ps{\nabla F(y) - \nabla F(x_\star),y-x_\star}\\
+    &+ 2\gamma^2 \bE \|g(x_\star,\zeta) + \phi_I\|^2 + 2\gamma^2 \bE\|g(y,\zeta) - g(x_\star,\zeta)\|^2\\
+    \leq& \|y - x_\star\|^2 -2\gamma(1-\gamma L) \ps{\nabla F(y) - \nabla F(x_\star),y-x_\star}\\
+    &+ 2\gamma^2 \bE \|g(x_\star,\zeta) + \phi_I\|^2\\
+    \leq& \|y - x_\star\|^2 -2\gamma(1-\gamma L)\mu \|y-x_\star\|^2\\
+    &+ 2\gamma^2 \bE \|g(x_\star,\zeta) + \phi_I\|^2.
+\end{align*}
+Denoting $\sigma^2 = \bE \|g(x_\star,\zeta) + \phi_I\|^2$ the variance of the (zero mean) random variable $g(x_\star,\zeta) + \phi_I$, we finally have
+\begin{equation}
+\label{eq:linear-neighborhood-rpsg}
+    \bE \|x^+ - x_\star\|^2 \leq (1-2\gamma(1-\gamma L)\mu)\|y - x_\star\|^2 + 2\gamma^2 \sigma^2. 
+\end{equation}
+\end{proof}
+
+
 
 \bibliography{math}
 
