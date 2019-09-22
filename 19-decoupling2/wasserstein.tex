@@ -227,6 +227,8 @@ The stochastic Proximal Point algorithm can be applied to find a zero of a monot
 Stochastic version of Primal dual algorithm has been considered e.g. in~\cite{chambolle2018stochastic}. Linear convergence of stochastic optimization algorithm in Wasserstein distance has been considered in~\cite{dieuleveut2017bridging,can2019accelerated}. 
 
 
+The use of the Wasserstein distance is not really a contribution, but just a way to express the result which is linear convergence up to the neighborhood. We found that this is cleaner. The Wasserstein distance allows to first express the linear rate to "something" and then express the convergence of the "something" to the solution as the step size goes to zero. 
+
 \section{Basic Method}
 
 The Basic Method is a random algorithm to solve the linear system $M x = b$. 
@@ -292,12 +294,13 @@ Let be $\mu_n^\gamma$ the distribution of $x_n$ and assume that $A(\cdot,\xi)$ i
     W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2
 \end{equation}
 Moreover, \begin{equation}
+    \label{eq:cvd}
     \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) \longrightarrow_{\gamma \to \infty} \bP(\lambda(\xi) = 0)
 \end{equation} 
 \end{proposition}
 
 \begin{proof}
-
+Eq.~\eqref{eq:cvd} follows from dominated convergence theorem.
 Now, consider another sequence $(y_n)$ produced by the stochastic proximal point algorithm, with the same noise $\xi_n$:
 \begin{equation}
     y_{n+1} = J_{\gamma A(\cdot,\xi_{n+1})}(y_n)
@@ -318,14 +321,18 @@ Noting that $\frac{x_n - x_{n+1}}{\gamma} \in A(x_{n+1},\xi_{n+1})$ and $\frac{y
 \begin{equation}
     \lambda(\xi_{n+1})\|x_{n+1} - y_{n+1}\|^2 \leq \ps{\frac{x_n - x_{n+1}}{\gamma} - \frac{y_n - y_{n+1}}{\gamma}, x_{n+1} - y_{n+1}}
 \end{equation}
+and
+\begin{equation}
+    \|(x_{n+1} - x_n) - (y_{n+1} - y_n)\|^2 = \gamma^2\|\frac{x_{n+1} - x_n}{\gamma} - \frac{y_{n+1} - y_n}{\gamma}\|^2 \geq \gamma^2\lambda(\xi_{n+1})\|x_{n+1} - y_{n+1}\|^2.
+\end{equation}
 Therefore, 
 \begin{equation}
-    \|x_{n+1} - y_{n+1}\|^2 \leq \frac{1}{1+2\gamma\lambda(\xi_{n+1})}\|x_{n} - y_{n}\|^2.
+    \|x_{n+1} - y_{n+1}\|^2 \leq \frac{1}{1+2\lambda(\xi_{n+1})\gamma + \lambda(\xi_{n+1})\gamma^2}\|x_{n} - y_{n}\|^2.
 \end{equation}
 Assuming that $y_0 \sim \pi^\gamma$ and taking expectation,
 
 \begin{equation}
-    \bE(\|x_{n+1} - y\|^2) \leq \bE\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) \bE(\|x_{n} - y\|^2),
+    \bE(\|x_{n+1} - y\|^2) \leq \bE\left(\frac{1}{1+2\gamma\lambda(\xi) + \lambda(\xi)\gamma^2}\right) \bE(\|x_{n} - y\|^2),
 \end{equation}
 where $y$ is any rv with distribution $\pi^\gamma$.
 Taking optimal couplings we get the result.
@@ -350,7 +357,7 @@ is in instance of~\eqref{eq:spp} with $A(x,\xi) = \partial g(x,\xi)$
 \begin{corollary}
 Assume that $g(\cdot,\xi)$ is $\lambda(\xi)$-(strongly) convex. Then,
 \begin{equation}
-    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2
+    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)+\lambda(\xi)\gamma^2}\right) W^2(\mu_{n},\pi^\gamma)^2
 \end{equation}
 \end{corollary}
 
@@ -376,7 +383,7 @@ If $L = I$, then it is stochastic Douglas Rachford/ADMM.
 \begin{corollary}
 Denote $\mu_n$ the distribution of $(x_n,y_n)$ and $\pi^\gamma$ its invariant measure. Assume that $g(\cdot,\xi)$ is $\lambda_1(\xi)$-(strongly) convex and $p(\cdot,\xi)$ is $\lambda_2(\xi)$-smooth. Then,
 \begin{equation}
-    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)}\right) W^2(\mu_{n},\pi^\gamma)^2,
+    W^2(\mu_{n+1},\pi^\gamma)^2 \leq \bE_\xi\left(\frac{1}{1+2\gamma\lambda(\xi)+\lambda(\xi)\gamma^2}\right) W^2(\mu_{n},\pi^\gamma)^2,
 \end{equation}
 where $\lambda(\xi) = \min(\lambda_1(\xi),\lambda_2(\xi)).$
 \end{corollary}
@@ -385,7 +392,58 @@ where $\lambda(\xi) = \min(\lambda_1(\xi),\lambda_2(\xi)).$
 
 \section{Invariant measures}
 
+The neighborhood information is contained in the value of the\footnote{our analysis will show that there is only one invariant measure} invariant measure $\pi_\gamma$.
+For example, for basic method the neighborhood is reduced to the solution and so $\pi_\gamma = \delta_{x_\star}$.
+
+\begin{theorem}
+    If $A(\xi)$ is $\lambda$-strongly monotone ($\lambda$ deterministic?) then
+    \begin{equation}
+        W^2(\pi_\gamma,\delta_{x_\star}) \leq \frac{\gamma \bE(\|\phi(\xi)\|^2)}{2\lambda + \gamma\lambda}.
+    \end{equation}
+    where $\phi(\xi) \in A(x_\star,\xi)$ a.s.
+\end{theorem}
+\begin{proof}
+    Let $x \in H$ and $x^+ = J_{\gamma A(\xi)}(x)$. First,
+    \begin{align*}
+        \|x^+ - x_\star\|^2 &= \|x-x_\star\|^2 - 2\gamma\ps{A_\gamma(x,\xi),x-x_\star} + \gamma^2\|A_\gamma(x,\xi)\|^2,
+    \end{align*}
+    where
+    \begin{align*}
+        \ps{A_\gamma(x,\xi),x-x_\star} &= \ps{A_\gamma(x,\xi)-\phi(\xi),x-x_\star} + \ps{\phi(\xi),x-x_\star}\\
+        &\ps{A_\gamma(x,\xi)-\phi(\xi),x^+ - x_\star} + \ps{A_\gamma(x,\xi)-\phi(\xi),x - x^+} + \ps{\phi(\xi),x-x_\star}\\
+        &\ps{A_\gamma(x,\xi)-\phi(\xi),x^+ - x_\star} + \ps{A_\gamma(x,\xi)-\phi(\xi),\gamma A_\gamma(x,\xi)} + \ps{\phi(\xi),x-x_\star}.
+    \end{align*}
+    Therefore,
+    \begin{align*}
+        \|x^+ - x_\star\|^2 &= \|x-x_\star\|^2 - 2\gamma\ps{A_\gamma(x,\xi) - \phi(\xi),x^+-x_\star} + \gamma^2\|A_\gamma(x,\xi)\|^2\\
+        &-2\gamma\ps{A_\gamma(x,\xi)-\phi(\xi),\gamma A_\gamma(x,\xi)} - 2\gamma \ps{\phi(\xi),x-x_\star}\\
+        &= \|x-x_\star\|^2 - 2\gamma\ps{A_\gamma(x,\xi) - \phi(\xi),x^+-x_\star} - \gamma^2\|A_\gamma(x,\xi) - \phi(\xi)\|^2\\
+        &- 2\gamma \ps{\phi(\xi),x-x_\star} + \gamma^2\|\phi(\xi)\|^2
+    \end{align*}
+Since $\phi(\xi) \in A(x_\star,\xi)$ we can now use our only allowed inequality (strong monotonicity) 
+
+\begin{align*}
+    \|x^+ - x_\star\|^2 &\leq \frac{1}{1 + 2\gamma \lambda + \gamma^2\lambda}\|x-x_\star\|^2 - \frac{2\gamma}{1 + 2\gamma \lambda + \gamma^2\lambda} \ps{\phi(\xi),x-x_\star} + \frac{\gamma^2}{1 + 2\gamma \lambda + \gamma^2\lambda}\|\phi(\xi)\|^2.
+\end{align*}
+Assume that $x \sim \pi_\gamma$, then, $x^+ \sim \pi_\gamma$ and by taking optimal couplings
+\begin{align*}
+    W^2(\pi_\gamma,\delta_{x_\star}) &\leq \frac{1}{1 + 2\gamma \lambda + \gamma^2\lambda}W^2(\pi_\gamma,\delta_{x_\star}) + \frac{\gamma^2}{1 + 2\gamma \lambda + \gamma^2\lambda}\bE_\xi(\|\phi(\xi)\|^2).
+\end{align*}
+Finally,
+\begin{equation}
+    W^2(\pi_\gamma,\delta_{x_\star}) \leq \frac{\gamma \bE(\|\phi(\xi)\|^2)}{2\lambda + \gamma\lambda}.
+\end{equation}
+
 \subsection{Basic method}
+
+Does the rate match the one of Basic method?
+Basic method with step size $\omega$ has linear rate $(1-\omega(2-\omega)\lambda_m)$ (cf. Nicolas' thesis).
+Basic method can be seen as a stochastic proximal point algorithm with step size $\gamma = \frac{\omega}{1-\omega}$.
+What is the rate obtained here? It is 
+$$
+\frac{1}{1+2\gamma\lambda+\gamma^2\lambda} = \frac{1}{1+2(\frac{\omega}{1-\omega})\lambda+(\frac{\omega}{1-\omega})^2\lambda}
+$$
+\asnote{To be compared...}
 
 \subsection{More generally}
 
