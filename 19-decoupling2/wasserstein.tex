@@ -214,13 +214,15 @@
 %parler approx sto et de nos articles
 
 \begin{abstract} 
-We prove linear convergence of the stochastic Forward Backward algorithm in Wasserstein distance toward its invariant measure under some strong monotonicity assumption. The rate can be arbitrarily close to zero. These results apply to various algorithms including Chambolle Pock.
+Many problems arising in machine learning can be formulated as optimization problems. Given a real valued loss function f, the learner has to find a minimizer of the loss. This minimizer cannot be computed in closed form in general. The minimization of the loss is usually done using optimization algorithms that produce a sequence of iterates converging to the solution. When f is a convex function, the gradient descent algorithm is one of the standard optimization algorithm. However, this algorithm requires to have access to the gradient f at each iteration, which we don’t in practice. The reasons for this is twofold. First, the function f may not be smooth. Second, even if f is differentiable, the user may only have access to the gradient of a noisy version of f.     
+In many cases, f is composite, ie it can be written as the sum of a smooth function h and a nonsmooth function g. In this work, we consider the case where we have access to the gradient of a noisy version of h and the proximity operator of a noisy version of g. Proximity operators are well known objects of nonsmooth optimziation, but were introduced only recently in the stochastic setting. We study a randomized version of the celebrated Vu-Condat algorithm, that generalize both the proximal gradient algorithm and the Chambolle Pock algorithm. We prove the convergence of this algorithm, and provide non asymptotic guarantees. 
 \end{abstract}
 
 %
 %
 
 \section{Introduction}
+\asnote{Comparision with Bach Balamurugan}
 Finding a minimizer of a convex function or a saddle point of a convex concave function can be formulated as finding a zero of a maximal monotone operator. A standard method to find a zero of a monotone operator is the Proximal Point algorithm. The Proximal Point algorithm has many instances among minimization and saddle points methods including (in order of generality) proximal descent, Douglas Rachford, ADMM, Chambolle Pock.
 
 The stochastic Proximal Point algorithm can be applied to find a zero of a monotone operator written as an expectation. It admits as instances stochastic versions of the algorithms aforementioned. The iterates of the stochastic Proximal Point algorithm ban be seen as a Markov Chain. Under a strong monotonicity assumption (that boils down to a strong convexity assumption in the particular cases), we prove that this Markov Chain admits an unique invariant measure, and prove linear convergence to this invariant measure in Wasserstein distance. We can identify this invariant measure in the case of the Basic method~\cite{richtarik2017stochastic}, it is the Dirac at at a solution. In the general case, we can bound the distance between the invariant measure and the Dirac at a minimizer. 
@@ -573,6 +575,7 @@ Denoting $\sigma^2 = \bE \|g(x_\star,\zeta) + \phi_I\|^2$ the variance of the (z
     \bE \|x^+ - x_\star\|^2 \leq (1-2\gamma(1-\gamma L)\mu)\|y - x_\star\|^2 + 2\gamma^2 \sigma^2. 
 \end{equation}
 \end{proof}
+\asnote{Can we show that if $F$ deterministic then $\sigma^2 = 0$?}
 
 \section{Weakly convex case}
 
