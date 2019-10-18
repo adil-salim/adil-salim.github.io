@@ -15,6 +15,8 @@
 \setlength{\marginparwidth}{1.5cm}               %  this goes with todonotes
 \newcommand{\aknote}[1]{\todo[color=cyan!20]{#1}}
 \newcommand{\asnote}[1]{\todo[color=green!]{#1}}
+\newcommand{\adil}[1]{\todo[inline]{\textbf{Adil: }#1}}
+\newcommand{\peter}[1]{\todo[inline]{\textbf{Peter: }#1}}
 
 \newcommand{\cF}{{\mathcal F}} 
 \newcommand{\cS}{{\mathcal S}} 
@@ -83,27 +85,52 @@ We are especially trying to understand the following points.
     \item Minibatch analysis of~\cite{mishchenko2019stochastic} 
 \end{itemize}
 \section{About Decoupling}
+We shall look at a variant of the Decoupling method of~\cite{mishchenko2019stochastic}.
+The Decoupling method~\cite{mishchenko2019stochastic} is written (we use Moreau's identity for the last two lines)
 
-We shall provide an approach to understand some results of the Decoupling paper. We proceed as follows:
+\begin{align}
+    x^{k+1}   &= \prox_{\gamma R}(x^k - \gamma v^k - \gamma y^k)\\
+    \widetilde{x^{k+1}} &= x^{k+1}\\
+    y_j^{k+1} &= \prox_{\frac{1}{\gamma_j} g_j^\star}(y_j^k + \frac{1}{\gamma_j}\widetilde{x^{k+1}} ), \quad j \sim p_j.
+\end{align}
+
+We introduce the Decoupling 2 method:
+% \adil{Douglas Rachford algorithm is a particular case of Decoupling and Douglas Rachford-normalized form is a particular case of Decoupling2. Since the two form of DR are equivalent, are Decoupling and Decoupling2 equivalent? I don't think so because }
+
+\begin{align}
+    x^{k+1}   &= \prox_{\gamma R}(x^k - \gamma v^k - \gamma y^k)\\
+    \widetilde{x^{k+1}} &= 2x^{k+1} - x^k\\
+    y_j^{k+1} &= \prox_{\frac{1}{\gamma_j} g_j^\star}(y_j^k + \frac{1}{\gamma_j}\widetilde{x^{k+1}} ), \quad j \sim p_j.
+\end{align}
+
+If $m=1$ and if $v^k$ is the true gradient, the Decoupling 2 method is Vu Condat algorithm~\cite{con-jota13}:
+\begin{align}
+    x^{k+1}   &= \prox_{\gamma R}(x^k - \gamma \nabla f(x^k) - \gamma y^k)\\
+    y^{k+1} &= \prox_{\frac{1}{\gamma} g^\star}(y^k + \frac{1}{\gamma}(2x^{k+1}-x^k)).
+\end{align}
+
+
+
+Roadmap.
 \begin{itemize}
-    \item First, we introduce Vu-Condat algorithm and provide conditions unde which this algorithm converges linearly (these conditions should be already known in the literature but we have to check)
-    \item Second, we consider an instance of Vu-Condat algorithm that we call the Original method. As an instance of Vu-Condat, we can provide conditions under which the Original method converges linearly
-    \item Third, we add variance reduction for every gradient appearing in the Original method. This leads to the VR-Original method. This doesn't change the conditions under which we have linear rate (the proof is an extension of the proof of the main theorem of the $\sigma_k$ paper)
-    \item Finally, we add "coordinate descent" on top of VR-Original method. This leads to the Decoupling method. This doesn't change the conditions under which we have linear rate (This is based on standard considerations regarding coordinate descent).
+    \item First, we introduce Vu-Condat algorithm and provide conditions under which this algorithm converges linearly
+    \item Then, we replace the gradient appearing in Vu-Condat by a variance reduced unbiaise estimate. The conditions for linear convergence don't change.
+    \item Finally, we do coordinate descent for Vu-Condat-VR. This method called, Decoupling 2, is similar to the Decoupling method~\cite{mishchenko2019stochastic}, with similar guarantees. 
 \end{itemize}
 
 \section{Vu-Condat}
-
+\subsection{Forward-Backward}
 Consider an Euclidean space $\sX$ (it is important to consider an abstract space and not just $\bR^d$ to simplify the presentation), two monotone operators $A,B$ and a positive definite matrix $P$.
 The Forward Backward algorithm is written
 \begin{equation}
     \label{eq:FB}
     x^{k+1} = x^k - \gamma P^{-1} (B(x^k) + A(x^{k+1}))
 \end{equation}
-Note that $x^{k+1}$ is implicitly define. The equality $=$ is actually an inclusion $\in$ because monotone operators can be multi-valued, but we assume that our monotone operators are single valued to keep it simpler (but it is not necessary)
-The goal of the FB algorithm is to converge to a zero of $A+B$ i.e a point $x_\star$ such that $0 = A(x_\star) + B(x_\star)$. The most famous application of the FB algorithm is the case where $P=I$, $B = \nabla F$ and $A = \partial G$, where $F$ and $G$ are two convex functions. In this case the FB algorithm boils down to the prox-grad algorithm and converges to a minimizer of $F+G$.
+Note that $x^{k+1}$ is implicitly defined. The equality $=$ is actually an inclusion $\in$ because monotone operators can be set-valued, but we assume for simplicity that $A,B$ are single valued (but it is not necessary).
 
-If $P = I$, the analysis of the FB algorithm is as follows:
+The goal of the FB algorithm is to converge to a zero of $A+B$ i.e a point $x^\star$ such that $0 = A(x^\star) + B(x^\star)$. The most famous application of the FB algorithm is the case where $P=I$, $B = \nabla F$ and $A = \partial G$, where $F$ and $G$ are two convex functions, and $F$ is smooth. In this case the FB algorithm boils down to the prox-grad algorithm and converges to a minimizer of $F+G$.
+
+If $P = I$, the analysis of the FB algorithm is starts follows:
 \begin{align*}
     &\|x^{k+1} - x^\star\|^2 \\=& \|x^k - x^\star\|^2 - 2\gamma\ps{B(x^k),x^k-x^\star} - 2\gamma\ps{A(x^{k+1}),x^k-x^\star} +  \gamma^2\|B(x^k) + A(x^{k+1})\|^2\\ 
     =& \|x^k - x^\star\|^2 - 2\gamma\ps{B(x^k)-B(x^\star),x^k-x^\star} - 2\gamma\ps{A(x^{k+1})-A(x^\star),x^k-x^\star} +  \gamma^2\|B(x^k) + A(x^{k+1})\|^2\\
@@ -133,17 +160,24 @@ and we have
     =& \|x^k - x^\star\|^2 -\gamma^2\|A(x^{k+1}) - A(x^\star)\|^2 + \gamma^2 \|B(x^k) - B(x^\star) \|^2\\
     &- 2\gamma\ps{A(x^{k+1})-A(x^\star),x^{k+1}-x^\star} - 2\gamma\ps{B(x^k)-B(x^\star),x^k-x^\star}.
 \end{align}
-The two inner product are negative because of monotonicity. The only nonnegative term is $\|B(x^k) - B(x^\star) \|^2$. It is managed using some smoothness condition (namely, cocoercivity or lipschitzness). To get a linear rate, we need a contraction. This contraction can come from the three negative terms. For example, if $A$ or $B$ is strongly monotone we get a contraction. But this is not the only case where we have a contraction, we can use some partial strong monotonicity (we will see an example later).
+The two inner product are negative because of monotonicity. The only nonnegative term is $\|B(x^k) - B(x^\star) \|^2$. It is managed using some smoothness condition. To get a linear rate, we need a contraction. This contraction can come from the three negative terms. For example, if $A$ or $B$ is strongly monotone we get a contraction. But this is not the only case where we have a contraction, we can use some partial strong monotonicity (we will see an example later).
 
 The analysis in the case $P \neq I$ follows the same lines, by replacing $\|\cdot\|$ (resp. $\ps{\cdot,\cdot}$) by the norm (resp. the inner product) induced by $P$. 
 
 
 
 
+\subsection{Vu-Condat as instance of Forward Backward}
 
-Vu-Condat algorithm aims at minimizing $\min F(x) + G(x) + H(Mx)$ where $F,G,H$ are convex functions, $F$ is smooth and $M : \sX \to \sY$ is a matrix. It is a splitting algorithm: he user is only require to compute $\nabla F$, $\prox_G$ and $\prox_H$ separately. It is a primal dual algorithm. If $F=0$ is boils down to Chambolle-Pock algorithm.
+Vu-Condat algorithm aims at minimizing $\min F(x) + G(x) + H(Mx)$ where $F,G,H$ are convex functions, $F$ is smooth and $M : \sX \to \sY$ is a matrix. It is a splitting algorithm: the user is only required to compute $\nabla F$, $\prox_G$ and $\prox_H$ separately. It is a primal dual algorithm that operates in the primal dual space $\sX \times \sY$. In other words, the iterates $(x^k,y^k)$ are elements of $\sX \times \sY$. If $F=0$, Vu-Condat boils down to Chambolle-Pock algorithm.
 
-Interestingly, Vu-Condat can be obtained as an instance of the FB algorithm by carefully instanciating $A,B,P$. This is the easiest way to understand Vu-Condat algorithm. In the case of Vu-Condat, the optimization space is $\sX \times \sY$ i.e the iterates are elements $(x,y) \in \sX \times \sY$. The operators are defined on $\sX \times \sY$ by
+The iterations of Vu Condat are written
+\begin{align}
+    x^{k+1}   &= \prox_{\gamma G}(x^k - \gamma \nabla F(x^k) - \gamma M^T y^k)\\
+    y^{k+1} &= \prox_{\frac{1}{\gamma} H^\star}(y^k + \frac{1}{\gamma}M(2x^{k+1}-x^k)).
+\end{align}
+
+Interestingly, Vu-Condat can be obtained as an instance of the FB algorithm by carefully instanciating $A,B,P$. In the case of Vu-Condat, the optimization space is $\sX \times \sY$ i.e the iterates are elements $(x,y) \in \sX \times \sY$. The operators are defined on $\sX \times \sY$ by
 \[
 P_\gamma = \begin{bmatrix} I &  -\gamma M^T \\ -\gamma M & I \end{bmatrix},
 \]
@@ -153,152 +187,131 @@ A(x,y) = \begin{bmatrix} \partial G(x)&  + M^T y \\ -M x& +\partial H^\star(y)\e
 \[
 B(x,y) = \begin{bmatrix} \nabla F(x) \\ 0 \end{bmatrix} .
 \]
-To see that $A,B$ are monotone, note that $B$ is actually the gradient of the function $(x,y) \mapsto F(x)$ and that $A$ is the sum of a skew symmetrix matrix $M$ and the subdifferential of $(x,y) \mapsto G(x) + H^\star(y)$. Recall that a skew symmetric matrix is a monotone operator (since $\ps{Mz,z} = -\ps{Mz,z}$ we have $\ps{Mz,z} \geq 0$). As a sum, $A$ is monotone.
+To see that $A,B$ are monotone, note that $B$ is actually the gradient of the convex function $(x,y) \mapsto F(x)$ and that $A$ is the sum of a skew symmetrix matrix $L$ and the subdifferential of $(x,y) \mapsto G(x) + H^\star(y)$. Recall that a skew symmetric matrix is a monotone operator (since $\ps{Lz,z} = -\ps{Lz,z}$ we have $\ps{Lz,z} = 0 \geq 0$). As a sum, $A$ is monotone.
 
-Note also that a zero $(x^\star,y^\star)$ of $A+B$ is a primal-dual optimal point, i.e a saddle point of the Lagragien. Therefore $x^\star$ is a solution of our problem: since $0 = -Mx +\partial H^\star(y)$ we have $y = \partial H(Mx)$ and therefore $0=  \nabla F(x^\star) + \partial G(x^\star) + \partial H(M x^\star)$.
+Note also that a zero $(x^\star,y^\star)$ of $A+B$ is a primal-dual optimal point, i.e a saddle point of the Lagragien. Therefore $x^\star$ is a solution of our problem: if $0 = A(x^\star) + B(x^\star)$ then $0 = -Mx^\star +\partial H^\star(y^\star)$ and therefore $y^\star = \partial H(Mx^\star)$. Moreover $0 = \nabla F(x^\star) + \partial G(x^\star) + M^Ty^\star = \nabla F(x^\star) + \partial G(x^\star) + M^T \partial H(Mx^\star)$, therefore $x^\star$ is a minimizer of $F+G+H \circ M$.
 
 \subsection{Conditions under whcich Vu Condat converges linearly}
-The negative terms in the analysis of Vu-Condat are the following (recall that the norm is the norm on the product space $\sX \times \sY$)
+The sum of the negative term in the analysis of Forward Backward is (see Eq.~\eqref{eq:FB-final})
+$$
+\chi^{k+1} = -\gamma^2\|A(z^{k+1}) - A(z^\star)\|^2 - 2\gamma\ps{A(z^{k+1})-A(z^\star),z^{k+1}-z^\star} - 2\gamma\ps{B(z^k)-B(z^\star),z^k-z^\star},
+$$
+In the case of the monotone operators of Vu Condat, we have
+(recall that the norm is the norm on the product space $\sX \times \sY$, and we denote $z^k = (x^k,y^k)$ and $z^\star = (x^\star,y^\star)$)
     \begin{itemize}
         \item $\ps{A(z^{k+1})-A(z^\star),x^{k+1}-x^\star} = \ps{\partial G(x^{k+1})-\partial G(x^\star),x^{k+1}-x^\star}_\sX + \ps{\partial H^\star(y^{k+1})-\partial H^\star(y^\star),y^{k+1}-y^\star}_\sY$
-        \item $\ps{B(z^k)-B(z^\star),z^k-z^\star} = \ps{\nabla F(x) - \nabla F(x_\star),x-x^\star}_\sX$
+        \item $\ps{B(z^k)-B(z^\star),z^k-z^\star} = \ps{\nabla F(x^k) - \nabla F(x_\star),x-x^\star}_\sX$
         \item $\|A(z^{k+1}) - A(z^\star)\|^2 = \|\partial G(x^{k+1}) + M^T y^{k+1} - (\partial G(x^{\star}) + M^T y^{\star})\|_\sX^2 + \|(-M x^{k+1} + \partial H^\star(y^{k+1})) - (-M x^{\star} + \partial H^\star(y^{\star}))\|_\sY^2$
     \end{itemize}
 
-To have linear rate we need contraction in $x$ and $y$. Each of these term can bring a contraction. 
+To have linear rate we need contraction in $x$ and $y$. Each of these term can bring a contraction in $x$ or $y$. 
 
 Here we give some sufficient conditions. We have linear rate if 
     \begin{enumerate}
         \item \label{item:smooth} $F$ strongly convex (or $G$ strongly convex) and $H^\star$ strongly convex (i.e $H$ smooth)
-        \item \label{item:lin}$F$ strongly convex (or $G$ strongly convex) and $M^T = I$ (more generally, $M^T \geq \omega I$ \asnote{I mean $\|Mx\| \geq \omega\|x\|$ for some $\omega$ which is actually equivalent to $M^T$ injective}) and $G = 0$ (more generally, $G$ smooth)
+        \item \label{item:lin}$F$ strongly convex (or $G$ strongly convex) and $M^T = I$ (more generally, $M^T \geq \omega I$ \asnote{I mean $\|M^Tx\| \geq \omega\|x\|$ for some $\omega$ which is actually equivalent to $M^T$ injective or $M$ surjective}) and $G = 0$ (more generally, $G$ smooth)
         \item \dots
         \item \dots
         \item \dots
         \item \dots\asnote{Complete}
     \end{enumerate}
 
+
+    \section{Vu-Condat with VR}
+    In Eq.~\eqref{eq:FB-final} we replace the monotone operators $A,B$ by their values in the case of Vu-Condat algorithm.  In this particular case,~\eqref{eq:FB-final} boils down to:
+\begin{align*}
+    \|x^{k+1} - x^\star\|_\sX^2 + \|y^{k+1} - y^\star\|_\sX^2 
+    =& \|x^k - x^\star\|_\sX^2 + \|y^k - y^\star\|_\sY^2 \\
+    &-\gamma^2\|\partial G(x^{k+1}) + M^T y^{k+1} - (\partial G(x^{\star}) + M^T y^{\star})\|_\sX^2 \\
+    &- \gamma^2\|(-M x^{k+1} + \partial H^\star(y^{k+1})) - (-M x^{\star} + \partial H^\star(y^{\star}))\|_\sY^2 \\
+    &+ \gamma^2 \|\nabla F(x^k) - \nabla F(x_\star) \|_\sX^2\\
+    &- 2\gamma\ps{\partial G(x^{k+1})-\partial G(x^\star),x^{k+1}-x^\star}_\sX \\
+    &- 2\gamma\ps{\partial H^\star(y^{k+1})-\partial H^\star(y^\star),y^{k+1}-y^\star}_\sY \\
+    &- 2\gamma\ps{\nabla F(x^k) - \nabla F(x_\star),x-x^\star}_\sX.
+\end{align*}
+Denote 
+\begin{align*}
+    \chi^{k+1} 
+    =& \gamma\|\partial G(x^{k+1}) + M^T y^{k+1} - (\partial G(x^{\star}) + M^T y^{\star})\|_\sX^2 \\
+    & +\gamma\|(-M x^{k+1} + \partial H^\star(y^{k+1})) - (-M x^{\star} + \partial H^\star(y^{\star}))\|_\sY^2 \\
+    &+ 2\ps{\partial G(x^{k+1})-\partial G(x^\star),x^{k+1}-x^\star}_\sX \\
+    &+ 2\ps{\partial H^\star(y^{k+1})-\partial H^\star(y^\star),y^{k+1}-y^\star}_\sY.
+\end{align*}
+Assume from now on the every gradient $\nabla F(x^k)$ is replaced by an unbiased estimate $g^k$. We have
+
+
+\begin{align*}
+    \|x^{k+1} - x^\star\|_\sX^2 + \|y^{k+1} - y^\star\|_\sX^2 
+    =& \|x^k - x^\star\|_\sX^2 + \|y^k - y^\star\|_\sY^2 \\
+    &+ \gamma^2 \|g^k - \nabla F(x_\star) \|_\sX^2\\
+    &- 2\gamma\ps{g^k - \nabla F(x_\star),x-x^\star}_\sX\\
+    &-\gamma \chi^{k+1}.
+\end{align*}
+
+Moreover, we assume that $g^k$ is variance reduced in the sense of~\cite{gorbunov2019unified}: their exist an adapted stochastic process $(\sigma_k)_k$ and constants $A,B,C \geq 0$ such that
+\begin{align}
+    \bE_k(\|g^k - \nabla f(x^\star)\|^2) &\leq 2AD_F(x^k,x^\star) + B\sigma_k\\
+    \bE_k(\sigma_{k+1}^2) &\leq (1-\rho)\sigma_k^2 + 2CD_F(x^k,x^\star),
+\end{align}
+where $\bE_k$ denotes the conditional expectation.
+
+
+We can mimic the proof of Theorem 1 in~\cite{gorbunov2019unified} to get a contraction for $\|x^k-x^\star\|^2$.
+Taking conditional expectation and using $\mu$-quasi strong convexity we have
+
+\begin{align*}
+    \bE_k \|x^{k+1} - x^\star\|_\sX^2 + \|y^{k+1} - y^\star\|_\sX^2 
+    \leq& (1-\gamma\mu)\|x^k - x^\star\|_\sX^2 + \|y^k - y^\star\|_\sY^2 \\
+    &+ \gamma^2 (2AD_F(x^k,x^\star) + B\sigma_k) - 2\gamma D_F(x^k,x^\star)\\
+    &-\gamma\chi^{k+1}.
+\end{align*}
+
+Therefore, if $M>0$ is large enough in order to have $1-\rho+B/M < 1$,
+
+\begin{align*}
+    &\bE_k \|x^{k+1} - x^\star\|_\sX^2 + \|y^{k+1} - y^\star\|_\sX^2 + M\gamma^2\bE(\sigma_{k+1}^2)\\
+    \leq& (1-\gamma\mu)\|x^k - x^\star\|_\sX^2 + \|y^k - y^\star\|_\sY^2 -2\gamma(1-A\gamma)D_F(x^k,x^\star) + B\gamma^2\bE(\sigma_k^2)\\
+     &+ M\gamma^2(1-\rho)\bE(\sigma_k^2)+ 2M\gamma^2CD_F(x^k,x^\star)\\
+    &-\gamma\chi^{k+1}\\
+    =& (1-\gamma\mu)\|x^k - x^\star\|_\sX^2 + \|y^k - y^\star\|_\sY^2 -2\gamma(1-\gamma(A+MC))D_F(x^k,x^\star)\\
+     &+ M\gamma^2(1-\rho+\frac{B}{M})\bE(\sigma_k^2)\\
+    &-\gamma\chi^{k+1}.
+\end{align*}
+Finally, denoting $\alpha = \max(1-\rho+B/M,1-\gamma\mu) < 1$ and $W^k = \|x^k-x^\star\|^2 + M\gamma^2\sigma^k$ we have
+
+\asnote{Weakly convex case?}
+
+\begin{align*}
+    &\bE W^{k+1} + \bE \|y^{k+1} - y^\star\|_\sX^2\\
+    \leq& \alpha W^k + \bE\|y^k - y^\star\|_\sY^2 -2\gamma(1-\gamma(A+MC))D_F(x^k,x^\star)\\
+     &-\gamma\chi^{k+1}.
+\end{align*}
+
+Now, one can use $\chi^k$ to also have a contraction in $\bE\|y^k - y^\star\|_\sY^2$
+
 \section{An instance of Vu Condat}
 
 Consider the problem 
 \begin{equation}
     \label{eq:appli}
-\min_{x \in \sX} f(x) + \sum_{j=1}^m g_j(x)
+\min_{x \in \sX} f(x) + \sum_{j=1}^m g_j(x) + R(x)
 \end{equation}
-This problem can be tackled by Vu-Condat by setting $F(x) = f(x)$, $\sY = \sX^m$, $G(y_1,\ldots,y_m) = \sum_j g_j(y_j)$ and $M : \sX \to \sY, Mx = 1/m (x,\ldots,x)$
+This problem can be tackled by Vu-Condat by setting $F(x) = f(x)$, $\sY = \sX^m$, $H(y_1,\ldots,y_m) = \sum_j g_j(y_j)$ and $M : \sX \to \sY, Mx = 1/m (x,\ldots,x)$ and $G(x) = R(x)$.
 The iterates are now elements $(x,(y_1,\ldots,y_m)) \in \sX \times \sX^m$. Note that $G$ is separable and $M^T(y_1,\ldots,y_m) = \frac{1}{m}\sum_{j=1}^m y_j$. The prox of $G$ can be computed in parallel, therefore Vu-Condat applied to~\ref{eq:appli} is written\asnote{Check the step sizes. Rewrite decoupling as Vu-Condat}
-\begin{align*}
-   ....
-\end{align*}
-
+    \begin{align}
+        x^{n+1}   &= \prox_{\gamma R}(x^n - \gamma v^n - \gamma \frac{1}{m}\sum_{j=1}^m y_j^n)\\
+        \widetilde{x^{n+1}} &= 2x^{n+1} - x^n\\
+        y_j^{n+1} &= \prox_{\frac{1}{\gamma_j} g_j^\star}(y_j^n + \frac{1}{\gamma_j}\widetilde{x^{n+1}} ), \forall j.
+    \end{align}
+    
 We call this algorithm the Original method. It is a parallel version of the decoupling algorithm without VR.
 Conditions under which this algorithm converges linearly can be borrowed from the previous section.
 
 We now add VR and coordinate descent to the Original method in order to obtain the Decoupling method. The conditions under which linear rate holds don't change.
 
-\section{VR}
+
 
 \section{Coordinate descent}
-
-
-\section{Something else: Stochastic Chambolle-Pock algorithm}
-% References should be produced using the bibtex program from suitable
-% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
-% style file from IEEE produces unsorted bibliography list.
-% -------------------------------------------------------------------------
-
-We want to solve 
-\begin{equation}
-    \min_x \bE_\xi(g(x,\xi)) \quad\text{s.t.}\quad \bE(L)x = \bE(b),
-\end{equation}
-where $L$ is a random matrix and $b$ a random vector. We start with $b$ and $L$ deterministic. 
-
-Chambolle Pock for this problem is written
-\begin{align}
-    x_{n+1} &= \prox_{\gamma g(\cdot,\xi_{n+1})}(x_n - \gamma L_{n+1}^T y_n)\\
-    y_{n+1} &= y_n + \gamma L_{n+1}(2 x_{n+1} - x_n).
-\end{align}
-Let $z_n = (x_n, y_n)$, 
-\[
-P_\gamma = \begin{bmatrix} I &  -\gamma L^T \\ -\gamma L & I \end{bmatrix},
-\]
-\[
-A(z,\xi) = \begin{bmatrix} \partial f(x,\xi)&  + L^T y \\ -L x& \end{bmatrix} .
-\]
-
-Algorithm:
-
-$$
-P_\gamma(z_{n+1} - z_n) \in -\gamma A(z_{n+1}) 
-$$
-
-
-\begin{align*}
-&\|z_{n+1} - z_\star\|_\gamma^2 \\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \ps{z_n - z_\star,(P_{n+1} - P_n)z_n - z_\star}\\
-& -2\gamma \ps{A(z_{n+1}) - \varphi,z_{n+1} - z_\star} -2\gamma \ps{\varphi,z_{n} - z_\star} -2\gamma \ps{\varphi,z_{n+1} - z_n}\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
-& -2\gamma \alpha \ps{A(z_{n+1}) - \varphi,z_{n+1} - z_\star} \\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
-& -2\gamma\alpha \left(( g(x_{n+1},\xi_{n+1}) + \ps{L x_{n+1} - b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star - b,y_{n+1}} )\right)\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 +  \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C\\
-& -2\gamma\alpha \left(( g_\gamma(x_{n} - \gamma L^T y_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} )\right)\\
-& -2\gamma\alpha \left(-\frac{1}{2\gamma}\|x_{n+1} - x_n - \gamma L^T y_n\|^2 + \ps{L (x_{n+1} - x_n),y_\star} - \ps{L x_\star - b,y_{n+1} - y_n}\right)\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left(( g_\gamma(x_{n} - \gamma L^T y_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} ) - ( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} )\right)\\
-& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2.\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left( g_\gamma(x_{n},\xi_{n+1}) + \ps{\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1}), -\gamma L^T y_n} - \frac{\gamma}{2}\|L^T y_n\|^2 + \ps{L x_{n}-b,y_\star} \right) \\
-& +2\gamma \alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star -b,y_{n}} \right)\\
-& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\left(\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 - \|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2\right) + \ps{L x_{n}-b,y_\star} \right)\\
-&-2\gamma\alpha \left(-\frac{\gamma}{2}\|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2 - \gamma\ps{\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1}), L^T y_n} - \frac{\gamma}{2}\|L^T y_n\|^2 \right) \\
-& +2\gamma \alpha\left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
-& +\alpha \|x_{n+1} - x_n - \gamma L^T y_n\|^2\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 + \ps{L x_{n}-b,y_\star} \right)\\
-& + \alpha\|x_{n+1} - x_n\|^2 \\
-& +2\gamma \alpha\left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
-& + \alpha\|x_{n+1} - x_n - \gamma L^T y_n\|^2 - \alpha\gamma^2 \|\nabla^\gamma g(x_n-\gamma L^T y_n,\xi_{n+1})\|^2\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + \varepsilon \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) - \frac{\gamma}{2}\|\nabla^0 g(x_{n},\xi_{n+1})\|^2 + \ps{L x_{n}-b,y_\star} \right)\\
-& + \alpha\|x_{n+1} - x_n\|^2 \\
-& +2\gamma\alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right)\\
-\leq &\|z_{n} - z_\star\|_\gamma^2 - \|z_{n+1} - z_{n}\|_\gamma^2 + (\varepsilon + \alpha) \|z_{n+1} - z_{n}\|^2 + \gamma^2 C \\
-& -2\gamma\alpha \left( g(x_{n},\xi_{n+1}) + \ps{L x_{n}-b,y_\star} \right)\\
-& +2\gamma\alpha \left( g(x_\star,\xi_{n+1}) + \ps{L x_\star-b,y_{n}} \right).
-\end{align*}
-Taking $\varepsilon, \alpha$ enough small such that $(\varepsilon + \alpha) \|\cdot\|^2 \leq \|\cdot\|_\gamma^2$, and taking expectation we finally have
-
-\begin{equation}
-    \label{eq:final}
-    \bE_n(\|z_{n+1} - z_\star\|_\gamma^2) \leq \|z_n - z_\star\|_\gamma^2 -2\gamma\alpha\left( \cL(x_n,y_\star) - \cL(x_\star,y_n)\right)+ \gamma^2 C.
-\end{equation}
-\asnote{To be added : domain, forward step}
-
-In order to randomize $P$, let's look at
-\begin{equation}
-z_{n+1} - z_n = \begin{bmatrix} x_{n+1} - x_{n} \\ y_{n+1} - y_{n} \end{bmatrix}
- = \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T y_n \\ L (2 x_{n+1} - x_n)& \end{bmatrix}.
-\end{equation}
-
-\begin{align}
-P_{\gamma} (z_{n+1} - z_n) &= \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T \left(y_n +\gamma L (2 x_{n+1} - x_n)\right) \\ L \left(x_{n} -\gamma \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) - \gamma L^T y_n\right) \end{bmatrix}\\
-&= \gamma \begin{bmatrix} - \nabla^\gamma g(x_n - \gamma L^T y_n,\xi_{n+1}) & -L^T y_{n+1} \\ L x_{n+1} \end{bmatrix}\\
-&\in \gamma \begin{bmatrix} - \partial g(x_{n+1},\xi_{n+1}) & -L^T y_{n+1} \\ L x_{n+1} \end{bmatrix}\\
-\end{align}
-
-\begin{align}
-    \ps{(z_{n+1} - z_n), P_{\gamma} (z_{n+1} - z_n)} = 
-\end{align}
-
-
-
-
-
-
-\asnote{Use inf convolution like Combettes}
-
 
 
 
