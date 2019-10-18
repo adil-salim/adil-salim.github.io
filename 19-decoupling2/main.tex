@@ -22,6 +22,7 @@
 \newcommand{\cS}{{\mathcal S}} 
 \newcommand{\cM}{{\mathcal M}} 
 \newcommand{\cP}{{\mathcal P}} 
+\newcommand{\cO}{{\mathcal O}} 
 
 \DeclareMathOperator{\prox}{prox}
 
@@ -82,9 +83,84 @@ We are especially trying to understand the following points.
     \item \cite{gorbunov2019unified} provide a tight analysis of SGD, can we generalize it to the setting of~\cite{mishchenko2019stochastic}
     \item If we particularize~\cite{mishchenko2019stochastic} to the setting of SGD, what kind of analysis do we get? Especially, it allows biased estimate of the gradient.
     \item In~\cite{mishchenko2019stochastic}, what is the assumption made on $v_t$ ? what is $Y_t$?
-    \item Minibatch analysis of~\cite{mishchenko2019stochastic} 
+%    \item Minibatch analysis of~\cite{mishchenko2019stochastic}
 \end{itemize}
+
+\section{Extension of~\cite{gorbunov2019unified} to the weakly convex setting and $R$ strongly convex}
+Let $F$ (resp. $R$) $\mu$ strongly convex (resp $\lambda$ strongly convex). We allow $\mu=0$ (resp $\lambda = 0$)  
+The prox-SGD algorithm can be written
+\begin{equation}
+    x^{k+1} = x^k - \gamma g^k - \gamma \partial R(x^{k+1})
+\end{equation}
+The symbol $=$ should be an inclusion $\in$ since $\partial R$ is set valued, but we keep $=$ to simplify.
+
+The iterates $x^k$ satisfy
+
+\begin{align}
+    \label{eq:PG-final}
+    &\|x^{k+1} - x^\star\|^2 \\
+    =& \|x^k - x^\star\|^2 -\gamma^2\|\partial R(x^{k+1}) - \partial R(x^\star)\|^2 + \gamma^2 \|g^k - \nabla F(x^\star) \|^2\\
+    &- 2\gamma\ps{\partial R(x^{k+1})-\partial R(x^\star),x^{k+1}-x^\star} - 2\gamma\ps{g^k-\nabla F(x^\star),x^k-x^\star}.
+\end{align}
+This equality will be proven in the sequel in a more general case (see Eq.~\eqref{eq:FB-final}).
+
+We assume that $g^k$ satisfy (\cite{gorbunov2019unified}): there exist an adapted stochastic process $(\sigma_k)_k$ and constants $A,B,C \geq 0$ such that
+\begin{align}
+    \bE_k(\|g^k - \nabla f(x^\star)\|^2) &\leq 2AD_F(x^k,x^\star) + B\sigma_k + D_1\\
+    \bE_k(\sigma_{k+1}^2) &\leq (1-\rho)\sigma_k^2 + 2CD_F(x^k,x^\star) + D_2,
+\end{align}
+where $\bE_k$ denotes the conditional expectation.
+
+From Eq.~\eqref{PG-final},
+\begin{align}
+    &\bE_k\|x^{k+1} - x^\star\|^2 \\
+    \leq& \|x^k - x^\star\|^2 + \gamma^2 \bE_k\|g^k - \nabla F(x^\star) \|^2\\
+    &- 2\gamma \bE_k D_R(x^{k+1},x^\star) - 2\gamma D_F(x^{k},x^\star)\\
+    \leq& (1-\gamma \mu)\|x^k - x^\star\|^2 - \gamma \lambda \|x^{k+1} - x^\star\|^2\\
+    &- 2\gamma \bE_k D_R(x^{k+1},x^\star) - 2\gamma(1 - \gamma A) D_F(x^{k},x^\star)\\
+    &+ \gamma^2 B \sigma_k + \gamma^2 D_1.
+\end{align}
+Therefore, noting that $\frac{1-\gamma\mu}{1+\gamma\lambda} = 1-\gamma\frac{\mu+\lambda}{1+\gamma\lambda}$,
+\begin{align}
+    &\bE_k (1+\gamma \lambda)\|x^{k+1} - x^\star\|^2 + M(1+\gamma\lambda)\gamma^2 \bE_k \sigma_{k+1} + \bE_k 2\gamma D_R(x^{k+1},x^\star)\\
+    \leq& (1-\gamma\mu)\|x^k - x^\star\|^2 + 2\gamma \frac{1-\gamma\mu}{1+\gamma\lambda} D_R(x^{k},x^\star)\\
+    &- 2\gamma \left(1-\gamma\frac{\mu+\lambda}{1+\gamma\lambda}\right) D_R(x^{k},x^\star) - 2\gamma(1 - \gamma (A + M(1+\gamma\lambda)C)) D_F(x^{k},x^\star)\\
+    &+ \gamma^2 M \left((1-\rho)(1+\gamma\lambda) + \frac{B}{M}\right)\sigma_k + \gamma^2 (D_1 + M(1+\gamma\lambda)D_2).
+\end{align}
+
+Let $$V^k = \|x^{k} - x^\star\|^2 + M\gamma^2 \sigma_{k} +  \frac{2\gamma}{1+\gamma\lambda} D_R(x^{k},x^\star),$$ $$\alpha = \max\{1-\gamma\mu, (1-\rho)(1+\gamma\lambda) + \frac{B}{M}\},$$
+and 
+$$
+\beta = \max\{\frac{\mu+\lambda}{1+\gamma\lambda},A + M(1+\gamma\lambda)C\}
+$$
+
+\begin{align}
+    (1+\gamma\lambda)\bE_k V^{k+1}
+    \leq& \alpha V^k - 2\gamma (1-\gamma\beta) (D_R(x^{k},x^\star) + D_F(x^{k},x^\star))\\
+    &+\gamma^2 (D_1 + M(1+\gamma\lambda)D_2)\\
+    =& \alpha V^k - 2\gamma (1-\gamma\beta) ((F+R)(x^k) - (F+R)(x^\star))\\
+    &+\gamma^2 (D_1 + M(1+\gamma\lambda)D_2),
+\end{align}
+where the last equality comes from $\nabla F(x^\star) + \partial R(x^\star) = 0$.
+
+One can take $\gamma$ small enough in order to have $1-\gamma\beta >0$ (note that $\gamma \beta \to 0$ as $\gamma \to 0$). Once such $\gamma$ is chosen, one can take $M$ large enough in order to have $1-\rho + \frac{B}{M(1+\gamma\lambda)} < 1$ (for example $M > B/\rho$).
+
+
+If $\mu >0$ or $\lambda >0$, $V^k$ converges linearly with the rate $\frac{\alpha}{1+\gamma\lambda}$, up to a neighborhood.
+
+In the weakly convex setup ($\mu = 0 =\lambda$) we have 
+
+\begin{equation}
+    \label{eq:weakly-cvx-sigmak}
+    \bE_k V^{k+1} \leq V^k - 2\gamma(1-\gamma\beta)((F+R)(x^k) - (F+R)(x^\star)) +\gamma^2 (D_1 + M(1+\gamma\lambda)D_2).
+\end{equation}
+Therefore we have $((F+R)(\overline{x^k}) - (F+R)(x^\star)) = \cO(1/k)$ if $D_1 = 0 = D_2$ (\textit{i.e} if the algorithm is variance reduced)\asnote{And even without averaging if we know that $F+R(x^k)$ is nonincreasing. Show this!} and $((F+R)(\overline{x^k}) - (F+R)(x^\star)) = \cO(1/\sqrt{k})$ else (in the finite horizon setting where the constant step size is chosen as a function of $k$).
+
+
 \section{About Decoupling}
+The Decoupling method~\cite{mishchenko2019stochastic} is a primal dual algorithm, even the Lyapunov function of the Decoupling method without VR is the squared norm of the primal-dual variables ($Y_t$ represents the dual variables)
+
+
 We shall look at a variant of the Decoupling method of~\cite{mishchenko2019stochastic}.
 The Decoupling method~\cite{mishchenko2019stochastic} is written (we use Moreau's identity for the last two lines)
 
@@ -248,7 +324,7 @@ Assume from now on the every gradient $\nabla F(x^k)$ is replaced by an unbiased
     &-\gamma \chi^{k+1}.
 \end{align*}
 
-Moreover, we assume that $g^k$ is variance reduced in the sense of~\cite{gorbunov2019unified}: their exist an adapted stochastic process $(\sigma_k)_k$ and constants $A,B,C \geq 0$ such that
+Moreover, we assume that $g^k$ is variance reduced in the sense of~\cite{gorbunov2019unified}: there exist an adapted stochastic process $(\sigma_k)_k$ and constants $A,B,C \geq 0$ such that
 \begin{align}
     \bE_k(\|g^k - \nabla f(x^\star)\|^2) &\leq 2AD_F(x^k,x^\star) + B\sigma_k\\
     \bE_k(\sigma_{k+1}^2) &\leq (1-\rho)\sigma_k^2 + 2CD_F(x^k,x^\star),
@@ -287,7 +363,7 @@ Finally, denoting $\alpha = \max(1-\rho+B/M,1-\gamma\mu) < 1$ and $W^k = \|x^k-x
      &-\gamma\chi^{k+1}.
 \end{align*}
 
-Now, one can use $\chi^k$ to also have a contraction in $\bE\|y^k - y^\star\|_\sY^2$
+Now, one can use $\chi^k$ to also have a contraction in $\bE\|y^k - y^\star\|_\sY^2$. \cite{Put expectation everywhere}
 
 \section{An instance of Vu Condat}
 
