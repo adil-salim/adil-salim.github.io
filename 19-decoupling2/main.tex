@@ -373,25 +373,36 @@ Consider the problem
 \min_{x \in \sX} f(x) + \sum_{j=1}^m g_j(x) + R(x)
 \end{equation}
 This problem can be tackled by Vu-Condat by setting $F(x) = f(x)$, $\sY = \sX^m$, $H(y_1,\ldots,y_m) = \sum_j g_j(y_j)$ and $M : \sX \to \sY, Mx = 1/m (x,\ldots,x)$ and $G(x) = R(x)$.
-The iterates are now elements $(x,(y_1,\ldots,y_m)) \in \sX \times \sX^m$. Note that $G$ is separable and $M^T(y_1,\ldots,y_m) = \frac{1}{m}\sum_{j=1}^m y_j$. The prox of $G$ can be computed in parallel, therefore Vu-Condat applied to~\ref{eq:appli} is written\asnote{Check the step sizes. Rewrite decoupling as Vu-Condat}
+The iterates are now elements $(x,(y_1,\ldots,y_m)) \in \sX \times \sX^m$. Note that $G$ is separable and $M^T(y_1,\ldots,y_m) = \frac{1}{m}\sum_{j=1}^m y_j = \overline{y}$. The prox of $G$ can be computed in parallel, therefore Vu-Condat applied to~\ref{eq:appli} is written\asnote{Check the step sizes. Rewrite decoupling as Vu-Condat}
     \begin{align}
         x^{n+1}   &= \prox_{\gamma R}(x^n - \gamma v^n - \gamma \frac{1}{m}\sum_{j=1}^m y_j^n)\\
         \widetilde{x^{n+1}} &= 2x^{n+1} - x^n\\
         y_j^{n+1} &= \prox_{\frac{1}{\gamma_j} g_j^\star}(y_j^n + \frac{1}{\gamma_j}\widetilde{x^{n+1}} ), \forall j.
     \end{align}
     
-We call this algorithm the Original method. It is a parallel version of the decoupling algorithm without VR.
-Conditions under which this algorithm converges linearly can be borrowed from the previous section.
+The value of $\chi^{k+1}$ for this instance of Vu-Condat is 
+\begin{align*}
+    \chi^{k+1} 
+    =& \gamma\|\partial R(x^{k+1}) + \overline{y^{k+1}} - (\partial R(x^{\star}) + \overline{y^{\star}})\|_\sX^2 \\
+    & +\sum_{j=1}^m \gamma  \|(-\frac{1}{m}x^{k+1} + \partial g_j^\star(y_j^{k+1})) - (-x^{\star} + \partial g_j^\star(y_j^{\star}))\|_\sX^2 \\
+    &+ 2\ps{\partial R(x^{k+1})-\partial R(x^\star),x^{k+1}-x^\star}_\sX \\
+    &+ 2 \sum_j \ps{\partial g_j^\star(y_j^{k+1})-\partial g_j^\star(y_j^\star),y_j^{k+1}-y_j^\star}_\sX.
+\end{align*}
 
-We now add VR and coordinate descent to the Original method in order to obtain the Decoupling method. The conditions under which linear rate holds don't change.
+\begin{itemize}
+    \item If $F$ is strongly convex we have a contraction in $x$. If moreover, $g_j$ is smooth for every $j$, we have a contraction in $y_j$ (because in this case $g_j^\star$ is strongly convex). This si the case in Th 6 of\cite{mishchenko2019stochastic}.
+    \item If $R = 0$ and if there exists orthogonal vector subspaces $S_1,\ldots,S_m$ of $\sX$ such that for every $k$, $y_j^k \in S_j$, then the first term in $\chi^{k+1}$ is equal to $\frac{1}{m^2}\|y^{k+1} - y^\star\|_{\sX^m}^2$ and we have contraction in $y$. This is the case in Th 4 and 5 of~\cite{mishchenko2019stochastic}\asnote{Not exactly but this is the idea. Precise in order to extend}
+\end{itemize}
+We now add coordinate descent on top of this method in order to obtain the Decoupling method. The conditions under which linear rate holds don't change.
 
 
 
 \section{Coordinate descent}
 
 
+\section{Possible extensions}
 
-
+More general linear operator $M$
 
 \subsubsection*{References}
 \renewcommand\refname{\vskip -1cm}
