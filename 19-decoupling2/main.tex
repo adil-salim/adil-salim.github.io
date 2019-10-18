@@ -391,7 +391,7 @@ The value of $\chi^{k+1}$ for this instance of Vu-Condat is
 
 \begin{itemize}
     \item If $F$ is strongly convex we have a contraction in $x$. If moreover, $g_j$ is smooth for every $j$, we have a contraction in $y_j$ (because in this case $g_j^\star$ is strongly convex). This si the case in Th 6 of\cite{mishchenko2019stochastic}.
-    \item If $R = 0$ and if there exists orthogonal vector subspaces $S_1,\ldots,S_m$ of $\sX$ such that for every $k$, $y_j^k \in S_j$, then the first term in $\chi^{k+1}$ is equal to $\frac{1}{m^2}\|y^{k+1} - y^\star\|_{\sX^m}^2$ and we have contraction in $y$. This is the case in Th 4 and 5 of~\cite{mishchenko2019stochastic}\asnote{Not exactly but this is the idea. Precise in order to extend}
+    \item If $R = 0$ (or smooth) and if there exists orthogonal\asnote{Supplementaire sufficient? All what we need is linear independence of $(y_j)_j$} vector subspaces $S_1,\ldots,S_m$ of $\sX$ such that for every $k$, $y_j^k \in S_j$, then the first term in $\chi^{k+1}$ is equal to $\frac{1}{m^2}\|y^{k+1} - y^\star\|_{\sX^m}^2$ and we have contraction in $y$. This is the case in Th 4 and 5 of~\cite{mishchenko2019stochastic}\asnote{Not exactly but this is the idea. Precise in order to extend}
 \end{itemize}
 We now add coordinate descent on top of this method in order to obtain the Decoupling method. The conditions under which linear rate holds don't change.
 
