@@ -64,8 +64,10 @@
 \maketitle
 
 \begin{abstract} 
-
 \end{abstract}
+
+
+
 
 Generally, the goal of this work is to go from the analysis of SGD proposed in the $\sigma_k$ paper~\cite{gorbunov2019unified} to the decoupling paper~\cite{mishchenko2019stochastic}.
 
@@ -86,21 +88,115 @@ We are especially trying to understand the following points.
 %    \item Minibatch analysis of~\cite{mishchenko2019stochastic}
 \end{itemize}
 
-\section{Extension of~\cite{gorbunov2019unified} to the weakly convex setting and $R$ strongly convex}
+\section{Introduction}
+
+We provide a primal dual interpretation of the Decoupling algorithm. The algorithm is a Variance reduced of the Coodinate Update Vu Condat (CUVC) algorithm. The CUVC is studied in~\cite{Fercoq,Yin}. It uses stochastic coordinate updates~\cite{Iutzeler, Yin, Pesquet Combettes} in top of Vu-Condat algorithm~\cite{Vu, Condat, Chambolle-Pock}.
+This interpretation allows us to prove results related to the Decoupling2 algorithm, an algorithm very close to the Decoupling algorithm. The results proved for the Decoupling2 algorithm cover the results of~\cite{mishchenko2019stochastic}. 
+
+As a special case, we find the results contained in~\cite{gorbunov2019unified} for prox-SGD as well as now ones. 
+As a special case, we find known results related to CUVC as well as now ones.
+
+Proofs in the Appendix.
+
+\section{Problem}
+
+Consider the following minimization problem
+\begin{equation}
+    \label{eq:pb-original}
+    \min F(x) + R(x) + \sum_{j=1}^m h_j(A_j x)
+\end{equation}
+where $F,G,h_j \in \Gamma_0(\bR^d)$ and $F$ is smooth.
+
+This minimization problem can be addressed using Vu-Condat algorithm~\cite{vu-condat}. 
+
+Let $x^0,y_1^0,\ldots,y_m^0$.
+
+\begin{align}
+    \label{Vu-Condat}
+    x^{k+1}   &= \prox_{\gamma R}(x^k - \gamma \nabla F(x^k) - \gamma \sum_{j=1}^m A_j^{T} y_j^k)\\
+    \widetilde{x^{k+1}} &= 2x^{k+1} - x^k\\
+    y_j^{k+1} &= \prox_{\frac{1}{\gamma_j} h_j^\star}(y_j^k + \frac{1}{\gamma_j}A_j\widetilde{x^{k+1}} ), \forall j.
+\end{align}
+
+We consider the following setting. The use have access to 
+
+\begin{enumerate}
+    \item Unbiaised estimate $g^{k}$ of the gradient $\nabla F(x^k)$ :$\bE(g^k|x^k) = \nabla F(x^k)$
+    \item Unbiased estimate $r$ of the function $R$: $\bE_\xi(r(x,\xi)) = R(x)$ 
+    \item Unbiased estimates $p_j$ of the functions $h_j^\star$: $\bE_\xi(p_j(x,\xi)) = h_j^\star$
+    \item For every $j$, a sequence $(a_j^k)_k$ of the matrices such that: \begin{itemize}
+                                                                                        \item $(a_j^k)_k$ is a bounded martingale
+                                                                                        \item $\bE(a_j^0) = A_j$
+    \end{itemize}
+\end{enumerate}  
+
+To solve Problem~\eqref{eq:pb-original} in this setting, we introduce the Decoupling2 algorithm. Consider a sequence of iid realizations $\xi^k$ of $\xi$,
+
+
+\begin{align}
+    \label{eq:algo-general}
+    x^{k+1}   &= \prox_{\gamma r(\cdot,\xi^{k})}(x^k - \gamma g^{k} - \gamma \sum_{j=1}^m (a_j^{k})^{T} y_j^k)\\
+    \widetilde{x^{k+1}} &= 2x^{k+1} - x^k\\
+    y_j^{k+1} &= \prox_{\frac{1}{\gamma} p_j(\cdot,\xi)}(y_j^k + \frac{1}{\gamma} a_j^k \widetilde{x^{k+1}}), \quad j \sim p_j.
+\end{align}
+
+This algorithm is general. Five levels of randomness. It admits relevant (new and old) algorithms as special cases.
+
+\section{Relationship to existing and nonexisting methods}
+
+\subsection{Existing methods}
+If all estimate are exact (non random) and if the $m$ dual steps are done in parallel, then the algorithm~\eqref{eq:algo-general} boils down to Vu-Condat in the equivalent form given in~\eqref{eq:Vu-Condat}
+If moreover $m=1$, the algorithm~\eqref{eq:algo-general} boils down to Vu-Condat in its classical form.
+
+
+In the case $m=1$, if $r$ is deterministic and $h_j = 0$ then the algorithm is the prox SGD~\cite{gorbunov2019unified}. If $r$ is also random, it is stochastic prox SGD~\cite{bia-hac,bia-hac-sal}. If moreover $a_1^k$ is also random, then the algorithm is close to~\cite{salim} that allows to solve composite stochastic optimization algorithm under stochastic linear constraints (constraints written as expectations). We will provide more details on it later on.
+
+In the case $m > 1$, if everything else is deterministic, it is CUVC~\cite{fercoq,yin,pesquet,iutzeler}. If moreover $g^k$ is random, then the algorithm is very close the Decoupling algorithm~\cite{mishchenko2019stochastic}. The difference with this algorithm is that it sets $\widetilde{x^{k+1}} = x^{k+1}$.
+
+
+In the sequel we provide four different theorems under various assumptions on the randomness and the function class considered (smooth, convex...).
+For each theorem, we provide relevant special cases in which our assumptions hold.
+The proof of these results is presented in the appendix. It employs monotone operator theory. The relationship between Vu-Condat and the monotone operator theory was already noticed in~\cite{Vu-Condat}.
+
+
+
+
+\section{Non VR, weakly convex}
+
+\section{Non VR, strongly cvx}
+
+Wasserstein, linear case? 
+
+\section{VR, weakly cvx}
+
+\section{VR, strongly cvx}
+
+
+linear case, smooth case
+\subsection{Application : linear rate in distributed optimization without strong monotonicity}
+
+
+
+
+
+\part{Appendix}
+
+
+\section{Extension of~\cite{gorbunov2019unified} to the weakly convex setting and $R$ strongly convex and $\partial R$ monotone operator}
 Let $F$ (resp. $R$) $\mu$ strongly convex (resp $\lambda$ strongly convex). We allow $\mu=0$ (resp $\lambda = 0$)  
 The prox-SGD algorithm can be written
 \begin{equation}
-    x^{k+1} = x^k - \gamma g^k - \gamma \partial R(x^{k+1})
+    x^{k+1} = x^k - \gamma g^k - \gamma A(x^{k+1})
 \end{equation}
-The symbol $=$ should be an inclusion $\in$ since $\partial R$ is set valued, but we keep $=$ to simplify.
+where $A = \partial R$. The symbol $=$ should be an inclusion $\in$ since $A$ is set valued, but we keep $=$ to simplify.
 
 The iterates $x^k$ satisfy
 
 \begin{align}
     \label{eq:PG-final}
     &\|x^{k+1} - x^\star\|^2 \\
-    =& \|x^k - x^\star\|^2 -\gamma^2\|\partial R(x^{k+1}) - \partial R(x^\star)\|^2 + \gamma^2 \|g^k - \nabla F(x^\star) \|^2\\
-    &- 2\gamma\ps{\partial R(x^{k+1})-\partial R(x^\star),x^{k+1}-x^\star} - 2\gamma\ps{g^k-\nabla F(x^\star),x^k-x^\star}.
+    =& \|x^k - x^\star\|^2 -\gamma^2\|A(x^{k+1}) - A(x^\star)\|^2 + \gamma^2 \|g^k - \nabla F(x^\star) \|^2\\
+    &- 2\gamma\ps{A(x^{k+1})-A(x^\star),x^{k+1}-x^\star} - 2\gamma\ps{g^k-\nabla F(x^\star),x^k-x^\star}.
 \end{align}
 This equality will be proven in the sequel in a more general case (see Eq.~\eqref{eq:FB-final}).
 
@@ -141,7 +237,7 @@ $$
     =& \alpha V^k - 2\gamma (1-\gamma\beta) ((F+R)(x^k) - (F+R)(x^\star))\\
     &+\gamma^2 (D_1 + M(1+\gamma\lambda)D_2),
 \end{align}
-where the last equality comes from $\nabla F(x^\star) + \partial R(x^\star) = 0$.
+where the last equality comes from $\nabla F(x^\star) + A(x^\star) = 0$.
 
 One can take $\gamma$ small enough in order to have $1-\gamma\beta >0$ (note that $\gamma \beta \to 0$ as $\gamma \to 0$). Once such $\gamma$ is chosen, one can take $M$ large enough in order to have $1-\rho + \frac{B}{M(1+\gamma\lambda)} < 1$ (for example $M > B/\rho$).
 
@@ -383,9 +479,9 @@ The iterates are now elements $(x,(y_1,\ldots,y_m)) \in \sX \times \sX^m$. Note 
 The value of $\chi^{k+1}$ for this instance of Vu-Condat is 
 \begin{align*}
     \chi^{k+1} 
-    =& \gamma\|\partial R(x^{k+1}) + \overline{y^{k+1}} - (\partial R(x^{\star}) + \overline{y^{\star}})\|_\sX^2 \\
+    =& \gamma\|A(x^{k+1}) + \overline{y^{k+1}} - (A(x^{\star}) + \overline{y^{\star}})\|_\sX^2 \\
     & +\sum_{j=1}^m \gamma  \|(-\frac{1}{m}x^{k+1} + \partial g_j^\star(y_j^{k+1})) - (-x^{\star} + \partial g_j^\star(y_j^{\star}))\|_\sX^2 \\
-    &+ 2\ps{\partial R(x^{k+1})-\partial R(x^\star),x^{k+1}-x^\star}_\sX \\
+    &+ 2\ps{A(x^{k+1})-A(x^\star),x^{k+1}-x^\star}_\sX \\
     &+ 2 \sum_j \ps{\partial g_j^\star(y_j^{k+1})-\partial g_j^\star(y_j^\star),y_j^{k+1}-y_j^\star}_\sX.
 \end{align*}
 
