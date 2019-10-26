@@ -17,9 +17,11 @@ header:
 
 ## Conference papers
 
-- A. Salim, D. Kovalev and P. Richtarik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", submitted, May 2019.
+- A. Salim, D. Kovalev and P. Richtarik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %}).
 
-- M. Arbel, A. Korba, A. Salim and A. Gretton "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", submitted, May 2019.
+
+
+- M. Arbel, A. Korba, A. Salim and A. Gretton "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", Neurips 2019, Vancouver, Canada.
 
 - A. Salim*, A. Korba*, M. Arbel and A. Gretton "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
