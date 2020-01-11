@@ -66,6 +66,7 @@ I have reviewed papers for:
 - NeurIPS
 - Applied Mathematics and Optimization
 - IEEE Transactions on Information Theory
+- Automatica
 - IEEE Transactions on Signal and Information Processing over Networks
 - IEEE Signal Processing Letters
 
