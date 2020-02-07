@@ -17,6 +17,9 @@ header:
 
 ## Conference papers
 
+
+- A. Salim , A. Korba and G. Luise "[Wasserstein Proximal Gradient]({{site.baseurl}}{% link Research/wasserstein20.pdf %})", submitted, January 2020. 
+
 - A. Salim, D. Kovalev and P. Richtarik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
 
 
