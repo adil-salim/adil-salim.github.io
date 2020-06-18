@@ -7,6 +7,8 @@ header:
 
 ## Journal papers
 
+- A. Salim [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
+
 - A. Salim, P. Bianchi, and W. Hachem, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
 
 - A. Salim, P. Bianchi, and W. Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), accepted for publication in _Transaction on Automatic Control_, March 2018. (Here is the [Code](https://github.com/adil-salim/Snake) and a [short version]({{site.baseurl}}{% link Research/snake-nips17.pdf %}) presented at _NIPS 2017 Workshop Black in AI_)
@@ -17,16 +19,23 @@ header:
 
 ## Conference papers
 
+- D. Kovalev, A. Salim and P. Richtárik "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.09270)", submitted, May 2020.
 
-- A. Salim , A. Korba and G. Luise "[Wasserstein Proximal Gradient]({{site.baseurl}}{% link Research/wasserstein20.pdf %})", submitted, January 2020. 
+- A. Korba, A. Salim, M. Arbel, G. Luise and A. Gretton "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", submitted, May 2020. 
 
-- A. Salim, D. Kovalev and P. Richtarik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
+- A. Salim and P. Richtárik "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", submitted, May 2020. 
 
+- A. Salim, A. Korba and G. Luise "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", submitted, January 2020. 
 
+- A. Salim, L. Condat, K. Mishchenko and P. Richtárik "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", submitted, April 2020. 
+
+- S. Chraibi, A. Khaled, D. Kovalev, A. Salim, P. Richtárik and M. Takáč "[Distributed Fixed Point Methods with Compressed Iterates](https://arxiv.org/abs/1912.09925)", submitted, December 2019. 
+
+- A. Salim, D. Kovalev and P. Richtárik "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
 
 - M. Arbel, A. Korba, A. Salim and A. Gretton "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", Neurips 2019, Vancouver, Canada.
 
-- A. Salim*, A. Korba*, M. Arbel and A. Gretton "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
+- A. Korba, A. Salim, M. Arbel and A. Gretton "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
 - A. Salim "On Stochastic Primal-Dual Algorithms", _ICCOPT 2019_, Berlin, Germany. 
 
@@ -61,21 +70,29 @@ https://pastel.archives-ouvertes.fr/tel-01960496/document), under the supervisio
 
 - Intership report, [Méthodes séquentielles de traitement de données]({{site.baseurl}}{% link Research/rapport-de-stage.pdf %}), under the supervision of [Florian Maire](https://maths.ucd.ie/~fmaire/)
 
-## Reviewing activity
+## Service
+
+I served as an area chair for:
+
+- Black in AI workshop 2019
 
 I have reviewed papers for:
 
 - Journal of the Royal Statistical Society: Series B
-- NeurIPS
+- NeurIPS 2019, 2020
+- ICML 2020
+- Set-Valued and Variational Analysis
 - Applied Mathematics and Optimization
 - IEEE Transactions on Information Theory
-- Automatica
 - IEEE Transactions on Signal and Information Processing over Networks
+- IEEE Transactions on Signal Processing
 - IEEE Signal Processing Letters
+- Automatica
+- Numerical Algorithms
 
 
 ## Awards
 
 - **2018** _GDR ISIS_ Travel Grant for PhD mobility at EPFL
-- **2017 - 2018** _NIPS Workshop Black in AI_ Travel Grant
+- **2017, 2018** _NIPS Workshop Black in AI_ Travel Grant
 - **2009 - 2012** Merit Scholarship
