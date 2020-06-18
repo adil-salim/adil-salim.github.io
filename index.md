@@ -32,7 +32,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 - P. Bianchi, W. Hachem and A. Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
 
-- A. Salim, D. Kovalev and P. Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
+- A. Salim, D. Kovalev and P. Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**.
 
 - M. Arbel, A. Korba, A. Salim and A. Gretton, "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", Neurips 2019, Vancouver, Canada.
 
