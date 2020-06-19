@@ -18,24 +18,24 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ## Selected papers
 
-- D. Kovalev, A. Salim and P. Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.09270)", submitted, May 2020.
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", submitted, May 2020.
 
-- A. Korba, A. Salim, M. Arbel, G. Luise and A. Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", submitted, May 2020. 
+- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", submitted, May 2020. 
 
-- A. Salim and P. Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", submitted, May 2020. 
+- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", submitted, May 2020. 
 
-- A. Salim, L. Condat, K. Mishchenko and P. Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", submitted, April 2020. 
+- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", submitted, April 2020. 
 
-- A. Salim, A. Korba and G. Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", submitted, January 2020. 
+- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", submitted, January 2020. 
 
-- A. Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
+- Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
 
-- P. Bianchi, W. Hachem and A. Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
+- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
 
-- A. Salim, D. Kovalev and P. Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**.
+- Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**.
 
-- M. Arbel, A. Korba, A. Salim and A. Gretton, "[Maximum Mean Discrepancy Gradient Flow]({{site.baseurl}}{% link Research/mmd19.pdf %})", Neurips 2019, Vancouver, Canada.
+- Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", Neurips 2019, Vancouver, Canada.
 
-- A. Salim, P. Bianchi, and W. Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), _Transaction on Automatic Control_, March 2018.
+- Adil Salim, Pascal Bianchi, and Walid Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), _Transaction on Automatic Control_, March 2018.
 
-- P. Bianchi, W. Hachem, and A. Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/joca1813_revised.pdf %}), _Journal of Convex Analysis_, March 2018.
+- Pascal Bianchi, Walid Hachem, and Adil Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/joca1813_revised.pdf %}), _Journal of Convex Analysis_, March 2018.
