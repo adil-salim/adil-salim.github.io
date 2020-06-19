@@ -36,6 +36,8 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 - Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", Neurips 2019, Vancouver, Canada.
 
+- Pascal Bianchi, Walid Hachem, and Adil Salim, [Constant Step Stochastic Approximations Involving Differential Inclusions: Stability, Long-Run Convergence and Applications]({{site.baseurl}}{% link Research/revised_arxiv_dicst.pdf %}), _Stochastics_, May 2018. 
+
 - Adil Salim, Pascal Bianchi, and Walid Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), _Transaction on Automatic Control_, March 2018.
 
 - Pascal Bianchi, Walid Hachem, and Adil Salim, [A constant step Forward-Backward algorithm involving random maximal monotone operators]({{site.baseurl}}{% link Research/joca1813_revised.pdf %}), _Journal of Convex Analysis_, March 2018.
