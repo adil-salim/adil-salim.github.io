@@ -30,7 +30,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
 
-- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
+- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
 
 - Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**.
 
