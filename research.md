@@ -9,7 +9,7 @@ header:
 
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
 
-- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), submitted, January 2019. 
+- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
 
 - Adil Salim, Pascal Bianchi, and Walid Hachem, [Snake: a Stochastic Proximal Gradient Algorithm for Regularized Problems over Large Graphs]({{site.baseurl}}{% link Research/snake18.pdf %}), _Transaction on Automatic Control_, March 2018. (Here is the [Code](https://github.com/adil-salim/Snake) and a [short version]({{site.baseurl}}{% link Research/snake-nips17.pdf %}) presented at _NIPS 2017 Workshop Black in AI_)
 
