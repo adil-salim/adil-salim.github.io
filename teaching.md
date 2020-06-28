@@ -5,21 +5,21 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-Since 2015, I am a Tutorial Assistant for the following courses.
+I was a Teaching Assistant for the following courses.
 
-Industrial masters:
+Industrial masters (2018):
 
-- Image processing project ("Fil rouge", Télécom ParisTech)
+- Image processing project ("Fil rouge", Télécom Paris)
 
-Graduate level:
+Graduate level (2016 - 2018):
 
-- Introduction to Stochastic Processes (ENSAE ParisTech)
-- Applied statistics project (ENSAE ParisTech)
-- Optimization (Télécom ParisTech)
+- Introduction to Stochastic Processes (ENSAE Paris)
+- Applied statistics project (ENSAE Paris)
+- Optimization (Télécom Paris)
 
-Undergraduate level:
+Undergraduate level (2016 - 2018):
 
-- Algebra (ENSAE ParisTech)
-- Measure theory (ENSAE ParisTech)
+- Algebra (ENSAE Paris)
+- Measure theory (ENSAE Paris)
 
 
