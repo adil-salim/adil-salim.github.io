@@ -31,9 +31,9 @@ header:
 
 - Sélim Chraibi, Ahmed Khaled, Dmitry Kovalev, Adil Salim, Peter Richtárik and Martin Takáč, "[Distributed Fixed Point Methods with Compressed Iterates](https://arxiv.org/abs/1912.09925)", submitted, December 2019. 
 
-- Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", Neurips 2019, Vancouver, Canada, **Spotlight**. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
+- Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", **Spotlight** @ _Neurips 2019_, Vancouver, Canada. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
 
-- Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", Neurips 2019, Vancouver, Canada.
+- Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", _Neurips 2019_, Vancouver, Canada.
 
 - Anna Korba, Adil Salim, Michael Arbel and Arthur Gretton, "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
