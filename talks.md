@@ -29,7 +29,7 @@ header:
 
 - [On Stochastic Primal--Dual Algorithms]({{site.baseurl}}{% link Talks/iccopt.pdf %}), ICCOPT, August 2019, TU Berlin, Germany
 
-- [Langevin as an Optimization algorithm]({{site.baseurl}}{% link Talks/lmc.pdf %}), Neurips, December 2019, Vancouver, Canada
+- [Langevin as an Optimization algorithm]({{site.baseurl}}{% link Talks/lmc.pdf %}), Computer Science Graduate Seminar, November 2019, KAUST, KSA
 
 - [Stochastic Proximal Langevin Algorithm]({{site.baseurl}}{% link Talks/spla-slides.pdf %}), Neurips, December 2019, Vancouver, Canada
 
