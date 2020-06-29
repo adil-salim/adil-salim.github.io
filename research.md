@@ -7,7 +7,7 @@ header:
 
 ## Journal papers
 
-- Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), Octobre 2019. 
+- Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
 - Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
 
@@ -19,17 +19,17 @@ header:
 
 ## Conference papers
 
-- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", submitted, May 2020.
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", May 2020.
 
-- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", submitted, May 2020. 
+- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", May 2020. 
 
-- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", submitted, May 2020. 
+- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", May 2020. 
 
-- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", submitted, January 2020. 
+- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", January 2020. 
 
-- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", submitted, April 2020. 
+- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", April 2020. 
 
-- Sélim Chraibi, Ahmed Khaled, Dmitry Kovalev, Adil Salim, Peter Richtárik and Martin Takáč, "[Distributed Fixed Point Methods with Compressed Iterates](https://arxiv.org/abs/1912.09925)", submitted, December 2019. 
+- Sélim Chraibi, Ahmed Khaled, Dmitry Kovalev, Adil Salim, Peter Richtárik and Martin Takáč, "[Distributed Fixed Point Methods with Compressed Iterates](https://arxiv.org/abs/1912.09925)", December 2019. 
 
 - Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", **Spotlight** @ _Neurips 2019_, Vancouver, Canada. (Here is the slides of the [Spotlight]({{site.baseurl}}{% link Research/spla-slides.pdf %}), the [Code](https://github.com/adil-salim/SPLA) and the [Poster]({{site.baseurl}}{% link Research/poster-langevin19.pdf %})).
 
@@ -37,13 +37,13 @@ header:
 
 - Anna Korba, Adil Salim, Michael Arbel and Arthur Gretton, "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
-- Adil Salim "On Stochastic Primal-Dual Algorithms", _ICCOPT 2019_, Berlin, Germany. 
+#- Adil Salim "On Stochastic Primal-Dual Algorithms", _ICCOPT 2019_, Berlin, Germany. 
 
-- Adil Salim and Walid Hachem, "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", submitted, March 2019. 
+- Adil Salim and Walid Hachem, "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", March 2019. 
 
 - Sholom Schechtman, Adil Salim, and Pascal Bianchi, "[Passty Langevin]({{site.baseurl}}{% link Research/cap2019.pdf %})", _CAp 2019_, Toulouse, France.
 
-- Adil Salim, Pascal Bianchi and Walid Hachem, "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
+#- Adil Salim, Pascal Bianchi and Walid Hachem, "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
 
 - Adil Salim, Pascal Bianchi, and Walid Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}), an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report and the [Code](https://github.com/adil-salim/Stochastic-DR))
 
