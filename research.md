@@ -93,4 +93,5 @@ I have reviewed papers for:
 - **2019** Participation to _DS3 2019_, Ecole Polytechnique, France
 - **2018** _GDR ISIS_ Travel Grant for PhD mobility at EPFL
 - **2017, 2018** _NIPS Workshop Black in AI_ Travel Grant
+- **2015** Top 3 Master's thesis out of nearly 200 students
 - **2009 - 2012** Merit Scholarship
