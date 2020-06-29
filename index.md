@@ -18,15 +18,15 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ## Selected papers
 
-- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", May 2020.
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", June 2020.
 
-- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", May 2020. 
+- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", June 2020. 
 
-- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", May 2020. 
+- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", June 2020. 
 
 - Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", April 2020. 
 
-- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", January 2020. 
+- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", February 2020. 
 
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
