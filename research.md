@@ -37,13 +37,9 @@ header:
 
 - Anna Korba, Adil Salim, Michael Arbel and Arthur Gretton, "Yet another look at Stein Variational Gradient Descent", _ICML 2019 Workshop on Stein's Method_, Long Beach, USA.
 
-#- Adil Salim "On Stochastic Primal-Dual Algorithms", _ICCOPT 2019_, Berlin, Germany. 
-
 - Adil Salim and Walid Hachem, "[On the Performance of the Stochastic FISTA]({{site.baseurl}}{% link Research/fista19.pdf %})", March 2019. 
 
 - Sholom Schechtman, Adil Salim, and Pascal Bianchi, "[Passty Langevin]({{site.baseurl}}{% link Research/cap2019.pdf %})", _CAp 2019_, Toulouse, France.
-
-#- Adil Salim, Pascal Bianchi and Walid Hachem, "[A Splitting Algorithm for Minimization under Stochastic Linear Constraints]({{site.baseurl}}{% link Research/ismp18.pdf %})", _ISMP 2018_, Bordeaux, France. 
 
 - Adil Salim, Pascal Bianchi, and Walid Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada. (Here is the [Technical Report]({{site.baseurl}}{% link Research/TechnicalReport.pdf %}), an extended [abstract]({{site.baseurl}}{% link Research/stodr-short17.pdf %}) of the Technical Report and the [Code](https://github.com/adil-salim/Stochastic-DR))
 
