@@ -18,7 +18,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ## Selected papers
 
-- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization]({{site.baseurl}}{% link Research/decentralized20.pdf %})", June 2020.
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", June 2020.
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", June 2020. 
 
