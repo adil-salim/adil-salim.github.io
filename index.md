@@ -18,23 +18,28 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ## Selected papers
 
-- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", June 2020.
+# Sampling and optimal transport
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", June 2020. 
 
 - Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", June 2020. 
 
-- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", April 2020. 
-
 - Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", February 2020. 
-
-- Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
-
-- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
 
 - Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", **Spotlight** @ _Neurips 2019_, Vancouver, Canada.
 
 - Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", _Neurips 2019_, Vancouver, Canada.
+
+
+# Optimization and monotone operators
+
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", June 2020.
+
+- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", April 2020. 
+
+- Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
+
+- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
 
 - Adil Salim, Pascal Bianchi, and Walid Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada.
 
