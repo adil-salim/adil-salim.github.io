@@ -5,6 +5,9 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
+## Selected talks
+
+
 - A Stochastic Proximal Point Algorithm for Total Variation Regularization over Large Scale Graphs, Conference on Decision and Control, December 2016, Las Vegas, USA
 
 - [Stochastic Proximal Gradient algorithm]({{site.baseurl}}{% link Talks/fjml.pdf %}), France / Japan Machine Learning Workshop, September 2017, Ecole Normale Supérieure Paris, France
