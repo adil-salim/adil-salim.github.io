@@ -74,6 +74,7 @@ I have served as an area chair for:
 
 I have reviewed papers for:
 
+- Journal of Machine Learning Research
 - Journal of the Royal Statistical Society: Series B
 - NeurIPS 2019, 2020
 - ICML 2020
