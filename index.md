@@ -39,7 +39,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
-- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), to appear in _Optimization Letters_, January 2019. 
+- Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), _Optimization Letters_, June 2020. 
 
 - Adil Salim, Pascal Bianchi, and Walid Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada.
 
