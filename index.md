@@ -13,7 +13,7 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 - The sessions I am co-organizing at [SIAM Conference on Optimization 2020](https://www.siam.org/conferences/cm/conference/op20) are postponed until further notice, due to Covid19 outbreak. 
 I am co-organizing the mini-symposium "Gradient flows and interactions between optimization and sampling algorithms" (Part I and Part II) with [Anna Korba](https://akorba.github.io/) and the mini-symposium "Recent advances in primal-dual splitting for convex optimization" with [Laurent Condat](https://lcondat.github.io/).
 
-- I gave a talk at the [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems) which was held virtually at the Fields Institute, Toronto. My pre-recorded talk on Langevin algorithm can be found [here](), and Anna's talk on the MMD gradient flow is [here]().
+- I gave a talk at the [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems) which was held virtually at the Fields Institute, Toronto. My pre-recorded talk on Langevin algorithm can be found [here](https://www.youtube.com/watch?v=4lGjecpVWzE), and Anna's talk on the MMD gradient flow is [here](https://www.youtube.com/watch?v=fFrhvrGg9hw).
 
 
 ## Selected papers
