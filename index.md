@@ -13,18 +13,18 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 - The sessions I am co-organizing at [SIAM Conference on Optimization 2020](https://www.siam.org/conferences/cm/conference/op20) are postponed until further notice, due to Covid19 outbreak. 
 I am co-organizing the mini-symposium "Gradient flows and interactions between optimization and sampling algorithms" (Part I and Part II) with [Anna Korba](https://akorba.github.io/) and the mini-symposium "Recent advances in primal-dual splitting for convex optimization" with [Laurent Condat](https://lcondat.github.io/).
 
-- I will give a talk at the [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems) which will be virtually held at the Fields Institute, Toronto. 
+- I gave a talk at the [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems) which was held virtually at the Fields Institute, Toronto. My pre-recorded talk on Langevin algorithm can be found [here](), and Anna's talk on the MMD gradient flow is [here]().
 
 
 ## Selected papers
 
 ### Sampling and optimal transport
 
-- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", June 2020. 
+- Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _Neurips 2020_. 
 
-- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", June 2020. 
+- Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", _Neurips 2020_. 
 
-- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", February 2020. 
+- Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", _Neurips 2020_. 
 
 - Adil Salim, Dmitry Kovalev and Peter Richtárik, "[Stochastic Proximal Langevin Algorithm: Potential Splitting and Nonasymptotic Rates]({{site.baseurl}}{% link Research/langevin19.pdf %})", **Spotlight** @ _Neurips 2019_, Vancouver, Canada.
 
@@ -33,7 +33,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ### Optimization and monotone operators
 
-- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", June 2020.
+- Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _Neurips 2020_.
 
 - Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", April 2020. 
 
