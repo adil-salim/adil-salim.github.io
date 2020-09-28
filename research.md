@@ -91,6 +91,8 @@ I have reviewed papers for:
 
 ## Awards and Distinctions
 
+- **2020** Top 33% ICML reviewer
+- **2019** Top 50% NeurIPS reviewer
 - **2019** Participation to _MLSS 2019_, Skoltech Moscow, Russia
 - **2019** Participation to _DS3 2019_, Ecole Polytechnique, France
 - **2018** _GDR ISIS_ Travel Grant for PhD mobility at EPFL
