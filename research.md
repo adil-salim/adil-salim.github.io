@@ -70,7 +70,7 @@ https://pastel.archives-ouvertes.fr/tel-01960496/document), under the supervisio
 
 I have served as an area chair for:
 
-- Black in AI workshop 2019
+- Black in AI workshop 2019, 2020
 
 I have reviewed papers for:
 
