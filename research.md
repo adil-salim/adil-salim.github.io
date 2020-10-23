@@ -87,6 +87,7 @@ I have reviewed papers for:
 - IEEE Signal Processing Letters
 - Automatica
 - Numerical Algorithms
+- Journal of Mathematical Analysis and Applications
 
 
 ## Awards and Distinctions
