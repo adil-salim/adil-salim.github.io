@@ -34,7 +34,9 @@ header:
 
 - [Langevin as an Optimization algorithm]({{site.baseurl}}{% link Talks/lmc.pdf %}), Computer Science Graduate Seminar, November 2019, KAUST, KSA
 
-- [Stochastic Proximal Langevin Algorithm]({{site.baseurl}}{% link Talks/spla-slides.pdf %}), Neurips, December 2019, Vancouver, Canada
+- [Stochastic Proximal Langevin Algorithm]({{site.baseurl}}{% link Talks/spla-slides.pdf %}), NeurIPS, December 2019, Vancouver, Canada
+
+- [Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://www.youtube.com/watch?v=4lGjecpVWzE), [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems), Fields Institute, Toronto, Canada (ONLINE).
 
 
 
