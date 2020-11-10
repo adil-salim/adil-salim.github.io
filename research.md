@@ -90,6 +90,7 @@ I have reviewed papers for:
 - Automatica
 - Numerical Algorithms
 - Journal of Mathematical Analysis and Applications
+- Journal of Scientific Computing
 
 
 ## Awards and Distinctions
