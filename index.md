@@ -18,7 +18,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 ## Selected papers
 
-### Sampling and optimal transport
+### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _NeurIPS 2020_. 
 
@@ -31,7 +31,7 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 - Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", _NeurIPS 2019_, Vancouver, Canada.
 
 
-### Optimization and monotone operators
+### [Optimization and monotone operators](https://arxiv.org/pdf/0905.1270.pdf)
 
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
 
