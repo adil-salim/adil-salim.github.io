@@ -10,6 +10,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
+- I am presenting at NeurIPS 2020. The optimization paper in the Poster Session 3 and the sampling papers in the Poster Session 6.
+
 - The sessions I am co-organizing at [SIAM Conference on Optimization 2020](https://www.siam.org/conferences/cm/conference/op20) are postponed until further notice, due to Covid19 outbreak. 
 I am co-organizing the mini-symposium "Gradient flows and interactions between optimization and sampling algorithms" (Part I and Part II) with [Anna Korba](https://akorba.github.io/) and the mini-symposium "Recent advances in primal-dual splitting for convex optimization" with [Laurent Condat](https://lcondat.github.io/).
 
