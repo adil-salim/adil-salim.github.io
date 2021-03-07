@@ -19,6 +19,8 @@ header:
 
 ## Conference papers
 
+- Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", February 2021.
+
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _NeurIPS 2020_. 
