@@ -10,7 +10,7 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
-- Next fall (2021), I will be at UC Berkeley, USA, as a postdoctoral researcher of the [Foundations of Data Science Institute](https://fodsi.us/) and a Simons-Berkeley research fellow.
+- Next fall (2021), I will be at UC Berkeley, USA, as a postdoctoral researcher of the [Foundations of Data Science Institute](https://fodsi.us/) and a Simons-Berkeley research fellow (for the program [Geometric Methods in Optimization and Sampling](https://simons.berkeley.edu/programs/gmos2021)).
 
 - I am presenting at NeurIPS 2020. The optimization paper in the Poster Session 3 and the sampling papers in the Poster Session 6.
 
