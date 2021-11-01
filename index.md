@@ -3,7 +3,7 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/), UC Berkeley, USA. 
+I am a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/programs/gmos2021), UC Berkeley, USA. 
 
 Previously, I was a Postdoctoral Fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). 
 
