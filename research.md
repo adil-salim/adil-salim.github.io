@@ -19,6 +19,8 @@ header:
 
 ## Conference papers
 
+- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", June 2021.
+
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", February 2021.
 
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
