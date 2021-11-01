@@ -30,7 +30,7 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 - Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", _NeurIPS 2019_, Vancouver, Canada.
 
 
-### [Optimization and monotone operators](https://arxiv.org/pdf/0905.1270.pdf)
+### [Optimization and monotone operators](https://www.sciencedirect.com/bookseries/north-holland-mathematics-studies/vol/5)
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", February 2021.
 
