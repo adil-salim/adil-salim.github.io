@@ -17,6 +17,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
+- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", June 2021.
+
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _NeurIPS 2020_. 
 
 - Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", _NeurIPS 2020_. 
@@ -29,6 +31,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 
 ### [Optimization and monotone operators](https://arxiv.org/pdf/0905.1270.pdf)
+
+- Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", February 2021.
 
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
 
