@@ -3,22 +3,15 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
+I am a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/), UC Berkeley, USA. 
 
-I'm a postdoctoral fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my PhD at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/) in the S2A (Signal, Statistics and Learning) team. 
+Previously, I was a Postdoctoral Fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/) in the S2A (Signal, Statistics and Learning) team. 
 
-I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link postdoc_en.pdf %}).
+I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
 ## News
 
-- Next Fall (2021), I will be at UC Berkeley, USA, as a postdoctoral researcher of the [Foundations of Data Science Institute](https://fodsi.us/) and a Simons-Berkeley research fellow (for the program [Geometric Methods in Optimization and Sampling](https://simons.berkeley.edu/programs/gmos2021)).
-
-- I am presenting at NeurIPS 2020. The optimization paper in the Poster Session 3 and the sampling papers in the Poster Session 6.
-
-- The sessions I am co-organizing at [SIAM Conference on Optimization 2020](https://www.siam.org/conferences/cm/conference/op20) are postponed until further notice, due to Covid19 outbreak. 
-I am co-organizing the mini-symposium "Gradient flows and interactions between optimization and sampling algorithms" (Part I and Part II) with [Anna Korba](https://akorba.github.io/) and the mini-symposium "Recent advances in primal-dual splitting for convex optimization" with [Laurent Condat](https://lcondat.github.io/).
-
-- I gave a talk at the [Second Symposium on Machine Learning and Dynamical Systems](https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems) which was held virtually at the Fields Institute, Toronto. My pre-recorded talk on Langevin algorithm can be found [here](https://www.youtube.com/watch?v=4lGjecpVWzE), and Anna's talk on the MMD gradient flow is [here](https://www.youtube.com/watch?v=fFrhvrGg9hw).
-
+- I will join the [Machine Learning Foundations group](https://www.microsoft.com/en-us/research/group/mlog/) at Microsoft Research Redmond as a Senior Researcher in 2022.
 
 ## Selected papers
 
@@ -39,13 +32,9 @@ I am co-organizing the mini-symposium "Gradient flows and interactions between o
 
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
 
-- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", _NeurIPS 2020 Workshop OPT2020: Optimization for Machine Learning_.
-
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
 - Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), _Optimization Letters_, June 2020. 
-
-- Adil Salim, Pascal Bianchi, and Walid Hachem, "[A Constant Step Stochastic Douglas-Rachford Algorithm with Application to Non Separable Regularization]({{site.baseurl}}{% link Research/icassp18.pdf %})", _IEEE ICASSP 2018_, Calgary, Canada.
 
 - Pascal Bianchi, Walid Hachem, and Adil Salim, [Constant Step Stochastic Approximations Involving Differential Inclusions: Stability, Long-Run Convergence and Applications]({{site.baseurl}}{% link Research/revised_arxiv_dicst.pdf %}), _Stochastics_, May 2018. 
 
