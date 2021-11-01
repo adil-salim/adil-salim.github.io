@@ -29,9 +29,9 @@ minimal_mistakes_skin: "dark"
 author:
   name             : "Adil Salim"
   avatar           : "as.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Postdoctoral fellow at KAUST"
-  location         : "Al Khwarizmi Bldg 1, KAUST"
-  email            : "adil.salim@kaust.edu.sa"
+  bio              : "Google Research Fellow (Simons Institute, UC Berkeley)"
+  location         : "Melvin Calvin Lab, Room 229"
+  email            : "salim@berkeley.edu"
   uri              :
   bitbucket        :
   codepen          :
