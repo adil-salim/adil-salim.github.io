@@ -5,7 +5,7 @@ header:
 
 I am a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/), UC Berkeley, USA. 
 
-Previously, I was a Postdoctoral Fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/) in the S2A (Signal, Statistics and Learning) team. 
+Previously, I was a Postdoctoral Fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). 
 
 I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
