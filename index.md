@@ -3,15 +3,16 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/programs/gmos2021), UC Berkeley, USA.
+I am a Senior Researcher in the [Machine Learning Foundations group](https://www.microsoft.com/en-us/research/group/mlog/) at Microsoft Research (Redmond, USA).
+Previously, I was a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/programs/gmos2021), UC Berkeley, USA.
 
-Previously, I was a Postdoctoral Fellow at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/). I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). 
+I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). Then, I did a postdoc at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/).  
 
 I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
 ## News
 
-- I will join the [Machine Learning Foundations group](https://www.microsoft.com/en-us/research/group/mlog/) at Microsoft Research Redmond as a Senior Researcher in 2022.
+- I am attending a conference on Stein's method in [Banff](https://www.birs.ca/events/2022/5-day-workshops/22w5092).
 
 ## Selected papers
 
