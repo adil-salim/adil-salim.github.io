@@ -29,9 +29,9 @@ minimal_mistakes_skin: "dark"
 author:
   name             : "Adil Salim"
   avatar           : "as.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Google Research Fellow at Simons Institute"
-  location         : "Calvin Lab, UC Berkeley"
-  email            : "salim@berkeley.edu"
+  bio              : "Sr Researcher at Microsoft Research"
+  location         : "Building 99, 3921, Redmond, WA 98052"
+  email            : "adilsalim@microsoft.com"
   uri              :
   bitbucket        :
   codepen          :
