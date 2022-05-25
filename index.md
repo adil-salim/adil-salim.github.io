@@ -12,7 +12,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
-- I am attending a conference on Stein's method in [Banff](https://www.birs.ca/events/2022/5-day-workshops/22w5092).
+- [Sinho Chewi](https://chewisinho.github.io/) is spending the summer with us at MSR.
+- [Anna Korba](https://akorba.github.io/) and I will give a tutorial on Sampling as optimization at ICML 2022.
 
 ## Selected papers
 
