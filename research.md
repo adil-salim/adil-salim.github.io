@@ -19,11 +19,11 @@ header:
 
 ## Conference papers
 
-- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", February 2022.
+- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
 
-- Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", February 2022.
+- Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", _COLT 2022_.
 
-- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", June 2021.
+- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
