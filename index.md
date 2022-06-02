@@ -19,9 +19,9 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
-- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", February 2022.
+- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
 
-- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", June 2021.
+- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _NeurIPS 2020_. 
 
