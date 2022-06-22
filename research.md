@@ -7,6 +7,8 @@ header:
 
 ## Journal papers
 
+- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", to appear in _Journal of Optimization Theory and Applications_, April 2020.
+
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
 - Pascal Bianchi, Walid Hachem and Adil Salim, [A Fully Stochastic Primal-Dual Algorithm]({{site.baseurl}}{% link Research/pridu19.pdf %}), _Optimization Letters_, June 2020. 
@@ -34,8 +36,6 @@ header:
 - Adil Salim and Peter Richtárik, "[Primal Dual Interpretation of the Proximal Stochastic Gradient Langevin Algorithm](https://arxiv.org/abs/2006.09270)", _NeurIPS 2020_. 
 
 - Adil Salim, Anna Korba and Giulia Luise, "[The Wasserstein Proximal Gradient Algorithm](https://arxiv.org/abs/2002.03035)", _NeurIPS 2020_. 
-
-- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", _NeurIPS 2020 Workshop OPT2020: Optimization for Machine Learning_.
 
 - Sélim Chraibi, Ahmed Khaled, Dmitry Kovalev, Adil Salim, Peter Richtárik and Martin Takáč, "[Distributed Fixed Point Methods with Compressed Iterates](https://arxiv.org/abs/1912.09925)", December 2019. 
 
