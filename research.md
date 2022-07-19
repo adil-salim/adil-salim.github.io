@@ -25,7 +25,7 @@ header:
 
 - Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", _COLT 2022_.
 
-- Adil Salim, Lukang Sun, Peter Richtárik, "[Complexity Analysis of Stein Variational Gradient Descent Under Talagrand's Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
+- Adil Salim, Lukang Sun, Peter Richtárik, "[A Convergence Theory for SVGD in the Population Limit under Talagrand’s Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
