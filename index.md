@@ -12,7 +12,7 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
-- [Anna Korba](https://akorba.github.io/) and I will give a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}).
+- [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). If you have an ICML account, you can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437). If you don't, the video will be on Youtube soon.
 
 ## Selected papers
 
