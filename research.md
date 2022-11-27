@@ -21,6 +21,11 @@ header:
 
 ## Conference papers
 
+- Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
+diffusion models with minimal data assumptions]({{site.baseurl}}{% link score22.pdf %})", _NeurIPS 2022 Workshop on Score-Based Methods_, New Orleans, USA.
+
+- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", September 2022. 
+
 - Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
 
 - Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", _COLT 2022_.
