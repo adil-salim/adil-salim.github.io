@@ -12,14 +12,16 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
-- [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). If you have an ICML account, you can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437). If you don't, the video will be on Youtube soon.
+- [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). If you have an ICML account, you can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437).
 
 - [Sinho Chewi](https://chewisinho.github.io/) is writing a [book](https://chewisinho.github.io/main.pdf) on Sampling.
 
-## Selected papers
+## Some recent papers
 
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
+- Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
+diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", _NeurIPS 2022 Workshop on Score-Based Methods_, New Orleans, USA.
 
 - Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
 
@@ -40,6 +42,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 --->
 
 ### [Optimization and monotone operators](https://www.sciencedirect.com/bookseries/north-holland-mathematics-studies/vol/5)
+
+- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", September 2022. 
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
