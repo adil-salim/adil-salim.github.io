@@ -22,15 +22,15 @@ header:
 ## Conference papers
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
-diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_.
+diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
 
-- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_. 
+- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_, Singapore. 
 
-- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
+- Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_, London, UK.
 
-- Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", _COLT 2022_.
+- Krishnakumar Balasubramanian, Sinho Chewi, Murat A. Erdogdu, Adil Salim, Matthew Zhang, "[Towards a Theory of Non-Log-Concave Sampling: First-Order Stationarity Guarantees for Langevin Monte Carlo](https://arxiv.org/abs/2202.05214.pdf)", _COLT 2022_, London, UK.
 
-- Adil Salim, Lukang Sun, Peter Richtárik, "[A Convergence Theory for SVGD in the Population Limit under Talagrand’s Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
+- Adil Salim, Lukang Sun, Peter Richtárik, "[A Convergence Theory for SVGD in the Population Limit under Talagrand’s Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_, Baltimore, USA.
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
