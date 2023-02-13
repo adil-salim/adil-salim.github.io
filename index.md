@@ -21,7 +21,7 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
-diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", _NeurIPS 2022 Workshop on Score-Based Methods_, New Orleans, USA.
+diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_.
 
 - Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_.
 
@@ -43,7 +43,7 @@ diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research
 
 ### [Optimization and monotone operators](https://www.sciencedirect.com/bookseries/north-holland-mathematics-studies/vol/5)
 
-- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", September 2022. 
+- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_. 
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
