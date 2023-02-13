@@ -22,7 +22,7 @@ header:
 ## Conference papers
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
-diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", _NeurIPS 2022 Workshop on Score-Based Methods_, New Orleans, USA.
+diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_.
 
 - Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", September 2022. 
 
