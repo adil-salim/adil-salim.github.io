@@ -7,7 +7,7 @@ header:
 
 ## Journal papers
 
-- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", to appear in _Journal of Optimization Theory and Applications_, April 2020.
+- Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", _Journal of Optimization Theory and Applications_, April 2020.
 
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), October 2019. 
 
