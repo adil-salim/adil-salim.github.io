@@ -8,7 +8,7 @@ Previously, I was a Google Research Fellow at the [Simons Institute](https://sim
 
 I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). Then, I did a postdoc at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/).  
 
-I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
+I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. Recently, I have been interested in diffusion models and large language models. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
 ## News
 
