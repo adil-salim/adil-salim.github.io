@@ -43,6 +43,9 @@ diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research
 
 ### [Optimization and monotone operators](https://www.sciencedirect.com/bookseries/north-holland-mathematics-studies/vol/5)
 
+- Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi, Adil Salim, "[Forward-Backward Gaussian Variational Inference
+via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
+
 - Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_. 
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
