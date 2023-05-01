@@ -21,6 +21,9 @@ header:
 
 ## Conference papers
 
+- Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi, Adil Salim, "[Forward-Backward Gaussian Variational Inference
+via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
+
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
 diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
 
