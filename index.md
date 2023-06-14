@@ -12,6 +12,8 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## News
 
+- [Jaume de Dios Pont](https://jaume.dedios.cat/) is spending the summer with us at MSR.
+
 - [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). You can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437).
 
 - [Sinho Chewi](https://chewisinho.github.io/) is writing a [book](https://chewisinho.github.io/main.pdf) on Sampling.
