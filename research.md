@@ -21,13 +21,22 @@ header:
 
 ## Conference papers
 
+- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
+
+- Krishnakumar Balasubramanian, Larry Goldstein, Nathan Ross and Adil Salim, "[Gaussian random field approximation via Stein's method with applications to wide random neural networks](https://arxiv.org/pdf/2306.16308.pdf)", June 2023.
+
+
+- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", May 2023.
+
 - Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi, Adil Salim, "[Forward-Backward Gaussian Variational Inference
 via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
-diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research/score22.pdf %})", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
+diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215.pdf)", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
 
 - Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_, Singapore. 
+
+- Lukang Sun, Adil Salim and Peter Richtárik, "[Federated Sampling with Langevin Algorithm under Isoperimetry](https://arxiv.org/pdf/2206.00920.pdf)", June 2022.
 
 - Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_, London, UK.
 
