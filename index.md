@@ -25,7 +25,7 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ### LLMs
 
-- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need]([https://arxiv.org/pdf/2305.11798.pdf](https://arxiv.org/pdf/2306.11644.pdf))", May 2023.
+- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
 
 ### Diffusion models and sampling
 
