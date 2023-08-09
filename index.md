@@ -3,12 +3,13 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a Senior Researcher in the [Machine Learning Foundations group](https://www.microsoft.com/en-us/research/group/mlog/) at Microsoft Research (Redmond, USA).
+I am a Senior Researcher in the [Machine Learning Foundations group](https://www.microsoft.com/en-us/research/group/mlog/) at Microsoft Research (Redmond, USA). I currently study diffusion models and large language models.
+
 Previously, I was a Google Research Fellow at the [Simons Institute](https://simons.berkeley.edu/programs/gmos2021), UC Berkeley, USA.
 
-I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/). Then, I did a postdoc at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/).  
+I did my Ph.D at Telecom Paris and Paris--Saclay University, France, under the supervision of [Pascal Bianchi](https://bianchi.wp.imt.fr/) and [Walid Hachem](http://www-syscom.univ-mlv.fr/~whachem/), where I studied optimization. Then, I did a postdoc at KAUST, Saudi Arabia, hosted by [Peter Richtárik](https://richtarik.org/), where I studied sampling (as optimization).  
 
-I use optimization, statistics, optimal transport, convex analysis etc. to study machine learning algorithms. I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
+I received the Masters degrees in 2015 from ENSAE Paris, where I studied statistics, and from Paris--Saclay University, where I studied probability theory. Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
 ## News
 
@@ -22,6 +23,27 @@ I use optimization, statistics, optimal transport, convex analysis etc. to study
 
 ## Some recent papers
 
+### LLMs
+
+- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need]([https://arxiv.org/pdf/2305.11798.pdf](https://arxiv.org/pdf/2306.11644.pdf))", May 2023.
+
+### Diffusion models and sampling
+
+- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", May 2023.
+
+- Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi and Adil Salim, "[Forward-Backward Gaussian Variational Inference
+via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
+
+- Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
+diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215.pdf)", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
+
+### Optimization
+
+- Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_, Singapore. 
+
+
+<!---
+
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
@@ -31,7 +53,6 @@ diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research
 
 - Adil Salim, Lukang Sun, Peter Richtárik, "[A Convergence Theory for SVGD in the Population Limit under Talagrand’s Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
 
-<!---
 
 - Anna Korba, Adil Salim, Michael Arbel, Giulia Luise and Arthur Gretton, "[A Non-Asymptotic Analysis for Stein Variational Gradient Descent](https://arxiv.org/abs/2006.09797)", _NeurIPS 2020_. 
 
@@ -43,7 +64,6 @@ diffusion models with minimal data assumptions]({{site.baseurl}}{% link Research
 
 - Michael Arbel, Anna Korba, Adil Salim and Arthur Gretton, "[Maximum Mean Discrepancy Gradient Flow](https://arxiv.org/abs/1906.04370)", _NeurIPS 2019_, Vancouver, Canada.
 
---->
 
 ### [Optimization and monotone operators](https://www.sciencedirect.com/bookseries/north-holland-mathematics-studies/vol/5)
 
@@ -54,7 +74,6 @@ via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)"
 
 - Adil Salim, Laurent Condat, Dmitry Kovalev and Peter Richtárik, "[An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints](https://arxiv.org/abs/2102.11079)", _AISTATS 2022_.
 
-<!---
 
 - Dmitry Kovalev, Adil Salim and Peter Richtárik, "[Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization](https://arxiv.org/abs/2006.11773)", _NeurIPS 2020_.
 
