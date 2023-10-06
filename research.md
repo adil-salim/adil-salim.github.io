@@ -26,7 +26,7 @@ header:
 - Krishnakumar Balasubramanian, Larry Goldstein, Nathan Ross and Adil Salim, "[Gaussian random field approximation via Stein's method with applications to wide random neural networks](https://arxiv.org/pdf/2306.16308.pdf)", June 2023.
 
 
-- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", May 2023.
+- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", _NeurIPS 2023_.
 
 - Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi, Adil Salim, "[Forward-Backward Gaussian Variational Inference
 via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
