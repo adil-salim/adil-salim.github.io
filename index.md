@@ -29,7 +29,7 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ### Diffusion models and sampling
 
-- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", May 2023.
+- Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", _NeurIPS 2023_.
 
 - Michael Diao, Krishnakumar Balasubramanian, Sinho Chewi and Adil Salim, "[Forward-Backward Gaussian Variational Inference
 via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)", _ICML 2023_.
