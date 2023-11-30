@@ -93,6 +93,8 @@ https://pastel.archives-ouvertes.fr/tel-01960496/document), under the supervisio
 
 - Intership report, [Méthodes séquentielles de traitement de données]({{site.baseurl}}{% link Research/rapport-de-stage.pdf %}), under the supervision of [Florian Maire](https://maths.ucd.ie/~fmaire/)
 
+<!---
+
 ## Service
 
 I have served as an area chair for:
@@ -128,3 +130,5 @@ I have reviewed papers for:
 - **2017, 2018** _NIPS Workshop Black in AI_ Travel Grant
 - **2015** Top 3 Master's thesis out of nearly 200 students
 - **2009 - 2012** Merit Scholarship
+
+--->
