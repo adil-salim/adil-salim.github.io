@@ -3,7 +3,7 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a senior researcher at Microsoft Research now focusing on language models. 
+I am a senior researcher at Microsoft AI now focusing on language models. 
 
 Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
@@ -21,9 +21,7 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ## News
 
-- [Jaume de Dios Pont](https://jaume.dedios.cat/) is spending the summer with us at MSR.
-
-- [Avetik Karagulyan](https://avetx.github.io/), [Anna Korba](https://akorba.github.io/) and I organized a minisymposium on Wasserstein gradient flows at [SIAM Optimization 2023](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=76619) in Seattle. Avetik is visiting MSR after that. 
+- [Khashayar Gatmiry](https://scholar.google.com/citations?user=w8XocYQAAAAJ&hl=en) is spending the summer with us at Microsoft.
 
 - [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). You can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437).
 
@@ -32,6 +30,8 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 ## Some papers
 
 ### LLMs
+
+- Marah Abdin *et al.*, "[Phi-3 Technical Report](https://arxiv.org/pdf/2404.14219)", April 2024.
 
 - Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
 
