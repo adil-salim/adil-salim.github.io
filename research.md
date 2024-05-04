@@ -7,6 +7,8 @@ header:
 
 ## Journal papers
 
+- Krishnakumar Balasubramanian, Larry Goldstein, Nathan Ross and Adil Salim, [Gaussian random field approximation via Stein's method with applications to wide random neural networks](https://arxiv.org/pdf/2306.16308.pdf), _Applied and Computational Harmonic Analysis journal_, 2024.
+
 - Adil Salim, [A Strong Law of Large Numbers for Random Monotone Operators](https://arxiv.org/abs/1910.04405), _Set-Valued and Variational Analysis_, 2023. 
 
 - Adil Salim, Laurent Condat, Konstantin Mishchenko and Peter Richtárik, "[Dualize, Split, Randomize: Fast Nonsmooth Optimization Algorithms](https://arxiv.org/abs/2004.02635)", _Journal of Optimization Theory and Applications_, April 2020.
@@ -21,9 +23,9 @@ header:
 
 ## Conference papers
 
-- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
+- Marah Abdin *et al.*, "[Phi-3 Technical Report](https://arxiv.org/pdf/2404.14219)", April 2024.
 
-- Krishnakumar Balasubramanian, Larry Goldstein, Nathan Ross and Adil Salim, "[Gaussian random field approximation via Stein's method with applications to wide random neural networks](https://arxiv.org/pdf/2306.16308.pdf)", June 2023.
+- Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
 
 
 - Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", _NeurIPS 2023_.
