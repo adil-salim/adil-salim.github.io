@@ -28,7 +28,7 @@ minimal_mistakes_skin: "dark"
 # Site Author
 author:
   name             : "Adil Salim"
-  avatar           : "as.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "as2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Member of the technical staff at Microsoft AI"
   location         : "Building 99"
   email            : "adilsalim@microsoft.com"
