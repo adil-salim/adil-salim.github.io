@@ -3,9 +3,11 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a senior researcher at Microsoft AI now focusing on language models. 
+I am a member of the technical staff at Microsoft AI working on language models. 
 
-Here is my [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
+Before, my research was mostly focused on sampling, optimization and proximal methods. "[Here](https://arxiv.org/abs/2304.05398.pdf)" is a representative paper at the intersection of these topics. 
+
+[CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %}).
 
 <!---
 
