@@ -23,6 +23,8 @@ header:
 
 ## Conference papers
 
+- Victor Priser, Pascal Bianchi and Adil Salim, "[Long-time asymptotics of noisy SVGD outside the population limit](https://arxiv.org/pdf/2406.11929.pdf)", June 2024.
+
 - Marah Abdin *et al.*, "[Phi-3 Technical Report](https://arxiv.org/pdf/2404.14219)", April 2024.
 
 - Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
@@ -38,7 +40,7 @@ diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215
 
 - Sinho Chewi, Sébastien Bubeck and Adil Salim, "[On the complexity of finding stationary points of smooth functions in one dimension](https://arxiv.org/pdf/2209.07513.pdf)", **Best student paper award** @ _ALT 2023_, Singapore. 
 
-- Lukang Sun, Adil Salim and Peter Richtárik, "[Federated Sampling with Langevin Algorithm under Isoperimetry](https://arxiv.org/pdf/2206.00920.pdf)", June 2022.
+- Lukang Sun, Adil Salim and Peter Richtárik, "[Federated Sampling with Langevin Algorithm under Isoperimetry](https://arxiv.org/pdf/2206.00920.pdf)",  _TMLR 2023_.
 
 - Yongxin Chen, Sinho Chewi, Adil Salim, Andre Wibisono, "[Improved analysis for a proximal algorithm for sampling](https://arxiv.org/abs/2202.06386.pdf)", _COLT 2022_, London, UK.
 
