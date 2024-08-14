@@ -23,6 +23,8 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ## News
 
+- I am a workshop chair at [NeurIPS 2024](https://blog.neurips.cc/2024/08/02/announcing-the-neurips-2024-workshops/).
+
 - [Khashayar Gatmiry](https://scholar.google.com/citations?user=w8XocYQAAAAJ&hl=en) is spending the summer with us at Microsoft.
 
 - [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). You can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437).
