@@ -3,7 +3,7 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a member of technical staff at Microsoft Research working on language models. 
+I am a member of technical staff at Microsoft Research. I work on language models and diffusion models. 
 
 Before, my research was mostly focused on sampling, optimization and proximal methods. [Here](https://arxiv.org/abs/2304.05398.pdf) is a paper at the intersection of these topics. 
 
