@@ -23,7 +23,7 @@ header:
 
 ## Conference papers
 
-- Victor Priser, Pascal Bianchi and Adil Salim, "[Long-time asymptotics of noisy SVGD outside the population limit](https://arxiv.org/pdf/2406.11929.pdf)", June 2024.
+- Victor Priser, Pascal Bianchi and Adil Salim, "[Long-time asymptotics of noisy SVGD outside the population limit](https://arxiv.org/pdf/2406.11929.pdf)", _ICLR 2025_.
 
 - Marah Abdin *et al.*, "[Phi-3 Technical Report](https://arxiv.org/pdf/2404.14219)", April 2024.
 
