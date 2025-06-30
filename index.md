@@ -3,7 +3,7 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a member of technical staff at Microsoft Research. I work on language models and diffusion models. 
+I am a member of technical staff at Microsoft Research. I work on language models (especially the Phi series of language models) and diffusion models theory. 
 
 Before, my research was mostly focused on sampling, optimization and proximal methods. [Here](https://arxiv.org/abs/2304.05398.pdf) is a paper at the intersection of these topics. 
 
@@ -23,9 +23,9 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ## News
 
-- We released [phi-4](https://arxiv.org/pdf/2412.08905).
+- I am in Senegal for [MLSS 2025](https://mlss-senegal.github.io/).
 
-- I co-organize a Machine Learning Summer School (MLSS) in Senegal in 2025. Please apply! [MLSS 2025](https://mlss-senegal.github.io/).
+- We released [phi-4](https://arxiv.org/pdf/2412.08905).
 
 - I am a workshop chair at [NeurIPS 2024](https://blog.neurips.cc/2024/08/02/announcing-the-neurips-2024-workshops/).
 
