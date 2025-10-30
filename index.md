@@ -37,6 +37,8 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ### LLMs
 
+- Adil Salim, [Accelerating mathematical research with language models: A case study of an interaction with GPT-5-Pro on a convex analysis problem]({{site.baseurl}}{% link Research/case_study.pdf %}) October 2025.
+
 - Marah Abdin *et al.*, "[Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)", December 2024.
 
 - Marah Abdin *et al.*, "[Phi-3 Technical Report](https://arxiv.org/pdf/2404.14219)", April 2024.
