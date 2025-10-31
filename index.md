@@ -3,9 +3,9 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a member of technical staff at Microsoft Research. I work on language models (especially the [Phi](https://arxiv.org/pdf/2412.08905) series of language models) and diffusion models theory. 
+I am a member of technical staff at Microsoft Research. Before that I was a Google research fellow at the Simons Institute (UC Berkeley). 
 
-Before, my research was mostly focused on sampling, optimization and proximal methods. [Here](https://arxiv.org/abs/2304.05398.pdf) is a paper at the intersection of these topics. 
+I work on language models (especially the [Phi](https://arxiv.org/pdf/2412.08905) series of language models) and diffusion models theory. Before, my research was mostly focused on sampling, optimization and proximal methods. [Here](https://arxiv.org/abs/2304.05398.pdf) is a paper at the intersection of these topics. 
 
 [CV]({{site.baseurl}}{% link CV_Adil_Salim.pdf %})
 
