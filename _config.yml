@@ -30,7 +30,7 @@ author:
   name             : "Adil Salim"
   avatar           : "as.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : 
-  location         : "Building 99"
+  location         : 
   email            : "asalim.math@gmail.com"
   uri              :
   bitbucket        :
