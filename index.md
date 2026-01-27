@@ -3,7 +3,7 @@ header:
   overlay_image: unsplash-gallery-image-2.jpg
 ---
 
-I am a member of technical staff at Microsoft Research. Before that I was a Google research fellow at the Simons Institute (UC Berkeley). 
+I work in a startup. Previously, I am a member of technical staff at Microsoft Research. Before that I was a Google research fellow at the Simons Institute (UC Berkeley). 
 
 I work on language models (especially the [Phi](https://arxiv.org/pdf/2412.08905) series of language models) and diffusion models theory. Before, my research was mostly focused on sampling, optimization and proximal methods. [Here](https://arxiv.org/abs/2304.05398.pdf) is a paper at the intersection of these topics. 
 
@@ -27,8 +27,6 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 - I am in Senegal for [MLSS 2025](https://mlss-senegal.github.io/). The energy is awesome!!!
 
-- We released [phi-4](https://arxiv.org/pdf/2412.08905).
-
 - I am a workshop chair at [NeurIPS 2024](https://blog.neurips.cc/2024/08/02/announcing-the-neurips-2024-workshops/).
 
 - [Anna Korba](https://akorba.github.io/) and I have presented a tutorial on Sampling as Optimization at ICML 2022. Here are our [slides]({{site.baseurl}}{% link Research/tuto_icml.pdf %}). You can watch the [video here](https://icml.cc/virtual/2022/tutorial/18437).
@@ -45,13 +43,16 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 - Suriya Gunasekar, Yi Zhang *et al.*, "[Textbooks Are All You Need](https://arxiv.org/pdf/2306.11644.pdf)", June 2023.
 
-### Diffusion models and sampling
+### Diffusion models
+
+- Khashayar Gatmiry, Sitan Chen and Adil Salim, "[High-accuracy and dimension-free sampling with diffusions](https://arxiv.org/abs/2601.10708)", January 2026.
 
 - Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", _NeurIPS 2023_.
 
-
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
 diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215.pdf)", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
+
+<!---
 
 - Adil Salim, Lukang Sun, Peter Richtárik, "[A Convergence Theory for SVGD in the Population Limit under Talagrand’s Inequality T1](https://arxiv.org/pdf/2106.03076.pdf)", _ICML 2022_.
 
@@ -83,7 +84,7 @@ via JKO in the Bures–Wasserstein Space](https://arxiv.org/abs/2304.05398.pdf)"
 
 
 
-<!---
+
 
 ### [Sampling and optimal transport](http://www2.stat.duke.edu/~sayan/ambrosio.pdf)
 
