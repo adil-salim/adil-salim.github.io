@@ -23,7 +23,7 @@ header:
 
 ## Conference papers
 
-- Khashayar Gatmiry, Sitan Chen and Adil Salim, "[High-accuracy and dimension-free sampling with diffusions](https://arxiv.org/abs/2601.10708)", January 2026.
+- Khashayar Gatmiry, Sitan Chen and Adil Salim, "[High-accuracy and dimension-free sampling with diffusions](https://arxiv.org/abs/2601.10708)", **Spotlight** @ _ICML 2026_, Seoul, South Korea.
 
 - Adil Salim, "[Accelerating mathematical research with language models: A case study of an interaction with GPT-5-Pro on a convex analysis problem](https://arxiv.org/pdf/2510.26647)", October 2025.
 
