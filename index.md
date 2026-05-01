@@ -50,7 +50,7 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 - Sitan Chen, Sinho Chewi, Holden Lee, Yuanzhi Li, Jianfeng Lu and Adil Salim, "[The probability flow ODE is provably fast](https://arxiv.org/pdf/2305.11798.pdf)", _NeurIPS 2023_.
 
 - Sitan Chen, Sinho Chewi, Jerry Li, Yuanzhi Li, Adil Salim and Anru R. Zhang, "[Sampling is as easy as learning the score: theory for
-diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215.pdf)", **Notable top 5% paper** @ _ICLR 2023_, Kigali, Rwanda.
+diffusion models with minimal data assumptions](https://arxiv.org/pdf/2209.11215.pdf)", **Notable top 5% paper** @ _ICLR 2023_.
 
 <!---
 
