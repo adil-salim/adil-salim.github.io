@@ -23,6 +23,8 @@ I received the Masters degrees in 2015 from ENSAE Paris, where I studied statist
 
 ## News
 
+- [Sinho Chewi's](https://chewisinho.github.io/main.pdf) book is ready! 
+
 - Our last paper on dimension-free sampling with diffusion models will be presented as an oral at ICML 2026 "[High-accuracy and dimension-free sampling with diffusions](https://arxiv.org/abs/2601.10708)".
 
 - I will talk about diffusion models at [BIRS, Canada](https://www.birs.ca/events/2025/5-day-workshops/25w5430) and [IMS, Singapore](https://ims.nus.edu.sg/events/efficient-sampling-algorithms-complex-models/). Thanks for the invitations!
